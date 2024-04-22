@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 표출 관리</h3>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base tp3"><a href="#"><em class="cancel">취소</em></a></span>
+            <span class="btn-base"><a href="#"><em class="apply">적용</em></a></span>
+            <span class="btn-base"><a href="#"><em class="list">목록</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap">
+        <div class="content-l">
+          <h4 class="tit">VMS 목록</h4>
+          <div id="exampleTable" class="c-table" style="height: 554px"></div>
+          <div class="tit-area mt16">
+            <h4 class="tit">시나리오 운영</h4>
+            <div class="btns-wrap">
+              <div class="toggle-area">
+                <span class="s-label">수동모드</span>
+                <a href="#" class="s-toggle"></a>
+              </div>
+              <span class="btn-base tp3 md"><a href="#"><em class="delete">삭제</em></a></span>
+              <span class="btn-base md btn-popup-anim-1"><a href="#popup-manage-scenario"><em class="management">관리</em></a></span>
+            </div>
+          </div><!-- .tit-area -->
+
+          <!-- 시나리오 있음 - VMS 목록 > 선택 전 -->
+          <div class="tb-wrap mt12" id="scenario-tb-1">
+            <table class="tb-list">
+              <colgroup>
+                <col width="7%" />
+                <col width="7%" />
+                <col width="38%" />
+                <col width="38%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">상황</th>
+                  <th scope="col">시나리오 ID</th>
+                  <th scope="col">시나리오 이름</th>
+                  <th scope="col">전환시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="disabled">
+                  <td rowspan="2" class="bl0">자동</td>
+                  <td>평시</td>
+                  <td colspan="3" class="evt-td">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr class="disabled">
+                  <td>돌발</td>
+                  <td colspan="3" class="evt-td">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr class="disabled">
+                  <td class="bl0">수동</td>
+                  <td class="bl0"></td>
+                  <td colspan="3" class="evt-td">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .tb-wrap -->
+
+          <!-- 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 없는 경우 (자동) -->
+          <div class="tb-wrap mt12" id="scenario-tb-2" style="display: none;">
+            <table class="tb-list">
+              <colgroup>
+                <col width="7%" />
+                <col width="7%" />
+                <col width="38%" />
+                <col width="38%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">상황</th>
+                  <th scope="col">시나리오 ID</th>
+                  <th scope="col">시나리오 이름</th>
+                  <th scope="col">전환시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" class="bl0">자동</td>
+                  <td>평시</td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>돌발</td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr class="disabled">
+                  <td class="bl0">수동</td>
+                  <td class="bl0"></td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .tb-wrap -->
+
+          <!-- 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 있는 경우 (자동 : 평시) -->
+          <div class="tb-wrap mt12" id="scenario-tb-3" style="display: none;">
+            <table class="tb-list">
+              <colgroup>
+                <col width="7%" />
+                <col width="7%" />
+                <col width="38%" />
+                <col width="38%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">상황</th>
+                  <th scope="col">시나리오 ID</th>
+                  <th scope="col">시나리오 이름</th>
+                  <th scope="col">전환시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" class="bl0">자동</td>
+                  <td>평시</td>
+                  <td class="evt-td evt">VMS_SNO_001</td>
+                  <td class="bl0 evt">Limit_Speed</td>
+                  <td class="bl0 evt">3초</td>
+                </tr>
+                <tr>
+                  <td>돌발</td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr class="disabled">
+                  <td class="bl0">수동</td>
+                  <td class="bl0"></td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .tb-wrap -->
+
+          <!-- 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 없는 경우 (수동) -->
+          <div class="tb-wrap mt12" id="scenario-tb-4" style="display: none;">
+            <table class="tb-list">
+              <colgroup>
+                <col width="7%" />
+                <col width="7%" />
+                <col width="38%" />
+                <col width="38%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">상황</th>
+                  <th scope="col">시나리오 ID</th>
+                  <th scope="col">시나리오 이름</th>
+                  <th scope="col">전환시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="disabled">
+                  <td rowspan="2" class="bl0">자동</td>
+                  <td>평시</td>
+                  <td class="evt-td evt">VMS_SNO_001</td>
+                  <td class="bl0 evt">Limit_Speed</td>
+                  <td class="bl0 evt">3초</td>
+                </tr>
+                <tr class="disabled">
+                  <td>돌발</td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bl0">수동</td>
+                  <td class="bl0"></td>
+                  <td colspan="3" class="evt-td evt">
+                    <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .tb-wrap -->
+
+        </div><!-- .content-l -->
+        <div class="content-r">
+
+          <h4 class="tit">VMS 설치 위치</h4>
+          <div class="map-area half">
+            <div id="map" class="map" style="background: url(img/map_vw2dnight_ver2.png) 50% 50% no-repeat; background-size: cover;"></div>
+            <div id="select-map" class="map" style="background: url(img/map_vw2dnight_ver3.png) 50% 50% no-repeat; background-size: cover; display: none;"></div>
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+
+          <h4 class="tit mt20">선택 시나리오 정보</h4>
+          <div class="scenario-area" id="scenario-info-1">
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+          <div class="scenario-area" id="scenario-info-2" style="display: none;">
+            <span class="no-data"><em>추가된 시나리오가 존재하지 않습니다</em></span>
+          </div>
+          <div class="scenario-area" id="scenario-info-3" style="display: none;">
+            <div class="scenario-item">
+              <ul class="sce-list col4" id="scenario-col-4">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col3" id="scenario-col-3">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col2" id="scenario-col-2">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col1" id="scenario-col-1">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-manage-scenario" data-width="1200">
+      <h3 class="tit">운영시간관리</h3>
+      <div class="con-wrap">
+        <div class="manage-area">
+          <div id="exampleTable2" class="c-table" style="height: 418px;"></div>
+
+          <div class="scenario-detail" id="scenario-detail-1">
+            <h4 class="s-tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">-</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">-</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-2" style="display: none;">
+            <h4 class="s-tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">일이삼사오육칠팔구십일이삽사오오</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">03초</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <ul class="sce-list col4" id="scenario-p-col-4">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col3" id="scenario-p-col-3">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col2" id="scenario-p-col-2">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col1" id="scenario-p-col-1">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .scenario-detail -->
+
+        </div><!-- .manage-area -->
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="apply">적용</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    createTable("#exampleTable");
+    createTable("#exampleTable2");
+
+    $('.content-r .evt-list').on('click', function(e){
+      e.preventDefault();
+      $('#map, .content-r .evt-list').hide();
+      $('#select-map').show();
+
+      $('[id*=scenario-info-]').hide();
+      $('#scenario-info-3').show();
+    });
+
+    $('.s-toggle').on('click', function(e){
+      e.preventDefault();
+      $(this).toggleClass('on');
+    });
+
+    var diffH = 30;
+    $(window).on('load resize', function(){
+      var halfH = ($(window).height() - 240) / 2;
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 407);
+      $('.content-wrap .map-area').css('height', halfH);
+      $('.content-wrap .scenario-area').css('height', halfH);
+    });
+
+    $('.tb-list td.evt').on('click', function(){
+      if ($(this).closest('tr').hasClass('disabled')) {
+        return;
+      }
+      if (!$(this).closest('tr').hasClass('on')) {
+        $(this).closest('tr').siblings('tr.on').removeClass('on');
+        $(this).closest('tr').addClass('on');
+      } else {
+        $(this).closest('tr').removeClass('on');
+      }
+    });
+
+    var Qscenario = $.urlParam('scenario');
+    var Qpopup = $.urlParam('popup');
+    var Qcol = $.urlParam('col');
+
+    if (Qscenario || Qpopup || Qcol) {
+      setTimeout(function(){
+        if (Qscenario) {
+          $('[id*=scenario-]').hide();
+          if (Qscenario === '1') {
+            // VMS 목록 > 선택 전
+            $('#scenario-tb-1').show();
+            $('#scenario-info-1').show();
+          } else if (Qscenario === '2') {
+            // VMS 목록 > 선택 후 : 시나리오가 없는 경우 (자동)
+            $('#scenario-tb-2').show();
+            $('#scenario-info-2').show();
+            // $('.content-r .evt-list').click();
+          } else if (Qscenario === '3') {
+            // VMS 목록 > 선택 후 : 시나리오가 있는 경우 (자동 : 평시)
+            $('#scenario-tb-3').show();
+            $('#scenario-info-3').show();
+            $('.content-r .evt-list').click();
+            
+          } else if (Qscenario === '4') {
+            // VMS 목록 > 선택 후 : 시나리오가 없는 경우 (수동)
+            $('#scenario-tb-4').show();
+            $('#scenario-info-2').show();
+            // $('.content-r .evt-list').click();
+            $('.s-toggle').click();
+          }
+        }
+
+        if (Qcol === '1') {
+          $('#scenario-col-1, #scenario-p-col-1').css('display', 'flex');
+        } else if (Qcol === '2') {
+          $('#scenario-col-2, #scenario-p-col-2').css('display', 'flex');
+        } else if (Qcol === '3') {
+          $('#scenario-col-3, #scenario-p-col-3').css('display', 'flex');
+        } else {
+          $('#scenario-col-4, #scenario-p-col-4').css('display', 'flex');
+        }
+        
+        if (Qpopup === 'manageScenario') {
+          $('[href="#popup-manage-scenario"]').click();
+          setTimeout(function(){
+            createTable("#exampleTable2");
+          }, 250);
+          if (Qscenario === '1') {
+            $('#scenario-detail-1').show();
+          } else if (Qscenario === '2') {
+            $('#scenario-detail-2').show();
+          }
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 제어</h3>
+          <div class="navi-area">
+            <a class="home" href="#">VMS관리</a>
+            <a href="#" class="current">VMS 제어</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base"><a href="#"><em class="vmsdata">VMS 표출 관리</em></a></span>
+            <span class="btn-base btn-popup-anim-1"><a href="#popup-manage-time"><em class="time">운영시간 관리</em></a></span>
+            <span class="btn-base"><a href="#"><em class="on">ON</em></a></span>
+            <span class="btn-base"><a href="#"><em class="off">OFF</em></a></span>
+            <span class="btn-base tp2"><a href="#"><em class="play">재시작</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap">
+        <div class="content-l">
+          <div class="input-wrap select-input">
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>구간명</option>
+                <option value="1">구간 1</option>
+                <option value="2">구간 2</option>
+                <option value="3">구간 3</option>
+              </select>
+            </span>
+            <input type="text" class="input-base tp2" placeholder="VMS 이름을 입력하세요" />
+            <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
+          </div>
+          <div id="exampleTable" class="c-table mt12"></div>
+          <div class="total-area">
+            <span class="total">총 <em>30</em>건</span>
+          </div>
+        </div><!-- .content-l -->
+        <div class="content-r">
+
+          <h4 class="tit">VMS 설치 위치</h4>
+          <div class="map-area half">
+            <div id="map" class="map" style="background: url(img/map_vw2dnight_ver2.png) 50% 50% no-repeat; background-size: cover;"></div>
+            <div id="select-map" class="map" style="background: url(img/map_vw2dnight_new.png) 50% 50% no-repeat; background-size: cover; display: none;"></div>
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+
+          <h4 class="tit mt20">현재 시나리오 정보</h4>
+          <div class="scenario-area" id="scenario-info-1">
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+          <div class="scenario-area" id="scenario-info-2" style="display: none;">
+            <span class="no-data"><em>추가된 시나리오가 존재하지 않습니다</em></span>
+          </div>
+          <div class="scenario-area" id="scenario-info-3" style="display: none;">
+            <div class="scenario-item response-item" style="text-align: center;">
+              <img src="https://placehold.co/300x300/000000/FFFFFF/png" alt="" />
+            </div>
+          </div>
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-manage-time" data-width="740">
+      <h3 class="tit">운영시간관리</h3>
+      <div class="con-wrap">
+        <!-- <div class="sampleTable" style="height: 228px; background-color:#222631; display: flex; justify-content: center; align-items: center;">
+          <span class="sampleText" style="font-size: 14px; line-height: 1.4; text-align:center; color: #4c556d; font-weight: bold;">Table Area <br />height: 228px - Fixed (TR 5Line)</span>
+        </div> -->
+        <div id="exampleTable2" class="c-table" style="height: 228px;"></div>
+
+        <div class="input-wrap">
+          <span class="label">운영시간</span>
+          <div class="select-wrap">
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+              </select>
+            </span>
+            <span class="unit">시</span>
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+              </select>
+            </span>
+            <span class="unit">분</span>
+
+            <span class="bridge">~</span>
+
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+              </select>
+            </span>
+            <span class="unit">시</span>
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+              </select>
+            </span>
+            <span class="unit">분</span>
+          </div>
+        </div>
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="apply">적용</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    createTableType3("#exampleTable");
+    createTable("#exampleTable2");
+
+    $('.evt-list').on('click', function(e){
+      e.preventDefault();
+      $('#map, .evt-list').hide();
+      $('#select-map').show();
+
+      $('[id*=scenario-info-]').hide();
+      $('#scenario-info-3').show();
+    });
+
+    var diffH = 30;
+    $(window).on('load resize', function(){
+      var halfH = ($(window).height() - 240) / 2;
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 249);
+      $('.content-wrap .map-area').css('height', halfH);
+      $('.content-wrap .scenario-area').css('height', halfH);
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    if (Qsample === 'select') {
+      setTimeout(function(){
+        $('.evt-list').click();
+      }, 250);
+    }
+    if (Qpopup === 'manageTime') {
+      setTimeout(function(){
+        $('[href="#popup-manage-time"]').click();
+        setTimeout(function(){
+          createTable("#exampleTable2");
+        }, 250);
+      }, 250);
+    }
+  </script>
+</body>
+</html>

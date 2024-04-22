@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="dashboard-wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div class="dashboard-dimm"></div>
+    <div class="dashboard-area">
+      <div id="map" class="map" style="background: url(../img/map_vw2dnight.png) 50% 50% no-repeat; background-size: cover;"></div>
+
+      <!-- 좌측 패널 -->
+      <div class="left-wrap c-scrollbar" data-aos="fade-right">
+        <div class="lnb-area">
+          <span class="lnb-tit">주요 구간</span>
+          <ul class="lnb-list">
+            <li>
+              <dl>
+                <dt class="chk">
+                  <span>원주 전체 구간</span>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <span>광터 교차로 구간</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">광터 교차로</a></li>
+                    <li><a href="#">보통 삼거리</a></li>
+                    <li><a href="#">추모공원 삼거리</a></li>
+                    <li><a href="#">SK주유소 앞 사거리</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <span>선녀골 삼거리 구간</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <span>진양 삼거리 구간</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <span>반곡/관설 IC 구간</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>
+                  <span>음향식 노면 검지 구간</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li class="disabled">
+              <dl>
+                <dt>
+                  <span>구간 +/-</span>
+                </dt>
+                <dd>
+                  <ul class="c-scrollbar">
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                    <li><a href="#">교차로및지점명</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div><!-- .left-wrap -->
+
+      <!-- 레이어 선택 -->
+      <div class="layer-wrap accident">
+        <a href="#" class="btn-ico btn-accident"></a>
+        <div class="accident-area">
+          <div class="acc-top">
+            <p class="tit">돌발정보</p>
+            <ul class="items">
+              <li class="newwindow"><a href="#"></a></li>
+              <li class="expans"><a href="#"></a></li>
+              <li class="close"><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="acc-table">
+            <table>
+              <colgroup>
+                <col width="140" />
+                <col width="*" />
+                <col width="140" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">일시</th>
+                  <th scope="col">지점/장비명</th>
+                  <th scope="col">돌발유형</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="acc-table c-scrollbar">
+            <table>
+              <colgroup>
+                <col width="140" />
+                <col width="*" />
+                <col width="140" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">공군비행단삼거리/라이다_01</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">Text line 1 <br />Text line 2</td>
+                  <td>Text line 1 <br />Text line 2</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">봉산2교북측/O2RW000000234</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">공군비행단삼거리/라이다_01</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">Text line 1 <br />Text line 2</td>
+                  <td>Text line 1 <br />Text line 2</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">봉산2교북측/O2RW000000234</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">봉산2교북측/O2RW000000234</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">공군비행단삼거리/라이다_01</td>
+                  <td>사고</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">공군비행단삼거리/라이다_01</td>
+                  <td>급정거</td>
+                </tr>
+                <tr>
+                  <td>2024-02-05 13:08</td>
+                  <td class="t-left">공군비행단삼거리/라이다_01</td>
+                  <td>사고</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- .layer-wrap -->
+
+      <!-- 시설물 상태 정보 -->
+      <div class="layer-wrap status">
+        <a href="#" class="btn-ico btn-status"></a>
+        <div class="accident-area">
+          <div class="acc-top">
+            <p class="tit">시설물 상태 정보</p>
+            <ul class="items">
+              <li class="newwindow"><a href="#"></a></li>
+              <li class="expans"><a href="#"></a></li>
+              <li class="close"><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="acc-table">
+            <table>
+              <colgroup>
+                <col width="120" />
+                <col width="*" />
+                <col width="100" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">장비명</th>
+                  <th scope="col">지점명</th>
+                  <th scope="col">이상 유형</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="acc-table c-scrollbar">
+            <table>
+              <colgroup>
+                <col width="120" />
+                <col width="*" />
+                <col width="100" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-steady.svg"><em>정상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">VMS</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">LiDAR</td>
+                  <td class="t-left">청송삼거리</td>
+                  <td>
+                    <span class="state"><img src="img/ico-s-abnormal.svg"><em>이상</em></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- .layer-wrap -->
+
+      <!-- 확대/축소, 새로고침, 인덱스 -->
+      <div class="item-wrap">
+        <div class="layer-wrap">
+          <a href="#" class="btn-ico btn-layer"></a>
+          <div class="item-area">
+            <a href="#" class="new lidar"><span>LiDAR</span></a>
+            <a href="#" class="new radar"><span>레이더</span></a>
+            <a href="#" class="new cctv"><span>CCTV</span></a>
+            <a href="#" class="new vms"><span>VMS</span></a>
+            <a href="#" class="new dfs"><span>DFS</span></a>
+            <a href="#" class="new roadsurface"><span>노면검지</span></a>
+            <a href="#" class="new signal"><span>신호</span></a>
+          </div>
+        </div><!-- .layer-wrap -->
+        <div class="btns">
+          <a href="#" class="btn-ico btn-plus"></a>
+          <a href="#" class="btn-ico btn-minus"></a>
+        </div>
+        <a href="#" class="btn-ico btn-refresh"></a>
+        <a href="#" class="btn-ico btn-index"></a>
+        <div class="index-wrap ver-table">
+          <div class="idx-table">
+            <table summary="(Km/h), 시내부, 국도 정보">
+              <colgroup>
+                <col width="33.33%" />
+                <col width="33.33%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">(Km/h)</th>
+                  <th scope="col">시내부</th>
+                  <th scope="col">국도</th>
+                </tr>
+              </thead>
+              <tbody class="view">
+                <tr>
+                  <td class="st1">원활</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="25" readonly />
+                      <span>이상</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="25" readonly />
+                      <span>이상</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st2">서행</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="15" readonly />
+                      <span>~</span>
+                      <input type="text" value="25" readonly />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" readonly />
+                      <span>~</span>
+                      <input type="text" value="50" readonly />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st3">정체</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="15" readonly />
+                      <span>미만</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" readonly />
+                      <span>미만</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st4">정보없음</td>
+                  <td colspan="2">
+                    <div class="res">
+                      <span>대상정보없음</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="edit" style="display: none;">
+                <tr>
+                  <td class="st1">원활</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="25" />
+                      <span>이상</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="25" />
+                      <span>이상</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st2">서행</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="15" />
+                      <span>~</span>
+                      <input type="text" value="25" />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" />
+                      <span>~</span>
+                      <input type="text" value="50" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st3">정체</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="15" />
+                      <span>미만</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" />
+                      <span>미만</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="st4">정보없음</td>
+                  <td colspan="2">
+                    <div class="res">
+                      <span>대상정보없음</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="view">
+                <tr>
+                  <td colspan="3">
+                    <div class="btns-wrap">
+                      <a href="#" class="btn-change"><span class="txt">변경</span></a>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+              <tfoot class="edit" style="display: none;">
+                <tr>
+                  <td colspan="3">
+                    <div class="btns-wrap">
+                      <a href="#" class="btn-cancel"><span class="txt">취소</span></a>
+                      <a href="#" class="btn-apply"><span class="txt">적용</span></a>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!--
+          <ul>
+            <li class="st1">원활</li>
+            <li class="st2">서행</li>
+            <li class="st3">지체</li>
+            <li class="st4">정체</li>
+          </ul>
+          -->
+        </div>
+      </div><!-- .item-wrap -->
+
+      <!-- 아이콘 예시 -->
+      <span class="s-ico new cctv ex-1" id="ico-map-modal1" style="left: 791px; top: 538px;"></span>
+      <span class="s-ico new radar ex-1" id="ico-map-modal2" style="left: 852px; top: 532px;"></span>
+      <span class="s-ico new vms ex-1" id="ico-map-modal3" style="left: 800px; top: 567px;"></span>
+      <span class="s-ico new vms ex-1" id="ico-map-modal4" style="left: 934px; top: 530px;"></span>
+      <span class="s-ico new lidar ex-1" id="ico-map-modal5" style="left: 1091px; top: 460px;"></span>
+      <span class="s-ico new vms ex-1" id="ico-map-modal6" style="left: 1020px; top: 502px;"></span>
+      <span class="s-ico new vms ex-1" id="ico-map-modal7" style="left: 1145px; top: 467px;"></span>
+      <span class="s-ico new lidar ex-1" id="ico-map-modal8" style="left: 1176px; top: 433px;"></span>
+      <span class="s-ico new lidar ex-1" id="ico-map-modal9" style="left: 1356px; top: 350px;"></span>
+      <span class="s-ico new cctv ex-1" id="ico-map-modal10" style="left: 1384px; top: 359px;"></span>
+
+      <span class="s-ico vms ex-2" id="ico-map-modal11" style="left: 708px; top: 706px;"></span>
+      <span class="s-ico lidar ex-2" id="ico-map-modal12" style="left: 1195px; top: 493px;"></span>
+      <span class="s-ico lidar ex-2" id="ico-map-modal13" style="left: 1575px; top: 317px;"></span>
+      <span class="s-ico cctv ex-2" id="ico-map-modal14" style="left: 1570px; top: 355px;"></span>
+
+      <span class="s-ico vms ex-3" id="ico-map-modaln1" style="left: 863px; top: 685px;"></span>
+
+      <!-- 모달 예시 -->
+      <div class="modal-wrap" id="modal1" style="left: 654px; top: 259px;">
+        <div class="modal-top">
+          <p class="modal-title">광터 교차로</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal2" style="left: 715px; top: 253px;">
+        <div class="modal-top">
+          <p class="modal-title">SK주유소 앞 사거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content">
+          <iframe src="https://www.youtube.com/embed/GtegZ3Xqe8s?si=noorSGvXXg0ulFBd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal3" style="left: 663px; top: 291px;">
+        <div class="modal-top">
+          <p class="modal-title">SK주유소 앞 사거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal4" style="left: 798px; top: 251px;">
+        <div class="modal-top">
+          <p class="modal-title">SK주유소 앞 사거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal5" style="left: 954px; top: 181px;">
+        <div class="modal-top">
+          <p class="modal-title">추모공원 삼거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal6" style="left: 884px; top: 225px;">
+        <div class="modal-top">
+          <p class="modal-title">추모공원 삼거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal7" style="left: 1009px; top: 190px;">
+        <div class="modal-top">
+          <p class="modal-title">추모공원 삼거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal8" style="left: 1039px; top: 154px;">
+        <div class="modal-top">
+          <p class="modal-title">보통 삼거리</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal9" style="left: 1221px; top: 72px;">
+        <div class="modal-top">
+          <p class="modal-title">광터 교차로</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modal10" style="left: 1249px; top: 83px;">
+        <div class="modal-top">
+          <p class="modal-title">광터 교차로</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content">
+          <img src="https://placehold.co/300x227/000000/FFFFFF/png" alt="" />
+        </div>
+      </div><!-- .modal-wrap -->
+
+
+      <div class="modal-wrap" id="modaln1" style="left: 677px; top: 329px; width: 400px;">
+        <div class="modal-top">
+          <p class="modal-title">일이삼사오육칠팔구십일_이삼사오육칠팔</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <!-- <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap" id="modaln2" style="left: 725px; top: 301px; width: 400px;">
+        <div class="modal-top pr8">
+          <p class="modal-title">02RW0000000234</p>
+          <div class="modal-r">
+            <div class="tab-base col2" style="width: 144px;">
+              <ul>
+                <li><a href="#tab1">활성화</a></li>
+                <li class="on"><a href="#tab2">비활성화</a></li>
+              </ul>
+            </div>
+            <a href="#" class="btn-close"></a>
+          </div>
+        </div>
+        <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+      </div><!-- .modal-wrap -->
+
+      <div class="modal-wrap type-2" id="modals1" style="left: 757px; top: 433px; width: 200px;">
+        <div class="modal-info">
+          <ul>
+            <li>
+              <span class="label">속도</span>
+              <span class="result">40.2Km/h</span>
+            </li>
+            <li>
+              <span class="label">길이</span>
+              <span class="result">30.29Km</span>
+            </li>
+            <li>
+              <span class="label">속도</span>
+              <span class="result">30.29Km</span>
+            </li>
+          </ul>
+        </div>
+      </div><!-- .modal-wrap -->
+
+
+
+      <!-- 하단 패널(광터 교차로 구간) -->
+      <div class="period-wrap" id="period01">
+        <div class="period-top">
+          <div class="period-title">
+            <span class="tit">광터 교차로 구간</span>
+          </div>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="period-detail ver-label ver-relative">
+          <span class="fe-label">문막</span>
+          <div class="period-line-area fe-period">
+            <div class="period-line">
+              <span class="line-st1" style="width: 50%"></span>
+              <span class="line-st2" style="width: 32.09%"></span>
+              <span class="line-st1" style="width: 17.849%"></span>
+            </div>
+            <span class="s-ico new lidar up" id="ico-period-modal5" style="left: 2.3%;"></span>
+            <span class="s-ico new lidar up" id="ico-period-modal8" style="left: 96.2%;"></span>
+          </div>
+
+          <div class="period-name relative">
+            <span style="left: 0%;"><em>동화산업단지 앞 사거리</em></span>
+            <span style="left: 25%;"><em>SK주유소 앞 사거리</em></span>
+            <span style="left: 45%;"><em>추모공원 삼거리</em></span>
+            <span style="left: 70%;"><em>보통 삼거리</em></span>
+            <span class="last" style="right: 0%;"><em>광터 교차로</em></span>
+          </div>
+
+          <div class="period-line-area" style="margin-top: 8px;">
+            <div class="period-line">
+              <span class="line-st1" style="width: 50%"></span>
+              <span class="line-st2" style="width: 50%"></span>
+            </div>
+            <span class="s-ico new vms down" id="ico-period-modal3" style="left: 20%;"></span>
+            <span class="s-ico new radar down" style="left: 28%;"></span>
+            <span class="s-ico new vms down" id="ico-period-modal4" style="left: 35%;"></span>
+            <span class="s-ico new vms down" id="ico-period-modal6" style="left: 45%;"></span>
+            <span class="s-ico new vms down" id="ico-period-modal7" style="left: 65%;"></span>
+            <span class="s-ico new lidar down" style="left: 75%;"></span>
+            <span class="s-ico new cctv down" id="ico-period-modal10" style="left: 92%;"></span>
+          </div>
+          <span class="be-label">원주</span>
+
+          
+        </div>
+      </div><!-- .period-wrap -->
+
+      <!-- 하단 패널(선녀골 삼거리 구간) -->
+      <div class="period-wrap" id="period02">
+        <div class="period-top">
+          <div class="period-title">
+            <span class="tit">선녀골 삼거리 구간</span>
+          </div>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="period-detail ver-label ver-relative">
+          <span class="fe-label">원주</span>
+          <div class="period-line-area fe-period">
+            <div class="period-line">
+              <span class="line-st1" style="width: 25.05%"></span>
+              <span class="line-st2" style="width: 17.9%"></span>
+              <span class="line-st1" style="width: 7.0945%"></span>
+              <span class="line-st4" style="width: 25%"></span>
+              <span class="line-st2" style="width: 7.0945%"></span>
+              <span class="line-st1" style="width: 17.849%"></span>
+            </div>
+            <span class="s-ico new cctv up" style="left: 2.3%;"></span>
+            <span class="s-ico new lidar up" style="left: 25.5%;"></span>
+            <span class="s-ico new vms up" style="left: 49.3%;"></span>
+            <span class="s-ico new lidar up" style="left: 72%;"></span>
+            <span class="s-ico new vms up" style="left: 74%;"></span>
+            <span class="s-ico new radar up" style="left: 80%;"></span>
+            <span class="s-ico new vms up" style="left: 96.2%;"></span>
+          </div>
+
+          <div class="period-name relative">
+            <span style="left: 0%;"><em>선녀골 사거리</em></span>
+            <span style="left: 23%;"><em>청송주택 사거리</em></span>
+            <span style="left: 47%;"><em>동신버스 차고지 삼거리</em></span>
+            <span style="left: 73%;"><em>섬베고개 사거리</em></span>
+            <span class="last" style="right: 0%;"><em>섬베고개(군부대)</em></span>
+          </div>
+
+          <div class="period-line-area" style="margin-top: 8px;">
+            <div class="period-line">
+              <span class="line-st1" style="width: 50%"></span>
+              <span class="line-st2" style="width: 50%"></span>
+            </div>
+            <span class="s-ico new lidar down" style="left: 2.3%;"></span>
+          </div>
+          <span class="be-label">횡성</span>
+
+          
+        </div>
+      </div><!-- .period-wrap -->
+
+      <!-- 하단 패널(진양 삼거리 구간) -->
+      <div class="period-wrap" id="period03">
+        <div class="period-top">
+          <div class="period-title">
+            <span class="tit">진양 삼거리 구간</span>
+          </div>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="period-detail ver-label ver-relative">
+          <span class="fe-label">원주</span>
+          <div class="period-line-area fe-period">
+            <div class="period-line">
+              <span class="line-st1" style="width: 33.389%"></span>
+              <span class="line-st2" style="width: 11.09%"></span>
+              <span class="line-st4" style="width: 33.333%"></span>
+              <span class="line-st1" style="width: 22.2846%"></span>
+            </div>
+            <span class="s-ico new dfs up" style="left: 31.5%;"></span>
+            <span class="s-ico new cctv up" style="left: 33.5%;"></span>
+            <span class="s-ico new dfs up" style="left: 35.5%;"></span>
+            <span class="s-ico new vms up" style="left: 44%;"></span>
+            <span class="s-ico new vms up" style="left: 53%;"></span>
+            <span class="s-ico new vms up" style="left: 64%;"></span>
+            <span class="s-ico new vms up" style="left: 75%;"></span>
+            <span class="s-ico new vms up" style="left: 84%;"></span>
+            <span class="s-ico new vms up" style="left: 96.2%;"></span>
+          </div>
+
+          <div class="period-name relative">
+            <span style="left: 0%;"><em>돌모루 사거리</em></span>
+            <span style="left: 32.8%;"><em>진양</em></span>
+            <span style="left: 64.5%;"><em>원증거리 사거리</em></span>
+            <span class="last" style="right: 0%;"><em>소초면 체육광장 삼거리</em></span>
+          </div>
+
+          <div class="period-line-area" style="margin-top: 8px;">
+            <div class="period-line">
+              <span class="line-st1" style="width: 77.8153%"></span>
+              <span class="line-st2" style="width: 22.1846%"></span>
+            </div>
+            <span class="s-ico new lidar down" style="left: 32.5%;"></span>
+            <span class="s-ico new dfs down" style="left: 34.5%;"></span>
+            <span class="s-ico new lidar down" style="left: 65%;"></span>
+          </div>
+          <span class="be-label">새말</span>
+
+          
+        </div>
+      </div><!-- .period-wrap -->
+
+      <!-- 하단 패널(반곡/관설IC구간) -->
+      <div class="period-wrap" id="period04">
+        <div class="period-top">
+          <div class="period-title">
+            <span class="tit">반곡/관설IC구간</span>
+          </div>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="period-detail ver-label ver-relative">
+          <span class="fe-label">문막</span>
+          <div class="period-line-area fe-period">
+            <div class="period-line">
+              <span class="line-st1" style="width: 100%"></span>
+            </div>
+          </div>
+
+          <div class="period-name relative">
+            <span style="left: 0%;"><em>내남송1교</em></span>
+            <span style="left: 50%;"><em>관설 IC</em></span>
+            <span class="last" style="right: 0%;"><em>반곡교차로</em></span>
+          </div>
+
+          <div class="period-line-area" style="margin-top: 8px;">
+            <div class="period-line">
+              <span class="line-st1" style="width: 100%"></span>
+            </div>
+            <span class="s-ico new vms down" style="left: 20%;"></span>
+            <span class="s-ico new vms down" style="left: 35%;"></span>
+            <span class="s-ico new radar down" style="left: 50.2%;"></span>
+            <span class="s-ico new vms down" style="left: 65%;"></span>
+            <span class="s-ico new vms down" style="left: 80%;"></span>
+            <span class="s-ico new radar down" style="left: 90%;"></span>
+          </div>
+          <span class="be-label">횡성</span>
+
+          
+        </div>
+      </div><!-- .period-wrap -->
+
+      <!-- 하단 패널(반곡/관설IC구간) -->
+      <div class="period-wrap" id="period05">
+        <div class="period-top">
+          <div class="period-title">
+            <span class="tit">음향식 노면 검지 구간</span>
+          </div>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="period-detail ver-label ver-relative">
+          <span class="fe-label">문막</span>
+          <div class="period-line-area fe-period">
+            <div class="period-line">
+              <span class="line-st1" style="width: 100%"></span>
+            </div>
+            <span class="s-ico new signal up" style="left: 5%;"></span>
+            <span class="s-ico new signal up" style="left: 10%;"></span>
+            <span class="s-ico new signal up" style="left: 15%;"></span>
+            <span class="s-ico new signal up" style="left: 21%;"></span>
+            <span class="s-ico new signal up" style="left: 26%;"></span>
+            <span class="s-ico new signal up" style="left: 32%;"></span>
+            <span class="s-ico new signal up" style="left: 38%;"></span>
+            <span class="s-ico new signal up" style="left: 44%;"></span>
+            <span class="s-ico new signal up" style="left: 50%;"></span>
+            <span class="s-ico new signal up" style="left: 56%;"></span>
+            <span class="s-ico new signal up" style="left: 62%;"></span>
+            <span class="s-ico new signal up" style="left: 68%;"></span>
+            <span class="s-ico new signal up" style="left: 74%;"></span>
+            <span class="s-ico new signal up" style="left: 80%;"></span>
+            <span class="s-ico new signal up" style="left: 84%;"></span>
+            <span class="s-ico new signal up" style="left: 88%;"></span>
+            <span class="s-ico new signal up" style="left: 92%;"></span>
+            <span class="s-ico new signal up" style="left: 96.2%;"></span>
+          </div>
+
+          <div class="period-name relative">
+            <span style="left: 0%;"><em>봉산2교</em></span>
+            <span style="left: 20%;"><em>봉산2교 북측</em></span>
+            <span style="left: 40%;"><em>봉산터널</em></span>
+            <span style="left: 60%;"><em>흥양 2교</em></span>
+            <span style="left: 80%;"><em>원증교 북측</em></span>
+            <span class="last" style="right: 0%;"><em>원증교</em></span>
+          </div>
+
+          <div class="period-line-area" style="margin-top: 8px;">
+            <div class="period-line">
+              <span class="line-st1" style="width: 100%"></span>
+            </div>
+            <span class="s-ico new signal down" style="left: 3%;"></span>
+            <span class="s-ico new signal down" style="left: 8%;"></span>
+            <span class="s-ico new signal down" style="left: 13%;"></span>
+            <span class="s-ico new signal down" style="left: 19%;"></span>
+            <span class="s-ico new signal down" style="left: 24%;"></span>
+            <span class="s-ico new signal down" style="left: 30%;"></span>
+            <span class="s-ico new signal down" style="left: 36%;"></span>
+            <span class="s-ico new signal down" style="left: 42%;"></span>
+            <span class="s-ico new signal down" style="left: 48%;"></span>
+            <span class="s-ico new signal down" style="left: 54%;"></span>
+            <span class="s-ico new signal down" style="left: 60%;"></span>
+            <span class="s-ico new signal down" style="left: 66%;"></span>
+            <span class="s-ico new signal down" style="left: 72%;"></span>
+            <span class="s-ico new signal down" style="left: 78%;"></span>
+            <span class="s-ico new signal down" style="left: 82%;"></span>
+            <span class="s-ico new signal down" style="left: 86%;"></span>
+            <span class="s-ico new signal down" style="left: 90%;"></span>
+            <span class="s-ico new signal down" style="left: 95%;"></span>
+            
+          </div>
+          <span class="be-label">횡성</span>
+
+          
+        </div>
+      </div><!-- .period-wrap -->
+      
+    </div><!-- .dashboard-area -->
+  </div><!-- #wrap -->
+
+  <script>
+    $('.lnb-list > li dt').on('click', function(){
+      var $target = $(this).closest('li');
+      if ($target.hasClass('disabled')) {
+        return;
+      }
+      if (!$target.hasClass('on')) {
+        $target.siblings().removeClass('on');
+        $target.addClass('on');
+      } else {
+        $target.removeClass('on');
+      }
+    });
+
+    $('.layer-wrap .btn-accident').on('click', function(e){
+      e.preventDefault();
+      var $target = $(this).closest('.layer-wrap');
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $target.addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $target.removeClass('on');
+      }
+    });
+
+    $('.layer-wrap .btn-status').on('click', function(e){
+      e.preventDefault();
+      var $target = $(this).closest('.layer-wrap');
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $target.addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $target.removeClass('on');
+      }
+    });
+
+    $('.layer-wrap .btn-layer').on('click', function(e){
+      e.preventDefault();
+      var $target = $(this).closest('.layer-wrap');
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $target.addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $target.removeClass('on');
+      }
+    });
+    $('.layer-wrap .item-area a').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    $('.item-wrap .btn-index').on('click', function(e){
+      e.preventDefault();
+      var $target = $(this).next('.index-wrap');
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $target.addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $target.removeClass('on');
+      }
+    });
+
+    $('.period-wrap .btn-close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.period-wrap').hide();
+    });
+
+    function resetIcon() {
+      $('.modal-wrap').hide();
+      $('[id*=ico-].on').removeClass('on');
+    }
+    
+    // 아이콘 + 모달
+    $('[id*=ico-]').on('click', function(e){
+      var _modal = ($(this).attr('id').split('-')[$(this).attr('id').split('-').length - 1]);
+      if (!$(this).hasClass('on')) {
+        resetIcon();
+        $('#ico-map-' + _modal + ', #ico-period-' + _modal).addClass('on');
+        console.log(_modal)
+        openModal('#' + _modal);
+      } else {
+        $('#ico-map-' + _modal + ', #ico-period-' + _modal).removeClass('on');
+        closeModal('#' + _modal);
+      }
+    });
+    $('.modal-wrap .btn-close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.modal-wrap').hide();
+      var _modal = $(this).closest('.modal-wrap').attr('id');
+      if (_modal) {
+        $('#ico-map-' + _modal + ', #ico-period-' + _modal).removeClass('on');
+      }
+    });
+
+    // 구간 선택
+    $('.lnb-area .lnb-list > li dd li').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $('.lnb-area .lnb-list > li dd li.on').removeClass('on');
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    $('.accident-area .acc-top .items li.expans a').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).closest('li').hasClass('on')) {
+        $(this).closest('li').addClass('on');
+        $(this).closest('.layer-wrap').find('.acc-table').addClass('on');
+      } else {
+        $(this).closest('li').removeClass('on');
+        $(this).closest('.layer-wrap').find('.acc-table').removeClass('on');
+      }
+    });
+    $('.accident-area .acc-top .items li.close a').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.layer-wrap').removeClass('on');
+      $(this).closest('.layer-wrap').find('.btn-ico').removeClass('on');
+    });
+    $('.accident-area .acc-table tr td').on('click', function(){
+      if (!$(this).closest('tr').hasClass('on')) {
+        $(this).closest('tr').siblings().removeClass('on');
+        $(this).closest('tr').addClass('on');
+        openModal('#modaln1');
+      } else {
+        $(this).closest('tr').removeClass('on');
+      }
+    });
+
+    $('.idx-table tfoot td a.btn-change').on('click', function(e){
+      e.preventDefault();
+      $('.idx-table .view').hide();
+      $('.idx-table tbody.edit').css('display', 'table-row-group');
+      $('.idx-table tfoot.edit').css('display', 'table-footer-group');
+    });
+
+    $('.idx-table tfoot td a.btn-cancel, .idx-table tfoot td a.btn-apply').on('click', function(e){
+      e.preventDefault();
+      $('.idx-table .edit').hide();
+      $('.idx-table tbody.view').css('display', 'table-row-group');
+      $('.idx-table tfoot.view').css('display', 'table-footer-group');
+    });
+
+    var Qperiod = $.urlParam('period');
+    var Qmodal = $.urlParam('modal');
+    var Qdetail = $.urlParam('detail');
+    var Qsample = $.urlParam('sample');
+    var Qmode = $.urlParam('mode');
+
+    if (Qperiod) {
+      setTimeout(function(){
+        $('.btn-layer').click();
+        $('.dashboard-area > [id*=ico-].ex-1').show();
+        $('.layer-wrap .item-area a:nth-child(n+0):nth-child(-n+4)').addClass('on');
+        if (Qperiod === '01') {
+          $('.lnb-list > li:eq(1) dt').click(); // 광터 교차로 구간 선택
+          $('.period-wrap#period01').show(); // 하단 패널
+        }
+        if (Qperiod === '02') {
+          $('.lnb-list > li:eq(2) dt').click(); // 선녀골 삼거리 구간 선택
+          $('.period-wrap#period02').show(); // 하단 패널
+        }
+        if (Qperiod === '03') {
+          $('.lnb-list > li:eq(3) dt').click(); // 진양 삼거리 구간 선택
+          $('.period-wrap#period03').show(); // 하단 패널
+        }
+        if (Qperiod === '04') {
+          $('.lnb-list > li:eq(4) dt').click(); // 반곡/관설IC구간 선택
+          $('.period-wrap#period04').show(); // 하단 패널
+        }
+        if (Qperiod === '05') {
+          $('.lnb-list > li:eq(5) dt').click(); // 음향식 노면 검지 구간 선택
+          $('.period-wrap#period05').show(); // 하단 패널
+        }
+      }, 250);
+    }
+    if (Qmodal == '01') {
+      setTimeout(function(){
+        $('#ico-period-modal1').click();
+        $('.btn-index').click();
+      }, 250);
+    }
+    if (Qmodal == '02') {
+      setTimeout(function(){
+        $('#ico-period-modal2').click();
+      }, 250);
+    }
+    if (Qdetail === '01') {
+      setTimeout(function(){
+        // $('.btn-layer').click();
+        $('.dashboard-area > [id*=ico-].ex-2').show();
+        $('.layer-wrap .item-area a:nth-child(n+0):nth-child(-n+4)').addClass('on');
+        $('.lnb-list > li:eq(1) dt').click(); // 광터 교차로 구간 선택
+        $('.lnb-list > li:eq(1) dd li:eq(0)').click(); // 광터 교차로 선택
+        $('.period-wrap#period01').show(); // 하단 패널
+      }, 250);
+    }
+    if (Qsample == '01' || Qsample == '02') {
+      if (Qmode == 'edit') {
+        $('.idx-table tfoot td a.btn-change').click();
+      }
+      if (Qperiod != '01') {
+        $('.lnb-area .lnb-list > li:eq(0) dt').click();
+        // $('.btn-accident, .btn-layer, .btn-index').click();
+      }
+      if (Qsample == '02') {
+        $('.btn-status').click();
+        $('.accident-area .acc-top .items li.expans a').click();
+
+      }
+      if (Qmodal == 'n01') {
+        $('.dashboard-area > [id*=ico-].ex-3').show();
+        if (Qperiod != '01') {
+          $('#ico-map-modaln1').click();
+          $('.accident-area .acc-table tr:eq(6) td').click();
+        }
+        if (Qperiod == '01') {
+          $('.dashboard-area > [id*=ico-].ex-2').show();
+          $('#ico-map-modal1').click();
+        }
+      }
+    }
+    if (Qmodal == 'n02') {
+      openModal('#modaln2');
+      $('.btn-layer').click(); // 초기화
+    }
+    if (Qmodal == 's01') {
+      openModal('#modals1');
+    }
+  </script>
+</body>
+</html>

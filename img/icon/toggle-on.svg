@@ -1,0 +1,19 @@
+<svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect y="1" width="40" height="20" rx="10" fill="#4C556D"/>
+    <g filter="url(#zpdc73paca)">
+        <circle cx="29" cy="11" r="7" fill="#008FFF"/>
+        <circle cx="29" cy="11" r="6.5" stroke="#33A5FF"/>
+    </g>
+    <defs>
+        <filter id="zpdc73paca" x="18" y="0" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix values="0 0 0 0 0.2 0 0 0 0 0.647059 0 0 0 0 1 0 0 0 0.5 0"/>
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_155_11010"/>
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow_155_11010" result="shape"/>
+        </filter>
+    </defs>
+</svg>

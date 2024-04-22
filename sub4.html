@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>계정 관리</h3>
+          <div class="navi-area">
+            <a class="home" href="#">시스템 관리</a>
+            <a href="#" class="current">계정 관리</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base tp3"><a href="#"><em class="delete">삭제</em></a></span>
+            <span class="btn-base"><a href="#"><em class="modify">수정</em></a></span>
+            <span class="btn-base btn-popup-anim-1"><a href="#popup-add-account"><em class="add">추가</em></a></span>
+            <span class="btn-base tp2"><a href="#"><em class="refresh">패스워드 초기화</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap type-3">
+        <div class="content-l">
+          <div id="exampleTable" class="c-table"></div>
+          <div class="total-area">
+            <span class="total">총 <em>30</em>건</span>
+          </div>
+        </div><!-- .content-l -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-add-account" data-width="500">
+      <h3 class="tit">계정 추가</h3>
+      <div class="con-wrap">
+        <div class="items-input">
+          <ul>
+            <li>
+              <div class="input-area">
+                <span class="label">ID</span>
+                <div class="input">
+                  <input type="text" placeholder="ID를 입력하세요" class="input-base tp2" />
+                </div>
+              </div>
+              <p class="info"><span>최대 10자, 특수문자를 포함할 수 없습니다.</span></p>
+            </li>
+            <li>
+              <div class="input-area">
+                <span class="label">Password</span>
+                <div class="input">
+                  <input type="password" placeholder="Password를 입력하세요" class="input-base tp2" />
+                </div>
+              </div>
+              <p class="info"><span>최소 8자 이상, 영어+숫자+특수문자를 조합해야 합니다.</span></p>
+            </li>
+            <li>
+              <div class="input-area">
+                <span class="label">이름</span>
+                <div class="input">
+                  <input type="text" placeholder="이름을 입력하세요" class="input-base tp2" />
+                </div>
+              </div>
+              <p class="info"><span>최대 5자로 제한됩니다.</span></p>
+            </li>
+            <li>
+              <div class="input-area">
+                <span class="label">전화번호</span>
+                <div class="input">
+                  <input type="text" placeholder="전화번호를 입력하세요" class="input-base tp2" />
+                </div>
+              </div>
+              <p class="info"><span>최대 10자, 숫자형태만 입력가능 합니다.</span></p>
+            </li>
+          </ul>
+        </div>
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    createTable("#exampleTable");
+
+    $('.evt-list').on('click', function(e){
+      e.preventDefault();
+      $('#map, .evt-list').hide();
+      $('#select-map').show();
+
+      $('[id*=scenario-info-]').hide();
+      $('#scenario-info-3').show();
+    });
+
+    var diffH = 30;
+    $(window).on('load resize', function(){
+      var halfH = ($(window).height() - 240) / 2;
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 191);
+      $('.content-wrap .map-area').css('height', halfH - diffH);
+      $('.content-wrap .scenario-area').css('height', halfH + diffH);
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    if (Qsample === 'select') {
+      setTimeout(function(){
+        $('.evt-list').click();
+      }, 250);
+    }
+    if (Qpopup === 'addAccount') {
+      setTimeout(function(){
+        $('[href="#popup-add-account"]').click();
+      }, 250);
+    }
+  </script>
+</body>
+</html>

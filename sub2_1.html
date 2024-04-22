@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>레이더 관리</h3>
+          <div class="navi-area">
+            <a class="home" href="#">수집장치 관리</a>
+            <a href="#" class="current">레이더 관리</a>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap">
+        <div class="content-l">
+          <div id="exampleTable" class="c-table"></div>
+          <div class="total-area">
+            <span class="total">총 <em>30</em>건</span>
+          </div>
+        </div><!-- .content-l -->
+        <div class="content-r">
+          <h4 class="tit">레이더 설치 위치</h4>
+          <div class="map-area half">
+            <div id="map" class="map" style="background: url(img/map_vw2dnight_ver2.png) 50% 50% no-repeat; background-size: cover;"></div>
+            <div id="select-map" class="map" style="background: url(img/map_vw2dnight_new.png) 50% 50% no-repeat; background-size: cover; display: none;"></div>
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+
+          <h4 class="tit mt20">현재 시나리오 정보</h4>
+          <div class="scenario-area" id="scenario-info-1">
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+          <div class="scenario-area" id="scenario-info-2" style="display: none;">
+            <span class="no-data"><em>추가된 시나리오가 존재하지 않습니다</em></span>
+          </div>
+          <div class="scenario-area" id="scenario-info-3" style="display: none;">
+            <div class="scenario-item response-item" style="text-align: center;">
+              <img src="https://placehold.co/300x300/000000/FFFFFF/png" alt="" />
+            </div>
+          </div>
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+  <script>
+    createTableType2("#exampleTable");
+
+    $('.evt-list').on('click', function(e){
+      e.preventDefault();
+      $('#map, .evt-list').hide();
+      $('#select-map').show();
+
+      $('[id*=scenario-info-]').hide();
+      $('#scenario-info-3').show();
+    });
+
+    var diffH = 30;
+    $(window).on('load resize', function(){
+      var halfH = ($(window).height() - 240) / 2;
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 191);
+      $('.content-wrap .map-area').css('height', halfH);
+      $('.content-wrap .scenario-area').css('height', halfH);
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    var Qcol = $.urlParam('col');
+
+    if (Qsample === 'select') {
+      setTimeout(function(){
+        $('.evt-list').click();
+
+        if (Qcol === '2') {
+          $('#scenario-col-2').css('display', 'flex');
+        } else if (Qcol === '3') {
+          $('#scenario-col-3').css('display', 'flex');
+        } else if (Qcol === '4') {
+          $('#scenario-col-4').css('display', 'flex');
+        } else {
+          $('#scenario-col-1').css('display', 'flex');
+        }
+      }, 250);
+    }
+    if (Qpopup === 'manageTime') {
+      setTimeout(function(){
+        $('[href="#popup-manage-time"]').click();
+        setTimeout(function(){
+          createTable("#exampleTable");
+        }, 250);
+      }, 250);
+    }
+  </script>
+</body>
+</html>

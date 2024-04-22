@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 메세지 관리</h3>
+          <div class="navi-area">
+            <a class="home" href="#">VMS관리</a>
+            <a href="#" class="current">VMS 메세지 관리</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base tp3"><a href="#"><em class="delete">삭제</em></a></span>
+            <span class="btn-base btn-popup-anim-1" style="display: none;"><a href="#popup-add-scenario"><em class="add">추가</em></a></span>
+            <span class="btn-base btn-popup-anim-1"><a href="#popup-add-message"><em class="add">추가</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap type-2">
+        <div class="content-l">
+          <div class="tab-base col2">
+            <ul>
+              <li class="on"><a href="#tab1">텍스트</a></li>
+              <li><a href="#tab2">이미지</a></li>
+            </ul>
+          </div>
+          <ul class="panel-base">
+            <li id="tab1">
+              <div class="msg-list-wrap">
+                <ul class="msg-list">
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=1" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=2" alt="" /></dt>
+                      <dd>메시지 이름 메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=3" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=4" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=5" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=6" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=7" alt="" /></dt>
+                      <dd>메시지 이름 메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=8" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=9" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=10" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=11" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=12" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=13" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=14" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=15" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=16" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=17" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=18" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=19" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=20" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><img src="https://placehold.co/600x600/000000/FFFFFF/png?text=21" alt="" /></dt>
+                      <dd>메시지 이름</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              <div class="paging-wrap">
+                <a href="#" class="btn-prev"></a>
+                <a href="#">1</a>
+                <a href="#" class="on">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#" class="btn-next"></a>
+              </div>
+            </li>
+            <li id="tab2">
+            </li>
+          </ul>
+        </div><!-- .content-l -->
+        <div class="content-r">        
+          <div class="scenario-detail" id="scenario-detail-1">
+            <h4 class="tit">VMS 메시지</h4>
+            <div class="scenario-item">
+              <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-2" style="display: none;">
+            <h4 class="tit">VMS 메시지</h4>
+            <div class="scenario-item">
+              <ul class="sce-list viewer">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .scenario-detail -->
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-add-scenario" data-width="920">
+      <h3 class="tit">VMS 시나리오 추가</h3>
+      <div class="con-wrap">
+        <div class="manage-area type-2">
+          <div class="add-thumb">
+            <img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" />
+          </div>
+          <div class="add-input">
+            <div class="tab-base col2">
+              <ul>
+                <li class="on"><a href="#tab-add-scenario-1">텍스트</a></li>
+                <li><a href="#tab-add-scenario-2">이미지</a></li>
+              </ul>
+            </div>
+            <ul class="panel-base">
+              <li id="tab-add-scenario-1">
+                <div class="items-input">
+                  <ul>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">메시지 이름</span>
+                        <div class="input">
+                          <input type="text" placeholder="메시지 이름을 입력하세요" class="input-base tp2" />
+                        </div>
+                      </div>
+                      <p class="info"><span>메시지 이름에 공백이 없어야 합니다.</span></p>
+                    </li>
+                    <li class="col2">
+                      <div class="input-area">
+                        <span class="label">X-좌표</span>
+                        <div class="input">
+                          <span class="counter-base">
+                            <button class="btn-minus">-</button>
+                            <input type="text" value="0" />
+                            <button class="btn-plus">+</button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="input-area">
+                        <span class="label">Y-좌표</span>
+                        <div class="input">
+                          <span class="counter-base">
+                            <button class="btn-minus">-</button>
+                            <input type="text" value="0" />
+                            <button class="btn-plus">+</button>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col2">
+                      <div class="input-area">
+                        <span class="label">폰트 크기</span>
+                        <div class="input">
+                          <span class="counter-base">
+                            <button class="btn-minus">-</button>
+                            <input type="text" value="0" />
+                            <button class="btn-plus">+</button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="input-area">
+                        <span class="label">폰트 색상</span>
+                        <div class="input">
+                          <span class="select-base">
+                            <span class="value"></span>
+                            <select>
+                              <option value="0" selected>선택</option>
+                              <option value="1">Red</option>
+                              <option value="2">Green</option>
+                              <option value="3">Blue</option>
+                            </select>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">메시지 입력</span>
+                        <div class="input">
+                          <input type="text" placeholder="메시지를 입력하세요" class="input-base tp2" />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="btns-wrap t-right mt12">
+                    <span class="btn-base tp3"><a href="#">삭제</a></span>
+                    <span class="btn-base"><a href="#">적용</a></span>
+                  </div>
+                </div>
+              </li>
+              <li id="tab-add-scenario-2">
+                <div class="items-input">
+                  <ul>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">메시지 이름</span>
+                        <div class="input">
+                          <input type="text" placeholder="메시지 이름을 입력하세요" class="input-base tp2" />
+                        </div>
+                      </div>
+                      <p class="info"><span>메시지 이름에 공백이 없어야 합니다.</span></p>
+                    </li>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">텍스트 입력</span>
+
+                        <!--
+                        <div class="input">
+                          <input type="text" placeholder="첨부파일을 업로드하세요" class="input-base tp2" />
+                        </div>
+                        -->
+
+                        <div class="input-wrap file">
+                          <input type="text" class="input-base tp2" placeholder="첨부파일을 업로드하세요" readonly />
+                          <span class="btn-base"><a href="#">파일찾기</a></span>
+                          <input type="file" id="addFile" />
+                          <a href="#" class="btn-delete"></a>
+                        </div>
+                      </div>
+                      <p class="info"><span>JPG, PNG, GIF, 파일크기 50MB, 최대 해상도 500X500px로 제한됩니다.</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .manage-area -->
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-add-message" data-width="988">
+      <h3 class="tit">VMS 메세지 추가</h3>
+      <div class="con-wrap">
+        <div class="manage-area type-2">
+          <div class="add-thumb">
+            <img src="https://placehold.co/312x312/000000/FFFFFF/png" alt="" />
+          </div>
+          <div class="add-input">
+            <div class="tab-base col2">
+              <ul>
+                <li class="on"><a href="#tab-add-message-1">텍스트</a></li>
+                <li><a href="#tab-add-message-2">이미지</a></li>
+              </ul>
+            </div>
+            <ul class="panel-base">
+              <li id="tab-add-message-1">
+                <div class="items-input">
+                  <ul>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">레이아웃</span>
+                        <span class="select-base">
+                          <span class="value"></span>
+                          <select id="selectLayout">
+                            <option value="1">1열</option>
+                            <option value="2" selected>2열</option>
+                          </select>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="items-inner">
+                        <div class="item-s-area">
+                          <p class="item-s-tit">1열 (상단)</p>
+                          <div class="item-s-input">
+                            <ul>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트크기</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="폰트크기를 입력하세요" class="input-base tp2" value="2" />
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트두께</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="폰트두께를 입력하세요" class="input-base tp2" value="2" />
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트 색상</span>
+                                  <span class="select-base">
+                                    <span class="value"></span>
+                                    <select>
+                                      <option value="0">선택</option>
+                                      <option value="1" selected>Red</option>
+                                      <option value="2">Green</option>
+                                      <option value="3">Blue</option>
+                                    </select>
+                                  </span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">텍스트 입력</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="텍스트를 입력하세요" class="input-base tp2" />
+                                  </div>
+                                </div>
+                                <p class="info"><span>최대글자 수 3글자 입니다.</span></p>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="btns-wrap t-center mt12">
+                            <span class="btn-base tp3"><a href="#">삭제</a></span>
+                            <span class="btn-base"><a href="#">적용</a></span>
+                          </div>
+                        </div>
+                        <div class="item-s-area">
+                          <p class="item-s-tit">2열 (상단)</p>
+                          <div class="item-s-input">
+                            <ul>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트크기</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="폰트크기를 입력하세요" class="input-base tp2" value="2" />
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트두께</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="폰트두께를 입력하세요" class="input-base tp2" value="2" />
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">폰트 색상</span>
+                                  <span class="select-base">
+                                    <span class="value"></span>
+                                    <select>
+                                      <option value="0">선택</option>
+                                      <option value="1" selected>Red</option>
+                                      <option value="2">Green</option>
+                                      <option value="3">Blue</option>
+                                    </select>
+                                  </span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="input-area">
+                                  <span class="label">텍스트 입력</span>
+                                  <div class="input">
+                                    <input type="text" placeholder="텍스트를 입력하세요" class="input-base tp2" />
+                                  </div>
+                                </div>
+                                <p class="info"><span>최대글자 수 3글자 입니다.</span></p>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="btns-wrap t-center mt12">
+                            <span class="btn-base tp3"><a href="#">삭제</a></span>
+                            <span class="btn-base"><a href="#">적용</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">메시지 입력</span>
+                        <div class="input">
+                          <input type="text" placeholder="메시지를 입력하세요" class="input-base tp2" />
+                        </div>
+                      </div>
+                      <p class="info"><span>메시지 이름에 공백이 없어야 합니다.</span></p>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </li>
+              <li id="tab-add-message-2">
+                <div class="items-input">
+                  <ul>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">메시지 이름</span>
+                        <div class="input">
+                          <input type="text" placeholder="메시지 이름을 입력하세요" class="input-base tp2" />
+                        </div>
+                      </div>
+                      <p class="info"><span>메시지 이름에 공백이 없어야 합니다.</span></p>
+                    </li>
+                    <li>
+                      <div class="input-area">
+                        <span class="label">텍스트 입력</span>
+
+                        <!--
+                        <div class="input">
+                          <input type="text" placeholder="첨부파일을 업로드하세요" class="input-base tp2" />
+                        </div>
+                        -->
+
+                        <div class="input-wrap file">
+                          <input type="text" class="input-base tp2" placeholder="첨부파일을 업로드하세요" readonly />
+                          <span class="btn-base"><a href="#">파일찾기</a></span>
+                          <input type="file" id="addFile" />
+                          <a href="#" class="btn-delete"></a>
+                        </div>
+                      </div>
+                      <p class="info"><span>JPG, PNG, GIF, 파일크기 50MB, 최대 해상도 500X500px로 제한됩니다.</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .manage-area -->
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    $(window).on('load resize', function(){
+      $('.content-wrap .scenario-item').css('height', $(window).height() - 191);
+    });
+
+    $('.content-wrap.type-2 .msg-list li').on('click', function(){
+      $('.content-wrap.type-2 .msg-list li.on').removeClass('on');
+      $(this).addClass('on');
+
+      $('#scenario-detail-1').hide();
+
+      var imgSrc = $(this).find('dt img').attr('src');
+      $('#scenario-detail-2 .canvas-image img').attr('src', imgSrc);
+      $('#scenario-detail-2').show();
+    });
+
+    $('#addFile').on('change', function(){
+      var $target = $(this).closest('.input-wrap');
+      var fileValue = this.value.split('\\');  
+      var fileName = fileValue[fileValue.length-1];
+      $target.find('.input-base').val(fileName);
+      if (!$target.hasClass('active')) {
+        $target.addClass('active');
+      }
+    });
+    $('.input-wrap.file .btn-delete').on('click', function(){
+      var $target = $(this).closest('.input-wrap')
+      $target.find('.input-base').val('');
+      $target.removeClass('active');
+    });
+
+    $('#selectLayout').on('change', function(){
+      console.log(parseInt($(this).val()) === 1);
+      if (parseInt($(this).val()) === 1) {
+        $('#tab-add-message-1 .item-s-area:eq(1)').addClass('disabled');
+      } else {
+        $('#tab-add-message-1 .item-s-area:eq(1)').removeClass('disabled');
+      }
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    var Qtab = $.urlParam('tab');
+    var Qstate = $.urlParam('state');
+    if (Qsample == 'select') {
+      setTimeout(function(){
+        $('.content-wrap.type-2 .msg-list li:eq(1)').click();
+      }, 250);
+    }
+    if (Qpopup == 'addScenario') {
+      setTimeout(function(){
+        $('[href="#popup-add-scenario"]').click();
+      }, 250);
+    } else if (Qpopup == 'addMessage') {
+      setTimeout(function(){
+        $('[href="#popup-add-message"]').click();
+      }, 250);
+    }
+    if (Qtab == '2') {
+      setTimeout(function(){
+        $('[href="#tab-add-scenario-2"]').click();
+        $('[href="#tab-add-message-2"]').click();
+      }, 250);
+    }
+    if (Qstate == 'col1') {
+      setTimeout(function(){
+        $('#tab-add-message-1 #selectLayout').val('1').prop('selected', true);
+        $('#tab-add-message-1 #selectLayout').prev('.value').text('1열');
+        $('#tab-add-message-1 .item-s-area:eq(1)').addClass('disabled');
+      }, 250);
+    }
+  </script>
+</body>
+</html>

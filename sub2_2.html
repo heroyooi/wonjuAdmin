@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>AI 신호 이력</h3>
+          <div class="navi-area">
+            <a class="home" href="#">수집장치 관리</a>
+            <a href="#" class="current">AI 신호 이력</a>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="sub-tit-wrap">
+        <div class="sub-tit">
+          <span class="label">그룹명</span>
+          <span class="title">2024.04.04 - 해당 신호 미적용</span>
+        </div>
+        <div class="input-wrap select-input">
+          <span class="select-base">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>구간명</option>
+              <option value="1">구간 1</option>
+              <option value="2">구간 2</option>
+              <option value="3">구간 3</option>
+            </select>
+          </span>
+          <input type="text" class="input-base tp2" placeholder="VMS 이름을 입력하세요" />
+          <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
+        </div>
+      </div>
+      <div class="content-wrap type-5">
+        <div class="content-l">
+          <h3 class="b-tit">오전 첨두(07~09)</h3>
+          <div class="con-area">
+            <h4 class="tit">0000교차로</h4>
+            <div class="tb-wrap">
+              <table class="tb-list-tp2">
+                <colgroup>
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">1</th>
+                    <th scope="col">2</th>
+                    <th scope="col">3</th>
+                    <th scope="col">4</th>
+                    <th scope="col">5</th>
+                    <th scope="col">주기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2" scope="row">기존</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="ai">
+                    <th rowspan="2" scope="row">AI</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="line">
+                    <th scope="row">비교</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- .content-l -->
+        <div class="content-c">
+          <h3 class="b-tit">비 첨두(11~13)</h3>
+          <div class="con-area">
+            <h4 class="tit">0000교차로</h4>
+            <div class="tb-wrap">
+              <table class="tb-list-tp2">
+                <colgroup>
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">1</th>
+                    <th scope="col">2</th>
+                    <th scope="col">3</th>
+                    <th scope="col">4</th>
+                    <th scope="col">5</th>
+                    <th scope="col">주기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2" scope="row">기존</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="ai">
+                    <th rowspan="2" scope="row">AI</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="line">
+                    <th scope="row">비교</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- .content-c -->
+        <div class="content-r">
+          <h3 class="b-tit">오후 첨두(17~19)</h3>
+          <div class="con-area">
+            <h4 class="tit">0000교차로</h4>
+            <div class="tb-wrap">
+              <table class="tb-list-tp2">
+                <colgroup>
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="14.2857%" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">1</th>
+                    <th scope="col">2</th>
+                    <th scope="col">3</th>
+                    <th scope="col">4</th>
+                    <th scope="col">5</th>
+                    <th scope="col">주기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2" scope="row">기존</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="ai">
+                    <th rowspan="2" scope="row">AI</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                  <tr>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>00.0%</td>
+                    <td>000</td>
+                  </tr>
+                  <tr class="line">
+                    <th scope="row">비교</th>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->    
+  </div><!-- #wrap -->
+  <script>
+    $(window).on('load resize', function(){
+      $('.content-wrap.type-5 .con-area').css('height', $(window).height() - 259);
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    if (Qsample === 'select') {
+      
+    }
+  </script>
+</body>
+</html>
