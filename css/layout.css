@@ -71,12 +71,17 @@ body{width:100%;overflow-y:hidden;}
 .content-wrap.type-4 > div:nth-of-type(1){width:calc(100% - 600px);padding:16px 4px 16px 20px;}
 .content-wrap.type-4 > div:nth-of-type(2){width:600px;}
 
-.content-wrap.type-5{padding:0 20px;}
-.content-wrap.type-5 > div{width:33.333%;padding:0;border-top:1px solid #373d4f;border-left:1px solid #373d4f;border-bottom:1px solid #373d4f;overflow:hidden;}
-.content-wrap.type-5 > div:first-child{border-radius:4px 0 0 4px;}
-.content-wrap.type-5 > div:last-child{border-radius:0 4px 4px 0;border-right:1px solid #373d4f;}
+.content-wrap.type-5{margin:0 20px;overflow-y:auto;border:1px solid #373d4f;position:relative;border-radius:4px;}
+.content-wrap.type-5::-webkit-scrollbar{background:#373d4f;width:12px;}
+.content-wrap.type-5::-webkit-scrollbar-track{border-radius:6px;background:transparent;}
+.content-wrap.type-5::-webkit-scrollbar-thumb{background:#4c556d;border-radius:6px;background-clip:padding-box;border:3px solid transparent;}
+.content-wrap.type-5 > div{width:33.333%;padding:0;}
+.content-wrap.type-5 > div .con-area{border-left:1px solid #373d4f;}
+.content-wrap.type-5 > div:first-child .con-area{border-left:0;}
 .content-wrap.type-5::before{display:none;}
 .content-wrap.type-5 .con-area{padding:12px 16px;}
+.content-wrap.type-5 .con-area .tit{margin-top:20px;}
+.content-wrap.type-5 .con-area .tit:first-child{margin-top:0;}
 
 .content-wrap.type-6::before{display:none;}
 .content-wrap.type-6 > div{position: relative;}
@@ -335,7 +340,7 @@ body{width:100%;overflow-y:hidden;}
 .accident-area .acc-table tr.on td,
 .accident-area .acc-table tr:hover td{background-color:rgba(51, 165, 255, 0.5);color:#ffffff;}
 .accident-area .acc-table.c-scrollbar.on{height:400px;}
-.accident-area .acc-table.on th{display:table-cell;}
+.accident-area .acc-table.on th{display:table-cell;border-bottom:1px solid #008fff;}
 
 .accident-area .acc-table td .state{font-size:0;}
 .accident-area .acc-table td .state > *{display:inline-block;vertical-align:middle;font-size:13px;}
@@ -384,7 +389,7 @@ body{width:100%;overflow-y:hidden;}
 .period-detail .period-name span.last{width:auto;}
 .period-detail .period-name span.last em{position: static;transform:none;}
 
-.period-detail.ver-label .period-line-area{padding:0 44px;}
+.period-detail.ver-label .period-line-area{padding:0 44px;z-index:1;}
 .period-detail.ver-label .period-line-area.fe-period{margin-top:0;}
 .period-detail.ver-label .fe-label,
 .period-detail.ver-label .be-label{font-size:16px;color:#d6d9e2;font-weight:bold;position:absolute;top:91px;}
@@ -392,8 +397,14 @@ body{width:100%;overflow-y:hidden;}
 .period-detail.ver-label .be-label{right:28px;}
 
 .period-detail .period-name.relative{position: relative;left:0;right:0;margin:0 44px;}
-.period-detail .period-name.relative span{bottom:initial;top:20px;}
+.period-detail .period-name.relative span{bottom:initial;top:21px;}
 .period-detail .period-name.relative span em{transform:none;bottom:initial;left:0;}
+.period-detail .period-name.relative span em::before,
+.period-detail .period-name.relative span em::after{content:'';display:block;width:1px;height:20px;background-color:#4c556d;position: absolute;left:50%;}
+.period-detail .period-name.relative span em::before{transform:translateY(-100%);top:1px;}
+.period-detail .period-name.relative span em::after{transform:translateY(100%);top:-3px;}
+.period-detail .period-name.relative span:first-child em::before, .period-detail .period-name.relative span:first-child em::after{display:none;}
+.period-detail .period-name.relative span:last-child em::before, .period-detail .period-name.relative span:last-child em::after{display:none;}
 .period-detail.ver-label.ver-relative .fe-label, .period-detail.ver-label.ver-relative .be-label{top:99px;}
 
 .video-wrap{width:100%;}

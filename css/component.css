@@ -312,7 +312,7 @@
 .tb-list-tp2{table-layout:fixed;width:100%;}
 .tb-list-tp2 th, .tb-list-tp2 td{font-size:13px;line-height:1.4;text-align:center;border-left:1px solid #373d4f;border-bottom:1px solid #373d4f;}
 .tb-list-tp2 thead th{border-bottom:1px solid #008fff;}
-.tb-list-tp2 th:first-child{border-right:1px solid #008fff;}
+.tb-list-tp2 th:first-child{border-right:1px solid #008fff;border-left:0;}
 .tb-list-tp2 th{font-weight:600;color:#7b86a4;background:rgba(34, 38, 49, 0.5);padding:9px;}
 .tb-list-tp2 td{color:#d6d9e2;padding:12.5px 9px;}
 .tb-list-tp2 td:hover{background-color: rgba(255, 49, 98, 0.7);}
