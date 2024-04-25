@@ -779,7 +779,8 @@
               <span class="line-st2" style="width: 32.09%"></span>
               <span class="line-st1" style="width: 17.849%"></span>
             </div>
-            <span class="s-ico new lidar up" id="ico-period-modal5" style="left: 2.3%;"></span>
+            <span class="s-ico new cctv up" id="ico-period-modal5" style="left: 20%;"></span>
+            <span class="s-ico new lidar up" style="left: 49.2%;"></span>
             <span class="s-ico new lidar up" id="ico-period-modal8" style="left: 96.2%;"></span>
           </div>
 
@@ -801,8 +802,8 @@
             <span class="s-ico new vms down" id="ico-period-modal4" style="left: 35%;"></span>
             <span class="s-ico new vms down" id="ico-period-modal6" style="left: 45%;"></span>
             <span class="s-ico new vms down" id="ico-period-modal7" style="left: 65%;"></span>
-            <span class="s-ico new lidar down" style="left: 75%;"></span>
-            <span class="s-ico new cctv down" id="ico-period-modal10" style="left: 92%;"></span>
+            <span class="s-ico new lidar down" style="left: 69.8%;"></span>
+            <span class="s-ico new cctv down" id="ico-period-modal10" style="left: 96.2%;"></span>
           </div>
           <span class="be-label">원주</span>
 
@@ -876,12 +877,12 @@
               <span class="line-st4" style="width: 33.333%"></span>
               <span class="line-st1" style="width: 22.2846%"></span>
             </div>
-            <span class="s-ico new dfs up" style="left: 31.5%;"></span>
-            <span class="s-ico new cctv up" style="left: 33.5%;"></span>
-            <span class="s-ico new dfs up" style="left: 35.5%;"></span>
+            <span class="s-ico new dfs up" style="left: 32.5%;"></span>
+            <span class="s-ico new dfs up" style="left: 34.2%;"></span>
             <span class="s-ico new vms up" style="left: 44%;"></span>
             <span class="s-ico new vms up" style="left: 53%;"></span>
-            <span class="s-ico new vms up" style="left: 64%;"></span>
+            <span class="s-ico new cctv up" style="left: 56%;"></span>
+            <span class="s-ico new vms up" style="left: 63%;"></span>
             <span class="s-ico new vms up" style="left: 75%;"></span>
             <span class="s-ico new vms up" style="left: 84%;"></span>
             <span class="s-ico new vms up" style="left: 96.2%;"></span>
@@ -900,8 +901,8 @@
               <span class="line-st2" style="width: 22.1846%"></span>
             </div>
             <span class="s-ico new lidar down" style="left: 32.5%;"></span>
-            <span class="s-ico new dfs down" style="left: 34.5%;"></span>
-            <span class="s-ico new lidar down" style="left: 65%;"></span>
+            <span class="s-ico new dfs down" style="left: 34.2%;"></span>
+            <span class="s-ico new lidar down" style="left: 65.3%;"></span>
           </div>
           <span class="be-label">새말</span>
 
@@ -938,6 +939,7 @@
             <span class="s-ico new vms down" style="left: 20%;"></span>
             <span class="s-ico new vms down" style="left: 35%;"></span>
             <span class="s-ico new radar down" style="left: 50.2%;"></span>
+            <span class="s-ico new cctv down" style="left: 51.9%;"></span>
             <span class="s-ico new vms down" style="left: 65%;"></span>
             <span class="s-ico new vms down" style="left: 80%;"></span>
             <span class="s-ico new radar down" style="left: 90%;"></span>
@@ -963,6 +965,7 @@
               <span class="line-st1" style="width: 100%"></span>
             </div>
             <span class="s-ico new signal up" style="left: 5%;"></span>
+            <span class="s-ico new cctv up" style="left: 7.3%;"></span>
             <span class="s-ico new signal up" style="left: 10%;"></span>
             <span class="s-ico new signal up" style="left: 15%;"></span>
             <span class="s-ico new signal up" style="left: 21%;"></span>
@@ -972,6 +975,7 @@
             <span class="s-ico new signal up" style="left: 44%;"></span>
             <span class="s-ico new signal up" style="left: 50%;"></span>
             <span class="s-ico new signal up" style="left: 56%;"></span>
+            <span class="s-ico new cctv up" style="left: 58.3%;"></span>
             <span class="s-ico new signal up" style="left: 62%;"></span>
             <span class="s-ico new signal up" style="left: 68%;"></span>
             <span class="s-ico new signal up" style="left: 74%;"></span>
@@ -979,7 +983,7 @@
             <span class="s-ico new signal up" style="left: 84%;"></span>
             <span class="s-ico new signal up" style="left: 88%;"></span>
             <span class="s-ico new signal up" style="left: 92%;"></span>
-            <span class="s-ico new signal up" style="left: 96.2%;"></span>
+            <span class="s-ico new signal up" style="left: 96.8%;"></span>
           </div>
 
           <div class="period-name relative">
@@ -1012,7 +1016,7 @@
             <span class="s-ico new signal down" style="left: 82%;"></span>
             <span class="s-ico new signal down" style="left: 86%;"></span>
             <span class="s-ico new signal down" style="left: 90%;"></span>
-            <span class="s-ico new signal down" style="left: 95%;"></span>
+            <span class="s-ico new signal down" style="left: 96%;"></span>
             
           </div>
           <span class="be-label">횡성</span>
@@ -1041,6 +1045,7 @@
     $('.layer-wrap .btn-accident').on('click', function(e){
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
+      $('.layer-wrap.on, .layer-wrap .btn-layer, .layer-wrap .btn-status').removeClass('on');
       if (!$(this).hasClass('on')) {
         $(this).addClass('on');
         $target.addClass('on');
@@ -1053,6 +1058,7 @@
     $('.layer-wrap .btn-status').on('click', function(e){
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
+      $('.layer-wrap.on, .layer-wrap .btn-layer, .layer-wrap .btn-accident').removeClass('on');
       if (!$(this).hasClass('on')) {
         $(this).addClass('on');
         $target.addClass('on');
@@ -1065,6 +1071,7 @@
     $('.layer-wrap .btn-layer').on('click', function(e){
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
+      $('.layer-wrap.on, .layer-wrap .btn-status, .layer-wrap .btn-accident').removeClass('on');
       if (!$(this).hasClass('on')) {
         $(this).addClass('on');
         $target.addClass('on');

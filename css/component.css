@@ -315,7 +315,7 @@
 .tb-list-tp2 th:first-child{border-right:1px solid #008fff;border-left:0;}
 .tb-list-tp2 th{font-weight:600;color:#7b86a4;background:rgba(34, 38, 49, 0.5);padding:9px;}
 .tb-list-tp2 td{color:#d6d9e2;padding:12.5px 9px;}
-.tb-list-tp2 td:hover{background-color: rgba(255, 49, 98, 0.7);}
+.tb-list-tp2 td.red{background-color: rgba(255, 49, 98, 0.7);}
 .tb-list-tp2 tbody tr.ai th, .tb-list-tp2 tbody tr.ai + tr td{border-bottom:1px solid rgba(0, 143, 255, 0.2);}
 .tb-list-tp2 tbody tr.line th, .tb-list-tp2 tbody tr.line td{border-bottom:1px solid rgba(0, 143, 255, 0.2);}
 
