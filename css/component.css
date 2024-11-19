@@ -151,47 +151,47 @@
 .s-toggle.on::before{background-color:#008fff;border:1px solid #33a5ff;left:22px;}
 
 /* icon */
-.s-ico{display:inline-block;width:28px;height:28px;background-position:50% 50%;background-repeat:no-repeat;border-radius:50%;cursor:pointer;position: relative;z-index:1;}
-.s-ico.lidar{background-image:url(../img/icon/ico-s-lidar-def.svg);background-color:#490083;}
-.s-ico.radar{background-image:url(../img/icon/ico-s-radar-def.svg);background-color:#0c523f;}
-.s-ico.cctv{background-image:url(../img/icon/ico-s-cctv-def.svg);background-color:#003966;}
-.s-ico.vms{background-image:url(../img/icon/ico-s-vms-def.svg);background-color:#312193;}
-.s-ico.dfs{background-image:url(../img/icon/ico-s-dfs-def.svg);background-color:rgba(5, 89, 100, 0.8);}
-.s-ico.roadsurface{background-image:url(../img/icon/ico-s-roadsurface-def.svg);background-color:#671068;}
-.s-ico.signal{background-image:url(../img/icon/ico-s-signal-def.svg);background-color:#306c36;}
-.s-ico.lidar:not(.disabled).on{background-image:url(../img/icon/ico-s-lidar-hor.svg);box-shadow: 0 0 8px 0 rgba(155, 29, 255, 0.5);background-color: #9b1dff;}
-.s-ico.radar:not(.disabled).on{background-image:url(../img/icon/ico-s-radar-hor.svg);box-shadow: 0 0 8px 0 rgba(70, 228, 184, 0.5);background-color: #25c99b;}
-.s-ico.cctv:not(.disabled).on{background-image:url(../img/icon/ico-s-cctv-hor.svg);box-shadow: 0 0 8px 0 rgba(0, 143, 255, 0.5);background-color: #008fff;}
-.s-ico.vms:not(.disabled).on{background-image:url(../img/icon/ico-s-vms-hor.svg);box-shadow: 0 0 8px 0 rgba(91, 64, 255, 0.5);background-color: #5b40ff;}
-.s-ico.dfs:not(.disabled).on{background-image:url(../img/icon/ico-s-dfs-hor.svg);box-shadow: 0 0 8px 0 rgba(17, 215, 242, 0.5);background-color: rgba(17, 215, 242, 0.8);}
-.s-ico.roadsurface:not(.disabled).on{background-image:url(../img/icon/ico-s-roadsurface-hor.svg);box-shadow: 0 0 8px 0 rgba(221, 49, 224, 0.5);background-color: #dd31e0;}
-.s-ico.signal:not(.disabled).on{background-image:url(../img/icon/ico-s-signal-hor.svg);box-shadow: 0 0 8px 0 rgba(221, 49, 224, 0.5);background-color: #4cb556;}
-.s-ico.on{z-index:2;}
-.s-ico.disabled{background-color: #373d4f;pointer-events:none;}
+.s-ico:not(.ai){display:inline-block;width:28px;height:28px;background-position:50% 50%;background-repeat:no-repeat;border-radius:50%;cursor:pointer;position: relative;z-index:1;}
+.s-ico:not(.ai).lidar{background-image:url(../img/icon/ico-s-lidar-def.svg);background-color:#490083;}
+.s-ico:not(.ai).radar{background-image:url(../img/icon/ico-s-radar-def.svg);background-color:#0c523f;}
+.s-ico:not(.ai).cctv{background-image:url(../img/icon/ico-s-cctv-def.svg);background-color:#003966;}
+.s-ico:not(.ai).vms{background-image:url(../img/icon/ico-s-vms-def.svg);background-color:#312193;}
+.s-ico:not(.ai).dfs{background-image:url(../img/icon/ico-s-dfs-def.svg);background-color:rgba(5, 89, 100, 0.8);}
+.s-ico:not(.ai).roadsurface{background-image:url(../img/icon/ico-s-roadsurface-def.svg);background-color:#671068;}
+.s-ico:not(.ai).signal{background-image:url(../img/icon/ico-s-signal-def.svg);background-color:#306c36;}
+.s-ico:not(.ai).lidar:not(.disabled).on{background-image:url(../img/icon/ico-s-lidar-hor.svg);box-shadow: 0 0 8px 0 rgba(155, 29, 255, 0.5);background-color: #9b1dff;}
+.s-ico:not(.ai).radar:not(.disabled).on{background-image:url(../img/icon/ico-s-radar-hor.svg);box-shadow: 0 0 8px 0 rgba(70, 228, 184, 0.5);background-color: #25c99b;}
+.s-ico:not(.ai).cctv:not(.disabled).on{background-image:url(../img/icon/ico-s-cctv-hor.svg);box-shadow: 0 0 8px 0 rgba(0, 143, 255, 0.5);background-color: #008fff;}
+.s-ico:not(.ai).vms:not(.disabled).on{background-image:url(../img/icon/ico-s-vms-hor.svg);box-shadow: 0 0 8px 0 rgba(91, 64, 255, 0.5);background-color: #5b40ff;}
+.s-ico:not(.ai).dfs:not(.disabled).on{background-image:url(../img/icon/ico-s-dfs-hor.svg);box-shadow: 0 0 8px 0 rgba(17, 215, 242, 0.5);background-color: rgba(17, 215, 242, 0.8);}
+.s-ico:not(.ai).roadsurface:not(.disabled).on{background-image:url(../img/icon/ico-s-roadsurface-hor.svg);box-shadow: 0 0 8px 0 rgba(221, 49, 224, 0.5);background-color: #dd31e0;}
+.s-ico:not(.ai).signal:not(.disabled).on{background-image:url(../img/icon/ico-s-signal-hor.svg);box-shadow: 0 0 8px 0 rgba(221, 49, 224, 0.5);background-color: #4cb556;}
+.s-ico:not(.ai).on{z-index:2;}
+.s-ico:not(.ai).disabled{background-color: #373d4f;pointer-events:none;}
 
-.s-ico.new.lidar{background-image:url(../img/icon/new/ico-s-lidar-def.svg);background-color:#fe6e26;}
-.s-ico.new.radar{background-image:url(../img/icon/new/ico-s-radar-def.svg);background-color:#48c560;}
-.s-ico.new.cctv{background-image:url(../img/icon/new/ico-s-cctv-def.svg);background-color:#008fff;}
-.s-ico.new.vms{background-image:url(../img/icon/new/ico-s-vms-def.svg);background-color:#5b40ff;}
-.s-ico.new.dfs{background-image:url(../img/icon/new/ico-s-dfs-def.svg);background-color:#15b4cc;}
-.s-ico.new.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-def.svg);background-color:#df4ff0;}
-.s-ico.new.signal{background-image:url(../img/icon/new/ico-s-signal-def.svg);background-color:#ff4a78;}
+.s-ico:not(.ai).new.lidar{background-image:url(../img/icon/new/ico-s-lidar-def.svg);background-color:#fe6e26;}
+.s-ico:not(.ai).new.radar{background-image:url(../img/icon/new/ico-s-radar-def.svg);background-color:#48c560;}
+.s-ico:not(.ai).new.cctv{background-image:url(../img/icon/new/ico-s-cctv-def.svg);background-color:#008fff;}
+.s-ico:not(.ai).new.vms{background-image:url(../img/icon/new/ico-s-vms-def.svg);background-color:#5b40ff;}
+.s-ico:not(.ai).new.dfs{background-image:url(../img/icon/new/ico-s-dfs-def.svg);background-color:#15b4cc;}
+.s-ico:not(.ai).new.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-def.svg);background-color:#df4ff0;}
+.s-ico:not(.ai).new.signal{background-image:url(../img/icon/new/ico-s-signal-def.svg);background-color:#ff4a78;}
 
-.s-ico.new:not(.disabled).on.lidar{background-image:url(../img/icon/new/ico-s-lidar-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.radar{background-image:url(../img/icon/new/ico-s-radar-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.cctv{background-image:url(../img/icon/new/ico-s-cctv-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.vms{background-image:url(../img/icon/new/ico-s-vms-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.dfs{background-image:url(../img/icon/new/ico-s-dfs-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
-.s-ico.new:not(.disabled).on.signal{background-image:url(../img/icon/new/ico-s-signal-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.lidar{background-image:url(../img/icon/new/ico-s-lidar-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.radar{background-image:url(../img/icon/new/ico-s-radar-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.cctv{background-image:url(../img/icon/new/ico-s-cctv-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.vms{background-image:url(../img/icon/new/ico-s-vms-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.dfs{background-image:url(../img/icon/new/ico-s-dfs-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
+.s-ico:not(.ai).new:not(.disabled).on.signal{background-image:url(../img/icon/new/ico-s-signal-hor.svg);background-color: rgba(255, 255, 255, 0.9);}
 
-.s-ico.new.disabled.lidar{background-image:url(../img/icon/new/ico-s-lidar-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.radar{background-image:url(../img/icon/new/ico-s-radar-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.cctv{background-image:url(../img/icon/new/ico-s-cctv-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.vms{background-image:url(../img/icon/new/ico-s-vms-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.dfs{background-image:url(../img/icon/new/ico-s-dfs-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-dis.svg);background-color: #373d4f;}
-.s-ico.new.disabled.signal{background-image:url(../img/icon/new/ico-s-signal-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.lidar{background-image:url(../img/icon/new/ico-s-lidar-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.radar{background-image:url(../img/icon/new/ico-s-radar-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.cctv{background-image:url(../img/icon/new/ico-s-cctv-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.vms{background-image:url(../img/icon/new/ico-s-vms-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.dfs{background-image:url(../img/icon/new/ico-s-dfs-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-dis.svg);background-color: #373d4f;}
+.s-ico:not(.ai).new.disabled.signal{background-image:url(../img/icon/new/ico-s-signal-dis.svg);background-color: #373d4f;}
 
 
 /* modal */
@@ -352,3 +352,130 @@
 .counter-base .btn-plus:hover{background-image:url(../img/icon/ic_stb_arrow_b.svg);}
 .counter-base .btn-minus:hover{background-image:url(../img/icon/ic_stb_arrow_b.svg);}
 .counter-base.on{border:1px solid #008fff;}
+
+/* 2024-11 추가 - seoul */
+/* datepicker */
+.tui-datepicker{border-radius:4px;overflow:hidden;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border: 0;background-color:transparent;z-index:1;}
+.tui-datepicker-type-date, .tui-calendar{width:238px;}
+.tui-datepicker .tui-calendar{padding-bottom:8px;background-color: rgba(59, 63, 92, 0.95);}
+.tui-datepicker-body .tui-timepicker, .tui-datepicker-footer .tui-timepicker{width:238px;}
+.tui-calendar .tui-calendar-body{padding-top:8px;}
+.tui-calendar th{height:21px;}
+.tui-calendar .tui-calendar-body-header th{color:#b2bbce;font-size:13px;}
+.tui-calendar td{height:32px;color:#fff;font-size:14px;}
+.tui-datepicker .tui-is-blocked{color:#778298;}
+.tui-datepicker-input{height:38px;border:0;width:200px;}
+.tui-datepicker-input > input{padding:10px 27px 10px 16px;font-size:13px;color:#b2bbce;border-radius:8px;background-color:#222631;border:1px solid #222631;}
+.tui-datepicker-input > input:focus{border:1px solid #008fff;color:#008fff;}
+.tui-datepicker-input > input:disabled{background-color:rgba(79, 82, 107, 0.3);color:rgba(255, 255, 255, 0.3);}
+.tui-calendar .tui-calendar-title{color:#fff;}
+.tui-calendar .tui-calendar-title-today{font-size:14px;}
+.tui-calendar .tui-calendar-title-today,
+.tui-calendar .tui-calendar-title-today:hover{background-color: rgba(0, 0, 0, 0.1);color:#fff;}
+.tui-calendar .tui-calendar-header{border-bottom:0;}
+.tui-calendar .tui-calendar-btn-prev-month:after{background:url(../img/ico-16-arrowleft-def.png) 50% 50% no-repeat;}
+.tui-calendar .tui-calendar-btn-next-month:after{background:url(../img/ico-16-arrowright-def.png) 50% 50% no-repeat;}
+.tui-calendar-btn{background-color: transparent;}
+.tui-datepicker.tui-rangepicker .tui-is-selected-range{background-color:rgba(26, 194, 255, 0.15);color:#fff;}
+.tui-datepicker .tui-is-selectable:hover{/*-color:rgba(255, 255, 255, 0.1);color:#fff;border-radius:4px;*/background-color:inherit;color:#fff;background-color: rgba(0, 143, 255, 0.2);border-radius:4px;}
+.tui-datepicker .tui-is-selectable.tui-is-selected, .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#00bbfe;border-radius:4px;}
+.tui-calendar .tui-calendar-today{color:#00bbfe;}
+.tui-calendar .tui-calendar-today:hover{color:#00bbfe;}
+.tui-datepicker-input.tui-has-focus .tui-ico-date{background-position:0 0;width:24px;height:24px;right:8px;top:8px;margin:0;background-image:url(../img/ico-24-calendar-def.png);}
+.tui-datepicker-input.tui-has-focus input:focus + .tui-ico-date{background-image:url(../img/ico-24-calendar-act.png);}
+.tui-datepicker-input.tui-has-focus input:disabled + .tui-ico-date{background-image:url(../img/ico-24-calendar-dis.png);}
+.tui-calendar-header-info{display:none;}
+
+.tb-list.ai{table-layout:fixed;width:100%;}
+.tb-list.ai th, .tb-list.ai td{font-size:13px;line-height:1.4;text-align:center;border-bottom:1px solid #373d4f;border-left:0;}
+.tb-list.ai thead th{border-bottom:1px solid #008fff;}
+.tb-list.ai th{font-weight:600;color:#fff;background-color:rgba(34, 38, 49, 0.5);padding:9px;}
+.tb-list.ai th.first{color:#7b86a4;}
+.tb-list.ai td{color:#d6d9e2;padding:9.5px 9px;}
+.tb-list.ai td.red{background-color: rgba(255, 49, 98, 0.7);}
+
+.input-wrap.ai{margin-top:0;gap:0 8px;}
+.input-wrap.ai .select-base{width:100%;}
+.input-wrap.ai .btn-ico{width:16px;height:16px;}
+.input-wrap.ai .btn-refresh{background-image:url(../img/seoul/ico-s-refresh-w.png);}
+
+/* .input-wrap{display:flex;align-items:center;position:relative;gap:0 8px;} */
+.input-wrap.ai .label{font-size:13px;font-weight:600;color:#b8bdcd;flex-shrink:0;padding-left:8px;position: relative;}
+.input-wrap.ai .label:first-child{padding-left:0;}
+.input-wrap.ai .label::before{content:'';display:block;width:1px;height:16px;background-color: #4c556d;position:absolute;left:0;top:1px;}
+.input-wrap.ai .label:first-child::before{display:none;}
+
+.radio-base.ai input{position:absolute;display:none;}
+.radio-base.ai input + label{position:relative;padding-left:20px;font-size:14px;font-weight:500;color:#757575;display:inline-block;line-height:14px;vertical-align:middle;}
+.radio-base.ai input + label:before{content:'';display:block;width:14px;height:14px;position: absolute;left:0;top:0;border-radius:50%;border:1px solid #4c556d;background-color:#2c3240;}
+.radio-base.ai input:checked + label:before{background-color: #008fff;border-color:#008fff;}
+.radio-base.ai input:checked + label:after{content:'';display:block;width:6px;height:6px;position:absolute;left:4px;top:4px;background:#fff;border-radius:50%;}
+.radio-list.ai{font-size:0;}
+.radio-list.ai li{display:inline-block;margin-left:8px;}
+.radio-list.ai li:first-child{margin-left:0;}
+
+.s-ico.ai{display:inline-block;background-position:50% 50%;background-repeat:no-repeat;border-radius:50%;cursor:pointer;position: relative;z-index:1;}
+
+.s-ico.ai.tp1{width:18px;height:18px;}
+.s-ico.ai.tp1.radar{background-image:url(../img/seoul/ico-s-radar-def.svg);}
+.s-ico.ai.tp1.cctv{background-image:url(../img/seoul/ico-s-cctv-def.svg);}
+.s-ico.ai.tp1.vms{background-image:url(../img/seoul/ico-s-vms-def.svg);}
+.s-ico.ai.tp1.dfs{background-image:url(../img/seoul/ico-s-dfs-def.svg);}
+.s-ico.ai.tp1.vds{background-image:url(../img/seoul/ico-s-vds-def.svg);}
+.s-ico.ai.tp1.all{background-image:url(../img/seoul/ico-s-all-def.svg);}
+
+.s-ico.ai.tp1.radar:hover, .s-ico.ai.tp1.radar.on{background-image:url(../img/seoul/ico-s-radar-hor.svg);}
+.s-ico.ai.tp1.cctv:hover, .s-ico.ai.tp1.cctv.on{background-image:url(../img/seoul/ico-s-cctv-hor.svg);}
+.s-ico.ai.tp1.vms:hover, .s-ico.ai.tp1.vms.on{background-image:url(../img/seoul/ico-s-vms-hor.svg);}
+.s-ico.ai.tp1.dfs:hover, .s-ico.ai.tp1.dfs.on{background-image:url(../img/seoul/ico-s-dfs-hor.svg);}
+.s-ico.ai.tp1.vds:hover, .s-ico.ai.tp1.vds.on{background-image:url(../img/seoul/ico-s-vds-hor.svg);}
+.s-ico.ai.tp1.all:hover, .s-ico.ai.tp1.all.on{background-image:url(../img/seoul/ico-s-all-hor.svg);}
+
+.s-ico.ai.tp1.radar.disabled{background-image:url(../img/seoul/ico-s-radar-dis.svg);}
+.s-ico.ai.tp1.cctv.disabled{background-image:url(../img/seoul/ico-s-cctv-dis.svg);}
+.s-ico.ai.tp1.vms.disabled{background-image:url(../img/seoul/ico-s-vms-dis.svg);}
+.s-ico.ai.tp1.dfs.disabled{background-image:url(../img/seoul/ico-s-dfs-dis.svg);}
+.s-ico.ai.tp1.vds.disabled{background-image:url(../img/seoul/ico-s-vds-dis.svg);}
+.s-ico.ai.tp1.all.disabled{background-image:url(../img/seoul/ico-s-all-dis.svg);}
+
+
+.s-ico.ai.tp2{width:28px;height:28px;}
+.s-ico.ai.tp2.radar{background-image:url(../img/seoul/ico-radar-poi-def.svg);}
+.s-ico.ai.tp2.cctv{background-image:url(../img/seoul/ico-cctv-poi-def.svg);}
+.s-ico.ai.tp2.vms{background-image:url(../img/seoul/ico-vms-poi-def.svg);}
+.s-ico.ai.tp2.dfs{background-image:url(../img/seoul/ico-dfs-poi-def.svg);}
+.s-ico.ai.tp2.vds{background-image:url(../img/seoul/ico-vds-poi-def.svg);}
+.s-ico.ai.tp2.all{background-image:url(../img/seoul/ico-all-poi-def.svg);}
+
+.s-ico.ai.tp2.radar:hover, .s-ico.ai.tp2.radar.on{background-image:url(../img/seoul/ico-radar-poi-hor.svg);}
+.s-ico.ai.tp2.cctv:hover, .s-ico.ai.tp2.cctv.on{background-image:url(../img/seoul/ico-cctv-poi-hor.svg);}
+.s-ico.ai.tp2.vms:hover, .s-ico.ai.tp2.vms.on{background-image:url(../img/seoul/ico-vms-poi-hor.svg);}
+.s-ico.ai.tp2.dfs:hover, .s-ico.ai.tp2.dfs.on{background-image:url(../img/seoul/ico-dfs-poi-hor.svg);}
+.s-ico.ai.tp2.vds:hover, .s-ico.ai.tp2.vds.on{background-image:url(../img/seoul/ico-vds-poi-hor.svg);}
+.s-ico.ai.tp2.all:hover, .s-ico.ai.tp2.all.on{background-image:url(../img/seoul/ico-all-poi-hor.svg);}
+
+.s-ico.ai.tp2.radar.disabled{background-image:url(../img/seoul/ico-radar-poi-dis.svg);}
+.s-ico.ai.tp2.cctv.disabled{background-image:url(../img/seoul/ico-cctv-poi-dis.svg);}
+.s-ico.ai.tp2.vms.disabled{background-image:url(../img/seoul/ico-vms-poi-dis.svg);}
+.s-ico.ai.tp2.dfs.disabled{background-image:url(../img/seoul/ico-dfs-poi-dis.svg);}
+.s-ico.ai.tp2.vds.disabled{background-image:url(../img/seoul/ico-vds-poi-dis.svg);}
+.s-ico.ai.tp2.all.disabled{background-image:url(../img/seoul/ico-all-poi-dis.svg);}
+.s-ico.ai.tp2.poi:hover, .s-ico.ai.tp2.poi.on{box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);}
+
+.s-ico.ai.tp3{width:24px;height:24px;}
+.s-ico.ai.tp3.radar{background-image:url(../img/seoul/ico-radar-def.svg);}
+.s-ico.ai.tp3.cctv{background-image:url(../img/seoul/ico-cctv-def.svg);}
+.s-ico.ai.tp3.vms{background-image:url(../img/seoul/ico-vms-def.svg);}
+.s-ico.ai.tp3.dfs{background-image:url(../img/seoul/ico-dfs-def.svg);}
+.s-ico.ai.tp3.vds{background-image:url(../img/seoul/ico-vds-def.svg);}
+.s-ico.ai.tp3.all{background-image:url(../img/seoul/ico-all-def.svg);}
+
+.s-ico.ai.tp3.radar:hover, .s-ico.ai.tp3.radar.on{background-image:url(../img/seoul/ico-radar-hov.svg);}
+.s-ico.ai.tp3.cctv:hover, .s-ico.ai.tp3.cctv.on{background-image:url(../img/seoul/ico-cctv-hov.svg);}
+.s-ico.ai.tp3.vms:hover, .s-ico.ai.tp3.vms.on{background-image:url(../img/seoul/ico-vms-hov.svg);}
+.s-ico.ai.tp3.dfs:hover, .s-ico.ai.tp3.dfs.on{background-image:url(../img/seoul/ico-dfs-hov.svg);}
+.s-ico.ai.tp3.vds:hover, .s-ico.ai.tp3.vds.on{background-image:url(../img/seoul/ico-vds-hov.svg);}
+.s-ico.ai.tp3.all:hover, .s-ico.ai.tp3.all.on{background-image:url(../img/seoul/ico-all-hov.svg);}
+
+.s-ico.ai.on{z-index:2;}
+.s-ico.ai.disabled{background-color: #373d4f;pointer-events:none;}

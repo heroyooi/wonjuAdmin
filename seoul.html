@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 서울지방국토관리청 통합모니터링 시스템 </title>
+  <link rel="icon" href="img/ico-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집 장비 관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">AI 영상 분석</a>
+        </li>
+        <li>
+          <a href="#">위험도 예측</a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="top-wrap">
+        <div class="video-area">
+          <div class="video"
+            style="background-color:#333; font-size: 24px; color: #fff; display:flex; justify-content: center; align-items: center; width: 438px; height: 328px;">
+            영상</div>
+        </div>
+        <div class="info-area">
+          <div class="input-wrap ai">
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0">선택</option>
+                <option value="1" selected>팔탄교차로~ 율암교차로</option>
+                <option value="2">Value 2</option>
+                <option value="3">Value 3</option>
+              </select>
+            </span>
+            <a href="#" class="btn-ico btn-refresh"></a>
+          </div>
+          <div class="tb-wrap mt8">
+            <table class="tb-list ai">
+              <colgroup>
+                <col width="*" />
+                <col width="74px" />
+                <col width="74px" />
+                <col width="74px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" class="first">구분</th>
+                  <th scope="col">대형</th>
+                  <th scope="col">중형</th>
+                  <th scope="col">소형</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:50~13:00</th>
+                  <td>9</td>
+                  <td>20</td>
+                  <td>13</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- .top-wrap -->
+      <div class="con-wrap">
+        <div class="input-wrap ai">
+          <span class="label">구간명</span>
+          <span class="select-base" style="width: 200px;">
+            <span class="value"></span>
+            <select>
+              <option value="0">선택</option>
+              <option value="1" selected>팔탄교차로~ 율암교차로</option>
+              <option value="2">Value 2</option>
+              <option value="3">Value 3</option>
+            </select>
+          </span>
+          <ul class="radio-list ai ml8">
+            <li>
+              <span class="radio-base ai">
+                <input type="radio" id="radio-date-1" name="radio-date" checked />
+                <label for="radio-date-1">일일</label>
+              </span>
+            </li>
+            <li>
+              <span class="radio-base ai">
+                <input type="radio" id="radio-date-2" name="radio-date" />
+                <label for="radio-date-2">기간</label>
+              </span>
+            </li>
+          </ul>
+          <span class="label">조회일자</span>
+
+          <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 120px;" id="search-oneway">
+            <input id="datepicker-input" type="text" aria-label="Date" placeholder="0000/00/00" class="t-center" />
+            <span class="tui-ico-date"></span>
+            <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+          </div>
+
+          <div class="input-wrap input-datepicker" id="search-period" style="display: none;">
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 120px;">
+              <input id="startpicker-input1" type="text" aria-label="Date" placeholder="0000/00/00" class="t-center">
+              <span class="tui-ico-date"></span>
+              <div id="startpicker-container1" style="margin-left: -1px;"></div>
+            </div>
+            <span class="bridge">~</span>
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 120px;">
+              <input id="endpicker-input1" type="text" aria-label="Date" placeholder="0000/00/00" class="t-center">
+              <span class="tui-ico-date"></span>
+              <div id="endpicker-container1" style="margin-left: -1px;"></div>
+            </div>
+          </div>
+
+          <span class="btn-base ml8"><a href="#"><em class="search">검색</em></a></span>
+        </div>
+        <div class="chart-area"
+          style="background-color: #222631;display:flex;justify-content: center;align-items: center;">
+          <p style="font-size:24px;font-weight:700;line-height:1.4;color:#4c556d;">Chart Area</p>
+        </div>
+      </div><!-- .con-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+        // days
+        DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        // daysShort
+        D: ['일', '월', '화', '수', '목', '금', '토'],
+        // months
+        MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+        // monthsShort
+        MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general', {
+      language: 'customKey',
+      // date: new Date(),
+      input: {
+        element: '#datepicker-input',
+        format: 'YYYY/MM/dd',
+      }
+    });
+
+    var today1 = new Date();
+    var picker1 = tui.DatePicker.createRangePicker({
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1',
+        container: '#startpicker-container1'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1',
+        container: '#endpicker-container1'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY/MM/dd',
+    });
+
+    picker1.on('change:end', () => {
+      console.log(123);
+    });
+
+    $('#radio-date-1').on('change', function(){
+      if ($(this).is(':checked')) {
+        $('#search-oneway').show();
+        $('#search-period').hide();
+      }
+    });
+
+    $('#radio-date-2').on('change', function(){
+      if ($(this).is(':checked')) {
+        $('#search-oneway').hide();
+        $('#search-period').show();
+      }
+    });
+
+    $(window).on('load resize', function () {
+      $('.chart-area').css('height', $(window).height() - $('.chart-area').offset().top - 16);
+    });
+  </script>
+</body>
+
+</html>

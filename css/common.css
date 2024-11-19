@@ -2,6 +2,8 @@
 
 @import url('base.css');
 @import url('layout.css');
+@import url('tui-date-picker.css'); /* 2024-11 추가 */
+@import url('tui-time-picker.css'); /* 2024-11 추가 */
 @import url('component.css');
 
 @import url('jquery-ui.min.css');
