@@ -87,4 +87,5 @@ body.isMac{font-weight:500;}/* Mac 폰트굵기 이슈 대응 */
 .t-right{text-align:right !important;}
 
 /* 2024-11 추가 - seoul */
+.ml8{margin-left:8px !important;}
 .mt8{margin-top:8px !important;}
