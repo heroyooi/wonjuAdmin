@@ -761,6 +761,129 @@
         </div>
       </div><!-- .modal-wrap -->
 
+      <div class="modal-wrap type-2" id="modalCell" style="left: 50%; transform: translateX(-50%); top: 315px; width: 942px;">
+          <div class="modal-head">
+            <p class="tit">셀단위 분석</p>
+            <a href="#" class="close"></a>
+          </div>
+          <div class="modal-period">
+            <span>아산 방면</span>
+            <span>안산 방면</span>
+          </div>
+          <div class="modal-cell">
+            <div class="cell-wrap">
+              <a class="cell-btn-l" href="javascript:;"></a>
+              <div class="cell-area">
+                <div class="cell-box-wrap">
+                  <ul>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="yellow">00.00</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="yellow">000.0</li>
+                  </ul>
+                  <ul>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="yellow">00.00</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="yellow">000.0</li>
+                  </ul>
+                </div>
+              </div>
+              <a class="cell-btn-r off" href="javascript:;"></a>
+            </div><!-- .cell-wrap -->
+
+            <div class="cell-period">
+              <span>백학IC</span>
+              <span>쌍학교차로</span>
+            </div>
+
+            <div class="cell-wrap">
+              <a class="cell-btn-l off" href="javascript:;"></a>
+              <div class="cell-area">
+                <div class="cell-box-wrap">
+                  <ul>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="yellow">00.00</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="yellow">000.0</li>
+                  </ul>
+                  <ul>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="red">00.0</li>
+                    <li class="yellow">00.00</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="green">00.0</li>
+                    <li class="yellow">000.0</li>
+                  </ul>
+                </div>
+              </div>
+              <a class="cell-btn-r" href="javascript:;"></a>
+            </div><!-- .cell-wrap -->
+          </div>
+      </div><!-- .modal-wrap -->
+
 
 
       <!-- 하단 패널(광터 교차로 구간) -->
@@ -1269,6 +1392,13 @@
     if (Qmodal == 's01') {
       openModal('#modals1');
     }
+    if (Qmodal == 'cell') {
+      openModal('#modalCell');
+    }
+    $('.modal-wrap .modal-head .close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.modal-wrap').hide();
+    })
   </script>
 </body>
 </html>

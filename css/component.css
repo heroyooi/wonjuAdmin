@@ -209,6 +209,26 @@
 .modal-wrap .modal-info li .label{color:#b8bdcd;}
 .modal-wrap .modal-info li .result{color:#f4f5f7;}
 
+.modal-wrap .modal-head{padding:14.5px 16px;background-color:#2c3240;position: relative;}
+.modal-wrap .modal-head .tit{color:#008fff;font-size:16px;font-weight:700;}
+.modal-wrap .modal-head .close{position:absolute;right:8px;top:12px;display:block;width:24px;height:24px;background:url(../img/ico-close-hor.png) 50% 50% no-repeat;}
+.modal-wrap .modal-period{background-color: #2c3240;padding:6.5px 16px;display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#b8bdcd;line-height:1.4;border-bottom:1px solid #008fff;}
+.modal-wrap .modal-cell{background-color: rgba(0, 0, 0, 0.2);padding:16px;}
+.modal-wrap .cell-wrap{display:flex;gap:0 8px;align-items: center;}
+.modal-wrap .cell-wrap [class*=cell-btn]{flex-shrink:0;width:12px;height:21px;background:url(../img/ico-arrow.png) 0 0 no-repeat;}
+.modal-wrap .cell-wrap .cell-btn-l{}
+.modal-wrap .cell-wrap .cell-btn-r{transform:rotate(180deg);}
+.modal-wrap .cell-wrap [class*=cell-btn].off{opacity:0;cursor:default;}
+.modal-wrap .cell-wrap .cell-area{flex-grow:1;}
+.cell-box-wrap ul{display:flex;border-top:1px solid #383d4f;}
+.cell-box-wrap ul:first-child{border-top:0;}
+.cell-box-wrap ul li{flex:1;height:44px;display:flex;justify-content: center;align-items:center;border-left:1px solid #373d4f;color:#fff;font-size:13px;font-weight:700;line-height:1.4;}
+.cell-box-wrap ul li.green{background-color:rgba(70, 228, 184, 0.85);}
+.cell-box-wrap ul li.red{background-color:rgba(255, 49, 98, 0.8);}
+.cell-box-wrap ul li.yellow{background-color: rgba(255, 224, 52, 0.85);color:#222631;}
+.cell-box-wrap ul li:first-child{border-left:0;}
+.cell-period{display:flex;justify-content:space-between;font-size:13px;font-weight:600;line-height:1.4;color:#b8bdcd;padding:0 20px;margin:8px 0;}
+
 /* popup */
 .mfp-wrap{-webkit-overflow-scrolling:touch}
 .mfp-zin.mfp-bg,
@@ -480,3 +500,4 @@
 
 .s-ico.ai.on{z-index:2;}
 .s-ico.ai.disabled{background-color: #373d4f;pointer-events:none;}
+
