@@ -227,7 +227,9 @@
 .cell-box-wrap ul li.red{background-color:rgba(255, 49, 98, 0.8);}
 .cell-box-wrap ul li.yellow{background-color: rgba(255, 224, 52, 0.85);color:#222631;}
 .cell-box-wrap ul li:first-child{border-left:0;}
-.cell-period{display:flex;justify-content:space-between;font-size:13px;font-weight:600;line-height:1.4;color:#b8bdcd;padding:0 20px;margin:8px 0;}
+.cell-period{display:flex;justify-content:space-between;font-size:13px;font-weight:600;line-height:1.4;color:#b8bdcd;padding:0 20px;margin:8px 0;gap:0 10px;}
+.cell-period .label{flex-shrink:0;}
+.cell-period .line{flex-grow:1;background:url(../img/img-gotline.png) 0 50% repeat-x;}
 
 /* popup */
 .mfp-wrap{-webkit-overflow-scrolling:touch}
