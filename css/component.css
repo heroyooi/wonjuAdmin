@@ -503,3 +503,7 @@
 .s-ico.ai.on{z-index:2;}
 .s-ico.ai.disabled{background-color: #373d4f;pointer-events:none;}
 
+/* 2025-01 추가 */
+.input-wrap.label-select{gap:0 8px;margin-top:0;}
+.input-wrap.label-select .label{flex-shrink:0;width:80px;}
+.input-wrap.label-select .select-base{width:100%;}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 제어</h3>
+          <div class="navi-area">
+            <a class="home" href="#">VMS관리</a>
+            <a href="#" class="current">VMS 제어</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base"><a href="#"><em class="vmsdata">VMS 표출 관리</em></a></span>
+            <span class="btn-base"><a href="#"><em class="on">ON</em></a></span>
+            <span class="btn-base"><a href="#"><em class="off">OFF</em></a></span>
+            <span class="btn-base tp2"><a href="#"><em class="play">재시작</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap type-7">
+        <div class="content-l">
+          <div class="input-wrap label-select">
+            <span class="label">VMS 유형</span>
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0" selected>전체</option>
+                <option value="1">4단 19열</option>
+                <option value="2">11단 3열 (도형식)</option>
+                <option value="3">4단 4열 (영상식)</option>
+              </select>
+            </span>
+          </div>
+          <div id="exampleTable" class="c-table mt12"></div>
+          <div class="total-area">
+            <span class="total">총 <em>30</em>건</span>
+          </div>
+        </div><!-- .content-l -->
+        <div class="content-r">
+
+          <h4 class="tit">VMS 설치 위치</h4>
+          <div class="map-area half">
+            <div id="map" class="map"
+              style="background: url(img/map_vw2dnight_ver2.png) 50% 50% no-repeat; background-size: cover;"></div>
+            <div id="select-map" class="map"
+              style="background: url(img/map_vw2dnight_ver3.png) 50% 50% no-repeat; background-size: cover; display: none;">
+            </div>
+            <span class="s-ico ai tp2 poi vms" style="left: 200px; top: 141px;"></span>
+            <span class="s-ico ai tp2 poi vms" style="left: 363px; top: 89px;"></span>
+            <span class="s-ico ai tp2 poi vms" style="left: 328px; top: 196px;"></span>
+            <span class="s-ico ai tp2 poi vms" style="left: 495px; top: 38px;"></span>
+          </div>
+
+          <h4 class="tit mt20">현재 시나리오 정보</h4>
+          <div class="scenario-area ver_vms" id="scenario-info-1">
+            <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+          </div>
+          <div class="scenario-area ver_vms" id="scenario-info-2_1" style="display: none;">
+            <div class="scenario-item">
+              <ul class="vms-list" id="type-1">
+                <li><img src="img/img-vms-412.png" alt=""></li>
+                <li><img src="img/img-vms-412.png" alt=""></li>
+                <li><img src="img/img-vms-412.png" alt=""></li>
+              </ul>
+            </div>
+          </div><!-- .scenario -->
+          <div class="scenario-area ver_vms" id="scenario-info-2_2" style="display: none;">
+            <div class="scenario-item">
+              <ul class="vms-list" id="type-2">
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+                <li><img src="img/img-vms-113.png" alt=""></li>
+              </ul>
+            </div>
+          </div><!-- .scenario -->
+          <div class="scenario-area ver_vms" id="scenario-info-2_3" style="display: none;">
+            <div class="scenario-item">
+              <ul class="vms-list" id="type-3">
+                <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
+              </ul>
+            </div>
+          </div><!-- .scenario -->
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+  <script>
+    createTableType6("#exampleTable");
+
+    $('.content-r .evt-list').on('click', function (e) {
+      e.preventDefault();
+      $('#map, .content-r .evt-list').hide();
+      $('#select-map').show();
+
+      $('[id*=scenario-info-]').hide();
+      $('#scenario-info-2_1').show();
+    });
+
+    $('.s-toggle').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('on');
+    });
+
+    var diffH = 30;
+    $(window).on('load resize', function () {
+      var halfH = ($(window).height() - 240) / 2;
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 249);
+      $('.content-wrap .map-area').css('height', halfH);
+      $('.content-wrap .scenario-area').css('height', halfH);
+    });
+
+    $('.tb-list td.evt').on('click', function () {
+      if ($(this).closest('tr').hasClass('disabled')) {
+        return;
+      }
+      if (!$(this).closest('tr').hasClass('on')) {
+        $(this).closest('tr').siblings('tr.on').removeClass('on');
+        $(this).closest('tr').addClass('on');
+      } else {
+        $(this).closest('tr').removeClass('on');
+      }
+    });
+
+    var $scenario = $('#scenario-info-2_2 .scenario-item');
+    $scenario.css('width', $scenario.find('.vms-list li').length * (96 + 16) + 16);
+
+    var Qscenario = $.urlParam('scenario');
+    var Qtype = $.urlParam('type');
+
+    if (Qscenario || Qtype) {
+      setTimeout(function () {
+        if (Qscenario) {
+          $('[id*=scenario-]').hide();
+          if (Qscenario === '1') {
+            // VMS 목록 > 선택 전
+            $('#scenario-tb-1').show();
+            $('#scenario-info-1').show();
+          } else if (Qscenario === '2') {
+            // 4단19열, 11단3열, 4단4열
+            $('#scenario-info-2_1').show();
+            $('.content-r .evt-list').click();
+          }
+        }
+        if (Qtype === '1') {
+          $('#scenario-info-2_1').show();
+          $('#scenario-info-2_2').hide();
+          $('#scenario-info-2_3').hide();
+        } else if (Qtype === '2') {
+          $('#scenario-info-2_1').hide();
+          $('#scenario-info-2_2').show();
+          $('#scenario-info-2_3').hide();
+        } else if (Qtype === '3') {
+          $('#scenario-info-2_1').hide();
+          $('#scenario-info-2_2').hide();
+          $('#scenario-info-2_3').show();
+        }
+      }, 250);
+    }
+  </script>
+</body>
+
+</html>
