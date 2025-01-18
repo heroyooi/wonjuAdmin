@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 표출 관리</h3>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base"><a href="#"><em class="apply">적용</em></a></span>
+            <span class="btn-base"><a href="#"><em class="list">목록</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap type-6">
+        <div class="content-f">
+          <h4 class="tit">VMS 목록</h4>
+          <div id="exampleTable1" class="c-table"></div>
+        </div>
+        <div class="content-l">
+          <h4 class="tit">시나리오 운영관리</h4>
+          <div id="exampleTable2" class="c-table"></div>
+        </div><!-- .content-l -->
+        <div class="content-r">        
+          <div class="scenario-detail" id="scenario-detail-1">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">-</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">-</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-2" style="display: none;">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">VMS광교교차로-학동AA11</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">180초</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <ul class="sce-list col4" id="scenario-col-4">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col3" id="scenario-col-3">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col2" id="scenario-col-2">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+              <ul class="sce-list col1" id="scenario-col-1">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-3" style="display: none;">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">VMS광교교차로-학동AA11</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">180초</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <ul class="sce-list col2">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-4" style="display: none;">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">VMS광교교차로-학동AA11</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">180초</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-item">
+              <ul class="sce-list col3">
+                <li>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                  <div class="canvas-image"><img src="https://placehold.co/600x600/000000/FFFFFF/png" alt="" /></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+                <li>
+                  <div class="canvas-image"></div>
+                  <div class="canvas-image"></div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .scenario-detail -->
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+  <script>
+    createTableType4("#exampleTable1");
+    createTableType7("#exampleTable2");
+
+    $(window).on('load resize', function(){
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 192);
+      $('.content-wrap .scenario-item').css('height', $(window).height() - 275);
+    });
+
+    var Qscenario = $.urlParam('scenario');
+    var Qcol = $.urlParam('col');
+
+    if (Qscenario || Qcol) {
+      setTimeout(function(){
+        if (Qscenario) {
+          $('[id*=scenario-]').hide();
+          if (Qscenario === '1') {
+            $('#scenario-detail-1').show();
+          } else if (Qscenario === '2') {
+            $('#scenario-detail-2').show();
+          } else if (Qscenario === '3') {
+            $('#scenario-detail-3').show();
+          } else if (Qscenario === '4') {
+            $('#scenario-detail-4').show();
+          }
+        }
+        if (Qcol === '1') {
+          $('#scenario-col-1').css('display', 'flex');
+        } else if (Qcol === '2') {
+          $('#scenario-col-2').css('display', 'flex');
+        } else if (Qcol === '3') {
+          $('#scenario-col-3').css('display', 'flex');
+        } else {
+          $('#scenario-col-4').css('display', 'flex');
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

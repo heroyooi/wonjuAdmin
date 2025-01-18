@@ -202,8 +202,8 @@
       }
     });
 
-    var $scenario = $('#scenario-info-2_2 .scenario-item');
-    $scenario.css('width', $scenario.find('.vms-list li').length * (96 + 16) + 16);
+    var $scenarioH = $('#scenario-info-2_2 .scenario-item');
+    $scenarioH.css('width', $scenarioH.find('.vms-list li').length * (96 + 16) + 16);
 
     var Qscenario = $.urlParam('scenario');
     var Qtype = $.urlParam('type');
@@ -214,7 +214,6 @@
           $('[id*=scenario-]').hide();
           if (Qscenario === '1') {
             // VMS 목록 > 선택 전
-            $('#scenario-tb-1').show();
             $('#scenario-info-1').show();
           } else if (Qscenario === '2') {
             // 4단19열, 11단3열, 4단4열
@@ -226,14 +225,20 @@
           $('#scenario-info-2_1').show();
           $('#scenario-info-2_2').hide();
           $('#scenario-info-2_3').hide();
+          $('.content-l .select-base select option:eq(1)').prop('selected', true);
+          commonSelect();
         } else if (Qtype === '2') {
           $('#scenario-info-2_1').hide();
           $('#scenario-info-2_2').show();
           $('#scenario-info-2_3').hide();
+          $('.content-l .select-base select option:eq(2)').prop('selected', true);
+          commonSelect();
         } else if (Qtype === '3') {
           $('#scenario-info-2_1').hide();
           $('#scenario-info-2_2').hide();
           $('#scenario-info-2_3').show();
+          $('.content-l .select-base select option:eq(3)').prop('selected', true);
+          commonSelect();
         }
       }, 250);
     }

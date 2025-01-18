@@ -1394,6 +1394,443 @@ var createTableType6 = function(target) {
   });
 }
 
+var createTableType7 = function(target) {
+  //define data array
+  var tabledata = [
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed",
+      "구간명": "비봉IC 부근 ~ 백학IC",
+      "전환시간": "5초"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Text Text Text Text Text",
+      "구간명": "Text Text Text Text Teext Text",
+      "전환시간": "5초"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+    {
+      "시나리오 ID":"VMS_001",
+      "시나리오 이름":"Limit_Speed_2",
+      "구간명": "Text Text Text Text Teext",
+      "전환시간": "자동_평시"
+    },
+  ];
+
+  //initialize table
+  const table = new Tabulator(target, {
+		data: tabledata, //assign data to table
+		layout: "fitColumns",
+		reactiveData: true,
+		columns: [
+			{ title: "시나리오 ID",
+        field: "시나리오 ID",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+			{ title: "시나리오 이름",
+        field: "시나리오 이름",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      { title: "구간명",
+        field: "구간명",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      { title: "전환시간",
+        field: "전환시간",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      }
+		],
+  });
+  table.on("rowClick", function(e, row){
+    if (!$(row._row.element).hasClass('on')) {
+      $(row._row.element).addClass('on')
+    } else {
+      $(row._row.element).removeClass('on')
+    }
+  });
+}
+
+var createTableType8 = function(target) {
+  //define data array
+  var tabledata = [
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"비봉IC 부근 ~ 백학IC",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Text line1 Text line2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"비봉IC 부근 ~ 백학IC",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed_2",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+    {
+      '시나리오 ID': 'VMS_001',
+      "시나리오 이름":"Limit_Speed",
+      "VMS 유형":"문자식(4단 19열)",
+      "구간":"자안교차로 부근 ~ 팔탄교차로",
+      "전환시간":"3초",
+      "최종 수정일": "0000-00-00"
+    },
+  ];
+
+  //initialize table
+  const table = new Tabulator(target, {
+		data: tabledata, //assign data to table
+		layout: "fitColumns",
+		reactiveData: true,
+		columns: [
+			{
+        width: 41,
+				formatter: "rowSelection",
+				titleFormatter: "rowSelection",
+				titleFormatterParams: {
+					rowRange: "active", //only toggle the values of the active filtered rows
+				},
+				headerSort: false,
+        hozAlign: "center",
+        headerHozAlign: "center"
+			},
+      { 
+        title: "시나리오 ID",
+        field: "시나리오 ID",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+			{ 
+        title: "시나리오 이름",
+        field: "시나리오 이름",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      {
+        title: "구간",
+        field: "구간",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+			{
+        title: "전환시간",
+        field: "전환시간",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      {
+        title: "최종 수정일",
+        field: "최종 수정일",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+		],
+  });
+  table.on("rowClick", function(e, row){
+    if (!$(row._row.element).hasClass('on')) {
+      $(row._row.element).addClass('on')
+    } else {
+      $(row._row.element).removeClass('on')
+    }
+  });
+}
+
 $(function(){
   AOS.init({ // https://github.com/michalsnik/aos#1-initialize-aos
     duration: 600,

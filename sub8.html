@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 시나리오 관리</h3>
+          <div class="navi-area">
+            <a class="home" href="#">VMS관리</a>
+            <a href="#" class="current">VMS 시나리오 관리</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base"><a href="#"><em class="delete">삭제</em></a></span>
+            <span class="btn-base"><a href="#"><em class="modify">수정</em></a></span>
+            <span class="btn-base btn-popup-anim-1"><a href="#popup-manage-scenario"><em class="add">추가</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap type-7">
+        <div class="content-l">
+          <div id="exampleTable" class="c-table"></div>
+          <div class="total-area">
+            <span class="total">총 <em>30</em>건</span>
+          </div>
+        </div><!-- .content-l -->
+        <div class="content-r">        
+          <div class="scenario-detail" id="scenario-detail-1">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">-</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">-</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-area ver_vms mt8">
+              <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
+            </div>
+          </div><!-- .scenario-detail -->
+
+          <div class="scenario-detail" id="scenario-detail-2" style="display: none;">
+            <h4 class="tit">VMS 시나리오</h4>
+            <div class="info-box">
+              <ul>
+                <li>
+                  <span class="label">시나리오 이름</span>
+                  <span class="value">VMS광교교차로-학동AA11</span>
+                </li>
+                <li>
+                  <span class="label">전환 시간</span>
+                  <span class="value">180초</span>
+                </li>
+              </ul>
+            </div>
+            <div class="scenario-area ver_vms mt8" id="scenario-info-2_1" style="display: none;">
+              <div class="scenario-item">
+                <ul class="vms-list" id="type-1">
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                  <li><img src="img/img-vms-412.png" alt=""></li>
+                </ul>
+              </div>
+            </div><!-- .scenario -->
+            <div class="scenario-area ver_vms mt8" id="scenario-info-2_2" style="display: none;">
+              <div class="scenario-item">
+                <ul class="vms-list" id="type-2">
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                  <li><img src="img/img-vms-113.png" alt=""></li>
+                </ul>
+              </div>
+            </div><!-- .scenario -->
+            <div class="scenario-area ver_vms mt8" id="scenario-info-2_3" style="display: none;">
+              <div class="scenario-item">
+                <ul class="vms-list" id="type-3">
+                  <li><img src="img/img-vms-44.png" alt=""></li>
+                  <li><img src="img/img-vms-44.png" alt=""></li>
+                </ul>
+              </div>
+            </div><!-- .scenario -->
+          </div><!-- .scenario-detail -->
+        </div><!-- .content-r -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-manage-scenario" data-width="1388">
+      <h3 class="tit">VMS 시나리오 추가</h3>
+      <div class="con-wrap">
+        <div class="manage-area ver_vms">
+          <div class="scenario-items">
+            <div class="items-input">
+              <ul>
+                <li>
+                  <div class="input-area">
+                    <span class="label">VMS 유형</span>
+                    <div class="input">
+                      <div class="tab-base">
+                        <ul>
+                          <li class="on"><a href="#tab_m1">4단 19열</a></li>
+                          <li><a href="#tab_m2">11단 3열</a></li>
+                          <li><a href="#tab_m3">4단 4열</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="input-area">
+                    <span class="label">시나리오 이름</span>
+                    <div class="input">
+                      <input type="text" placeholder="시나리오 이름을 입력하세요" class="input-base tp2" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="input-area">
+                    <span class="label">전환 시간</span>
+                    <div class="input">
+                      <span class="counter-base">
+                        <button class="btn-minus">-</button>
+                        <input type="text" value="0" />
+                        <button class="btn-plus">+</button>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="items-status-area" id="m1">
+              <div class="items-status">
+                <div class="item full">
+                  <ul>
+                    <li><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                </div>
+                <div class="item next">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+              </div>
+            </div>
+            <div class="items-status-area" id="m2" style="display: none;">
+              <div class="items-status">
+                <div class="item full">
+                  <ul>
+                    <li><img src="https://placehold.co/96x176/000000/FFFFFF/png?text=1" alt="" /></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                </div>
+                <div class="item next">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+              </div>
+            </div>
+            <div class="items-status-area" id="m3" style="display: none;">
+              <div class="items-status">
+                <div class="item full">
+                  <ul>
+                    <li><img src="https://placehold.co/96x192/000000/FFFFFF/png?text=1" alt="" /></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled next">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+                <div class="item disabled">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <a href="#" class="btn-delete"></a>
+                  <div class="action-area"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scenario-material">
+            <ul class="panel-base">
+              <li id="tab_m1">
+                <div class="msg-list-wrap">
+                  <ul class="msg-list">
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-412.png" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li id="tab_m2">
+                <div class="msg-list-wrap">
+                  <ul class="msg-list">
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/96x176/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-113.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-113.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-113.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/96x176/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-113.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li id="tab_m3">
+                <div class="msg-list-wrap">
+                  <ul class="msg-list">
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/96x192/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/96x192/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>메시지 이름</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="img/img-vms-44.png" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .manage-area -->
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    createTableType8("#exampleTable");
+
+    $(window).on('load resize', function(){
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 191);
+      $('.content-wrap .scenario-area').css('height', $(window).height() - 275);
+    });
+
+    // $(".items-status ul").sortable({
+    //   revert: true
+    // }).droppable({
+    //   accept: ".msg-list li dt",
+    //   drop: function(event, ui) {
+    //     $(this).append("<li><img src='" + ui.helper.find('img').attr('src') + "' alt='' /></li>");
+    //     ui.helper.remove();
+    //   }
+    // });
+    // $(".msg-list li dt").draggable({
+    //   helper: "clone",
+    //   revert: "invalid"
+    // });
+
+    // VMS 시나리오 추가 - 공통
+    $('.tab-base li a').on('click', function(){
+      var activeVMS = ($(this).attr('href').split('_')[1]);
+      $('.items-status-area').hide();
+      $(`.items-status-area#${activeVMS}`).show();
+    });
+    $(".items-status ul").sortable({
+      revert: true
+    });
+
+    var cloneItem = `
+    <div class="item disabled">
+      <ul class="ui-sortable">
+        <li class="ui-sortable-handle ui-droppable"></li>
+      </ul>
+      <a href="#" class="btn-delete"></a>
+      <div class="action-area"></div>
+    </div>`;
+    
+
+    // VMS 시나리오 추가 - 4단 19열
+    $(".items-status-area#m1 ul li").droppable({
+      accept: "#tab_m1 .msg-list li dt",
+      drop: function(event, ui) {
+        if (!$(this).closest('.item').hasClass('disabled') && !$(this).closest('.item').hasClass('next')) {
+          $(this).html("<img src='" + ui.helper.find('img').attr('src') + "' alt='' />");
+          ui.helper.remove();
+        }
+      },
+    });
+    $("#tab_m1 .msg-list li dt").draggable({
+      helper: "clone",
+      revert: function(event) {
+        if ($('.items-status-area#m1 ul li img').length == 1) {
+          $('.items-status-area#m1 .items-status > .item:eq(0)').addClass('full');
+        }
+        if ($('.items-status-area#m1 ul li img').length >= 2) {
+          $('.items-status-area#m1 .items-status > .item:eq(2)').removeClass('disabled');
+        }
+        if ($('.items-status-area#m1 ul li img').length >= 3) {
+          $('.items-status-area#m1 .items-status > .item:eq(3)').removeClass('disabled');
+        }
+      },
+    });
+    $('.items-status-area#m1 .items-status').on('click', '> .item:not(.disabled) .action-area', function(){
+      $(this).closest('.item').removeClass('next');
+      if ($(this).closest('.item').next('.item').length) {
+        $(this).closest('.item').next('.item').addClass('next');
+      }
+    });
+
+    // VMS 시나리오 추가 - 11단 3열
+    function m2Drop() {
+      $(".items-status-area#m2 ul li").droppable({
+        accept: "#tab_m2 .msg-list li dt",
+        drop: function(event, ui) {
+          if (!$(this).closest('.item').hasClass('disabled') && !$(this).closest('.item').hasClass('next')) {
+            $(this).html("<img src='" + ui.helper.find('img').attr('src') + "' alt='' />");
+            ui.helper.remove();
+          }
+        },
+      });
+    }
+    m2Drop();
+    $("#tab_m2 .msg-list li dt").draggable({
+      helper: "clone",
+      revert: function(event) {
+        for (let i = 0; i <= $('.items-status-area#m2 ul li img').length; i++) {
+          if (i > 1) {
+            if ($('.items-status-area#m2 ul li img').length >= i) {
+              $(`.items-status-area#m2 .items-status > .item:eq(${i})`).removeClass('disabled');
+            }   
+          }
+        }
+      },
+    });
+    $('.items-status-area#m2 .items-status').on('click', '> .item:not(.disabled) .action-area', function(){
+      if ($(this).closest('.items-status').find('.item:not(.disabled)').length >= 4) {
+        $(this).closest('.items-status').append(cloneItem);
+        $(this).closest('.items-status-area').addClass('overflow');
+        m2Drop();
+        var $target = $(this).closest('.items-status');
+        $target.css('width', $target.find('.item').length * (149 + 16) + 16);
+        var $scroll = $target.parent('.items-status-area');
+        // $target.parent('.items-status-area').scrollLeft($scroll[0].scrollWidth);
+        $scroll.animate({ scrollLeft: $scroll[0].scrollWidth }, 500);
+      }
+      $(this).closest('.item').removeClass('next');
+      if ($(this).closest('.item').next('.item').length) {
+        $(this).closest('.item').next('.item').addClass('next');
+      }
+    });
+
+
+    // VMS 시나리오 추가 - 4단 4열
+    function m3Drop() {
+      $(".items-status-area#m3 ul li").droppable({
+        accept: "#tab_m3 .msg-list li dt",
+        drop: function(event, ui) {
+          if (!$(this).closest('.item').hasClass('disabled') && !$(this).closest('.item').hasClass('next')) {
+            $(this).html("<img src='" + ui.helper.find('img').attr('src') + "' alt='' />");
+            ui.helper.remove();
+          }
+        },
+      });
+    }
+    m3Drop();
+    $("#tab_m3 .msg-list li dt").draggable({
+      helper: "clone",
+      revert: function(event) {
+        for (let i = 0; i <= $('.items-status-area#m3 ul li img').length; i++) {
+          if (i > 1) {
+            if ($('.items-status-area#m3 ul li img').length >= i) {
+              $(`.items-status-area#m3 .items-status > .item:eq(${i})`).removeClass('disabled');
+            }   
+          }
+        }
+      },
+    });
+    $('.items-status-area#m3 .items-status').on('click', '> .item:not(.disabled) .action-area', function(){
+      if ($(this).closest('.items-status').find('.item:not(.disabled)').length >= 4) {
+        $(this).closest('.items-status').append(cloneItem);
+        $(this).closest('.items-status-area').addClass('overflow');
+        m3Drop();
+        var $target = $(this).closest('.items-status');
+        $target.css('width', $target.find('.item').length * (149 + 16) + 16);
+        var $scroll = $target.parent('.items-status-area');
+        // $target.parent('.items-status-area').scrollLeft($scroll[0].scrollWidth);
+        $scroll.animate({ scrollLeft: $scroll[0].scrollWidth }, 500);
+      }
+      $(this).closest('.item').removeClass('next');
+      if ($(this).closest('.item').next('.item').length) {
+        $(this).closest('.item').next('.item').addClass('next');
+      }
+    });
+
+    
+
+    var Qscenario = $.urlParam('scenario');
+    var Qtype = $.urlParam('type');
+    var Qpopup = $.urlParam('popup');
+    var Qtab = $.urlParam('tab');
+
+    if (Qscenario || Qpopup || Qtype) {
+      setTimeout(function(){
+        if (Qscenario) {
+          $('[id*=scenario-]').hide();
+          if (Qscenario === '1') {
+            // VMS 목록 > 선택 전
+            // $('#scenario-info-1').show();
+          } else if (Qscenario === '2') {
+            // 4단19열, 11단3열, 4단4열
+            $('#scenario-detail-2').show();
+            $('#scenario-info-2_1').show();
+            $('.content-r .evt-list').click();
+          }
+        }
+        if (Qpopup == 'manageScenario') {
+          setTimeout(function(){
+            $('[href="#popup-manage-scenario"]').click();
+            $(`#popup-manage-scenario .tab-base li:eq(${Qtab - 1}) a`).click();
+          }, 250);
+        }
+
+        if (Qtype === '1') {
+          $('#scenario-info-2_1').show();
+          $('#scenario-info-2_2').hide();
+          $('#scenario-info-2_3').hide();
+          commonSelect();
+        } else if (Qtype === '2') {
+          $('#scenario-info-2_1').hide();
+          $('#scenario-info-2_2').show();
+          $('#scenario-info-2_3').hide();
+          commonSelect();
+        } else if (Qtype === '3') {
+          $('#scenario-info-2_1').hide();
+          $('#scenario-info-2_2').hide();
+          $('#scenario-info-2_3').show();
+          commonSelect();
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>
