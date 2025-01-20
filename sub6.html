@@ -18,7 +18,7 @@
 <body>
   <div id="wrap">
     <div id="header">
-      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="" /></a></h1>
       <h2 class="hide">주메뉴</h2>
       <ul id="gnb">
         <li><a href="#">통합모니터링</a></li>
@@ -158,6 +158,11 @@
               <ul class="vms-list" id="type-3">
                 <li><img src="img/img-vms-44.png" alt=""></li>
                 <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
+                <li><img src="img/img-vms-44.png" alt=""></li>
               </ul>
             </div>
           </div><!-- .scenario -->
@@ -202,11 +207,14 @@
       }
     });
 
-    var $scenarioH = $('#scenario-info-2_2 .scenario-item');
-    $scenarioH.css('width', $scenarioH.find('.vms-list li').length * (96 + 16) + 16);
+    var $scenarioH2 = $('#scenario-info-2_2 .scenario-item');
+    var $scenarioH3 = $('#scenario-info-2_3 .scenario-item');
+    $scenarioH2.css('width', $scenarioH2.find('.vms-list li').length * (96 + 16) + 16);
+    $scenarioH3.css('width', $scenarioH3.find('.vms-list li').length * (97 + 16) + 16);
 
     var Qscenario = $.urlParam('scenario');
     var Qtype = $.urlParam('type');
+    var Qsample = $.urlParam('sample');
 
     if (Qscenario || Qtype) {
       setTimeout(function () {
@@ -233,12 +241,20 @@
           $('#scenario-info-2_3').hide();
           $('.content-l .select-base select option:eq(2)').prop('selected', true);
           commonSelect();
+          if (Qsample == '2') {
+            $('.scenario-area.ver_vms#scenario-info-2_2 .scenario-item ul li:nth-child(2) ~ li').remove();
+            $scenarioH2.css('width', $scenarioH2.find('.vms-list li').length * (96 + 16) + 16);
+          }
         } else if (Qtype === '3') {
           $('#scenario-info-2_1').hide();
           $('#scenario-info-2_2').hide();
           $('#scenario-info-2_3').show();
           $('.content-l .select-base select option:eq(3)').prop('selected', true);
           commonSelect();
+          if (Qsample == '2') {
+            $('.scenario-area.ver_vms#scenario-info-2_3 .scenario-item ul li:nth-child(2) ~ li').remove();
+            $scenarioH3.css('width', $scenarioH3.find('.vms-list li').length * (97 + 16) + 16);
+          }
         }
       }, 250);
     }

@@ -95,6 +95,18 @@ var commonPopup = function() {
     mainClass: 'fade-slideup fix-bottom',
     callbacks: magnificPopupConfiguration()
   });
+  $('.btn-popup-anim-4:not(.disabled) a, a.btn-popup-anim-4:not(.disabled)').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'mfp-zin',
+    closeOnBgClick: false
+  });
 
   $('.popup-wrap').each(function(){
     if ($(this).data('width')) {

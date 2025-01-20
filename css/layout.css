@@ -513,6 +513,7 @@ body{width:100%;overflow-y:hidden;}
 .items-input ul li .input .tab-base li{margin-top:0;}
 
 /* 공통 */
+#popup-manage-scenario{overflow:hidden;}
 .manage-area.ver_vms > div:nth-child(1){width:692px;}
 .manage-area.ver_vms .items-status-area{margin-top:16px;background-color: rgba(34, 38, 49, 0.7);border-radius:4px;height:268px;}
 .manage-area.ver_vms .items-status-area::-webkit-scrollbar{background:#373d4f;width:12px;height:12px;} 
@@ -531,6 +532,7 @@ body{width:100%;overflow-y:hidden;}
 .manage-area.ver_vms .msg-list-wrap::-webkit-scrollbar{background:#373d4f;width:12px;height:12px;} 
 .manage-area.ver_vms .msg-list-wrap::-webkit-scrollbar-track { border-radius: 6px; background: transparent;} 
 .manage-area.ver_vms .msg-list-wrap::-webkit-scrollbar-thumb { background: #4c556d; border-radius: 6px; background-clip: padding-box; border: 3px solid transparent; }
+/* .manage-area.ver_vms .items-status-area .items-status > .item:nth-child(1) .btn-delete{display:none;} */
 
 .manage-area.ver_vms .items-status-area#m1{overflow-y:scroll;}
 .manage-area.ver_vms .items-status-area#m1 .items-status{flex-direction:column;}

@@ -16,7 +16,7 @@
 <body>
   <div id="wrap">
     <div id="header">
-      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="" /></a></h1>
       <h2 class="hide">주메뉴</h2>
       <ul id="gnb">
         <li><a href="#">통합모니터링</a></li>
@@ -236,7 +236,8 @@
     createTableType7("#exampleTable2");
 
     $(window).on('load resize', function(){
-      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 192);
+      $('.content-wrap .c-table.tabulator#exampleTable1').css('height', 42 + 40 * 5); // VMS 목록 높이
+      $('.content-wrap .c-table.tabulator#exampleTable2').css('height', $(window).height() - 192); // 시나리오 운영관리 높이
       $('.content-wrap .scenario-item').css('height', $(window).height() - 275);
     });
 
