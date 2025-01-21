@@ -515,6 +515,7 @@ body{width:100%;overflow-y:hidden;}
 /* 공통 */
 #popup-manage-scenario{overflow:hidden;}
 .manage-area.ver_vms > div:nth-child(1){width:692px;}
+.manage-area.ver_vms > div.scenario-material{width:652px;}
 .manage-area.ver_vms .items-status-area{margin-top:16px;background-color: rgba(34, 38, 49, 0.7);border-radius:4px;height:268px;}
 .manage-area.ver_vms .items-status-area::-webkit-scrollbar{background:#373d4f;width:12px;height:12px;} 
 .manage-area.ver_vms .items-status-area::-webkit-scrollbar-track { border-radius: 6px; background: transparent;} 
