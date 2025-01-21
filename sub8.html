@@ -358,6 +358,30 @@
                         <dd>05_도형_남비봉_봉봉봉</dd>
                       </dl>
                     </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt><img src="https://placehold.co/608x64/000000/FFFFFF/png?text=1" alt="" /></dt>
+                        <dd>05_도형_남비봉_봉봉봉</dd>
+                      </dl>
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -512,30 +536,40 @@
     
 
     // VMS 시나리오 추가 - 4단 19열
-    $(".items-status-area#m1 ul li").droppable({
-      accept: "#tab_m1 .msg-list li dt",
-      drop: function(event, ui) {
-        if (!$(this).closest('.item').hasClass('disabled') && !$(this).closest('.item').hasClass('next')) {
-          $(this).html("<img src='" + ui.helper.find('img').attr('src') + "' alt='' />");
-          ui.helper.remove();
-        }
-      },
-    });
+    function m1Drop() {
+      $(".items-status-area#m1 ul li").droppable({
+        accept: "#tab_m1 .msg-list li dt",
+        drop: function(event, ui) {
+          if (!$(this).closest('.item').hasClass('disabled') && !$(this).closest('.item').hasClass('next')) {
+            $(this).html("<img src='" + ui.helper.find('img').attr('src') + "' alt='' />");
+            ui.helper.remove();
+          }
+        },
+      });
+    }
+    m1Drop();
     $("#tab_m1 .msg-list li dt").draggable({
       helper: "clone",
       revert: function(event) {
-        if ($('.items-status-area#m1 ul li img').length == 1) {
-          $('.items-status-area#m1 .items-status > .item:eq(0)').addClass('full');
-        }
-        if ($('.items-status-area#m1 ul li img').length >= 2) {
-          $('.items-status-area#m1 .items-status > .item:eq(2)').removeClass('disabled');
-        }
-        if ($('.items-status-area#m1 ul li img').length >= 3) {
-          $('.items-status-area#m1 .items-status > .item:eq(3)').removeClass('disabled');
+        for (let i = 0; i <= $('.items-status-area#m1 ul li img').length; i++) {
+          if (i > 1) {
+            if ($('.items-status-area#m1 ul li img').length >= i) {
+              $(`.items-status-area#m1 .items-status > .item:eq(${i})`).removeClass('disabled');
+            }   
+          }
         }
       },
     });
     $('.items-status-area#m1 .items-status').on('click', '> .item:not(.disabled) .action-area', function(){
+      if ($(this).closest('.items-status').find('.item:not(.disabled)').length >= 4) {
+        $(this).closest('.items-status').append(cloneItem);
+        $(this).closest('.items-status-area').addClass('overflow');
+        m1Drop();
+        var $target = $(this).closest('.items-status');
+        $target.css('height', $target.find('.item').length * (108 + 16) + 16);
+        var $scroll = $target.parent('.items-status-area');
+        $scroll.animate({ scrollTop: $scroll[0].scrollHeight }, 500);
+      }
       $(this).closest('.item').removeClass('next');
       if ($(this).closest('.item').next('.item').length) {
         $(this).closest('.item').next('.item').addClass('next');
