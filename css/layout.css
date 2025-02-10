@@ -556,3 +556,15 @@ body{width:100%;overflow-y:hidden;}
 .manage-area.ver_vms #tab_m3 .msg-list{gap:16px;}
 .manage-area.ver_vms #tab_m3 .msg-list li{width:calc(25% - 12px);text-align:center;}
 .manage-area.ver_vms #tab_m3 .msg-list li dt{display:inline-block;width:auto;}
+
+/* 2025-02 추가 */
+.content-wrap.w-full{display:block;padding:16px 20px;}
+.content-wrap.w-full::before{display:none;}
+.content-wrap.w-full > div{width:auto;padding:0;}
+.content-wrap.w-full > div.input-wrap.input-btn{width:468px;margin-top:0;}
+.tab-input-wrap{display:flex;gap:0 16px;}
+.tab-input-wrap .tab-base ul{width:360px;}
+.tab-input-wrap .tab-base li a{padding:9px 8px;}
+.tab-input-wrap .input-wrap{margin-top:0;}
+#popup-add-image .manage-area{gap:0 16px;}
+#popup-add-image .scenario-area{padding:16px;width:532px;height:532px;flex-shrink:0;}

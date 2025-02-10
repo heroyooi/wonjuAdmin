@@ -507,3 +507,32 @@
 .input-wrap.label-select{gap:0 8px;margin-top:0;}
 .input-wrap.label-select .label{flex-shrink:0;width:80px;}
 .input-wrap.label-select .select-base{width:100%;}
+
+/* 2025-02 추가 */
+.input-wrap.input-btn{width:468px;gap:0 9px;}
+.input-wrap.input-btn .btn-base{width:auto;flex-shrink:0;}
+
+.period-detail.ver-label.ver-relative.ver-cell{padding:16px 118px;position: relative;}
+.period-detail.ver-label.ver-relative.ver-cell .fe-label{left:20px;}
+.period-detail.ver-label.ver-relative.ver-cell .be-label{right:20px;}
+.period-detail.ver-label.ver-relative.ver-cell .fe-label,
+.period-detail.ver-label.ver-relative.ver-cell .be-label{top:50%;transform:translateY(-50%);padding:4px 16px;border-radius: 16px;
+background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
+.period-detail.ver-cell .cell-box-wrap ul li{height:26px;}
+
+.period-detail.ver-cell .cell-wrap{display:flex;gap:0 8px;align-items: center;}
+.period-detail.ver-cell .cell-wrap [class*=cell-btn]{flex-shrink:0;width:12px;height:21px;background:url(../img/ico-arrow.png) 0 0 no-repeat;}
+.period-detail.ver-cell .cell-wrap .cell-btn-r{transform:rotate(180deg);}
+.period-detail.ver-cell .cell-wrap [class*=cell-btn].off{opacity:0;cursor:default;}
+.period-detail.ver-cell .cell-wrap .cell-area{flex-grow:1;}
+
+[class*=popup-wrap] .tit.w-tip{display:inline-block;position: relative;z-index:1;}
+[class*=popup-wrap] .tit.w-tip .tip{display:flex;align-items: center;gap:0 8px;cursor:pointer;}
+[class*=popup-wrap] .tit.w-tip .tip::after{content:'';display:block;width:24px;height:24px;background:url(../img/ico-info-def.png) 50% 50% no-repeat;}
+[class*=popup-wrap] .tit.w-tip .tip.on::after{background:url(../img/ico-info-hov.png) 50% 50% no-repeat;}
+[class*=popup-wrap] .tit.w-tip .tip-content{font-size:13px;color:#b8bdcd;font-weight:400;position: absolute;border-radius: 8px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);background-color: #373d4f;padding:12px 16px;width:372px;left:20px;top:47px;display:none;}
+[class*=popup-wrap] .tit.w-tip .tip-content li{line-height:1.4;}
+[class*=popup-wrap] .tit.w-tip .tip-content li span{font-weight:700;}
+
+.items-input ul li .input-area .s-info{font-size:12px;font-weight:600;color:#99a2b9;display:flex;gap:0 4px;align-items:center;line-height:1.52;padding:4.5px 0;}
+.items-input ul li .input-area .s-info::before{width:12px;height:12px;background:url(../img/ico-s-hint.png) 0 0 no-repeat;content:'';display:block;}

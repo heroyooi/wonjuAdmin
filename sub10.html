@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 원주국토관리청 통합모니터링 시스템 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/tabulator.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집장치관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="sub5.html" target="_blank"><span class="ico">VMS 통합관제</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+          <ul class="submenu submenu5">
+            <li><a href="#">계정 관리</a></li>
+            <li><a href="#">접속 이력관리</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="tit-wrap">
+        <div class="tit-l">
+          <h3>VMS 이미지 관리</h3>
+          <div class="navi-area">
+            <a class="home" href="#">VMS관리</a>
+            <a href="#" class="current">VMS 이미지 관리</a>
+          </div>
+        </div>
+        <div class="tit-r">
+          <div class="btns-wrap">
+            <span class="btn-base"><a href="#"><em class="delete">삭제</em></a></span>
+            <span class="btn-base"><a href="#"><em class="modify">수정</em></a></span>
+            <span class="btn-base btn-popup-anim-1"><a href="#popup-manage-message"><em class="add">추가</em></a></span>
+          </div>
+        </div>
+      </div><!-- .tit-wrap -->
+      <div class="content-wrap w-full">
+        <div class="tab-input-wrap">
+          <div class="tab-base">
+            <ul>
+              <li class="on"><a href="javascript:;">4단 19열</a></li>
+              <li><a href="javascript:;">11단 3열</a></li>
+              <li><a href="javascript:;">4단 4열</a></li>
+            </ul>
+          </div>
+          <div class="input-wrap input-btn">
+            <input type="text" class="input-base tp2" placeholder="검색 키워드를 입력하세요" />
+            <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
+          </div>
+        </div>
+        <div id="exampleTable" class="c-table mt12"></div>
+        <div class="total-area">
+          <span class="total">총 <em>30</em>건</span>
+        </div>
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-manage-message" data-width="1268">
+      <h3 class="tit w-tip">
+        <span class="tip">VMS 메시지 추가</span>
+        <div class="tip-content" style="left: 150px;">
+          <ul>
+            <li><span>#nn</span>: 소통 등급 가변 정보  e.g., 소통원활 → #0001, 원활 → #01</li>
+            <li><span>@nn</span>: 시간 가변 정보</li>
+          </ul>
+        </div>
+      </h3>
+      <div class="con-wrap">
+        <div class="manage-area">
+          <div class="scenario-area">
+            <span class="evt-list"><em>이미지 파일을 선택하면 표출됩니다</em></span>
+            <div class="preview-img"></div>
+          </div>
+          <div>
+            <div class="items-input">
+              <ul>
+                <li>
+                  <div class="input-area">
+                    <span class="label">이미지 이름</span>
+                    <div class="input">
+                      <input type="text" placeholder="이미지 이름을 입력하세요" class="input-base tp2" />
+                    </div>
+                  </div>
+                </li>
+                <li class="toggle">
+                  <div class="input-area">
+                    <span class="label">이미지 이름</span>
+                    <span class="s-info">등록할 이미지를 선택하고 추가하여 주세요</span>
+                  </div>
+                </li>
+                <li class="toggle">
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- .manage-area -->
+        <div class="btns-wrap t-center">
+          <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+          <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+    
+  </div><!-- #wrap -->
+  <script>
+    createTableType10("#exampleTable");
+
+    $(window).on('load resize', function(){
+      $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 249);
+    });
+
+    $('[class*=popup-wrap] .tit.w-tip .tip').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $(this).closest('.tit').find('.tip-content').show();
+      } else {
+        $(this).removeClass('on');
+        $(this).closest('.tit').find('.tip-content').hide();
+      }
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    
+    if (Qpopup === 'manageMessage') {
+      setTimeout(function(){
+        $('[href="#popup-manage-message"]').click();
+      }, 250);
+    }
+  </script>
+</body>
+</html>
