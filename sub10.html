@@ -177,13 +177,14 @@
                 </ul>
               </div>
               <div class="temp-detail">
-                <img src="https://placehold.co/608x64/000000/4c556d/png?text=Canvas Area\n608 x 64" alt="">
+                <img id="tmpImg1" src="https://placehold.co/608x64/000000/4c556d/png?text=Canvas Area\n608 x 64" alt="">
+                <img id="tmpImg2" src="https://placehold.co/145x268/000000/4c556d/png?text=Canvas Area\n145 x 268" alt="" style="display: none;">
               </div>
             </div>
             <div class="temp-tit-area mt16">
               <span class="s-tit">템플릿</span>
             </div>
-            <div class="temp-view-area">
+            <div class="temp-view-area" id="tmpView1">
               <ul>
                 <li>
                   <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
@@ -194,6 +195,32 @@
                   <span class="txt">기본 템플릿</span>
                 </li>
               </ul>
+            </div>
+            <div class="temp-view-area" id="tmpView2" style="display: none;">
+              <div class="col-wrap">
+                <ul class="col-5">
+                  <li>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="txt">기본 템플릿</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="txt">템플릿 1</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="txt">템플릿 2</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="txt">템플릿 3</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="txt">템플릿 4</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="temp-input-wrap">
@@ -415,7 +442,9 @@
     $('.pb-swiper.swiper-container .swiper-slide .inner .btn-del').on('click', function(e){
       e.preventDefault();
       $(this).closest('.swiper-slide').remove();
-    })
+    });
+
+    $('#tmpView2 .col-wrap').css('width', $('#tmpView2 .col-wrap li').length * (120 + 8) + 8);
 
     var Qsample = $.urlParam('sample');
     var Qpopup = $.urlParam('popup');
@@ -430,6 +459,9 @@
             $('.pb-info').hide();
             $('.pb-swiper').css('display', 'block');
             addListItems(10);
+          } else if (Qsample == '4') {
+            $('#tmpImg1, #tmpView1').hide();
+            $('#tmpImg2, #tmpView2').show();
           }
         }, 250);
       }

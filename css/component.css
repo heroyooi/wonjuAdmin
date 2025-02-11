@@ -555,8 +555,14 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .label-select .label{font-size:13px;font-weight:600;flex-shrink:0;color:#b8bdcd;}
 .temp-wrap .temp-top-area, .temp-wrap .temp-view-area{padding:12px 16px;border-radius:4px;border:1px solid #373d4f;}
 .temp-wrap .temp-top-area .temp-detail{padding: 16px;border-radius: 4px;background-color: rgba(34, 38, 49, 0.7);margin-top:12px;height:300px;display:flex;align-items: center;justify-content: center;}
-.temp-wrap .temp-view-area{height:153px;display:flex;align-items:center;}
-.temp-wrap .temp-view-area ul{display:flex;gap:8px;}
+.temp-wrap .temp-view-area{height:153px;display:flex;align-items:center;width:100%;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;}
+.temp-wrap .temp-view-area::-webkit-scrollbar{background:#373d4f;width:12px;height:12px;} 
+.temp-wrap .temp-view-area::-webkit-scrollbar-track { border-radius: 6px; background: transparent;} 
+.temp-wrap .temp-view-area::-webkit-scrollbar-thumb { background: #4c556d; border-radius: 6px; background-clip: padding-box; border: 3px solid transparent; }
+.temp-wrap .temp-view-area .col-wrap{flex: 0 0 auto;position:relative;overflow:hidden;}
+.temp-wrap .temp-view-area ul{display:flex;gap:8px;width:100%;justify-content:center;flex-wrap:wrap;}
+.temp-wrap .temp-view-area ul li{text-align:center;}
+.temp-wrap .temp-view-area ul.col-5 li{width:120px;}
 .temp-wrap .temp-view-area ul li span{display:block;text-align:center;}
 .temp-wrap .temp-view-area ul li span.txt{font-size:13px;line-height:1.4;color:#b8bdcd;margin-top:4px;}
 .temp-input-wrap .items-input{height:637px;}
