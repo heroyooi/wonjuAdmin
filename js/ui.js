@@ -1919,14 +1919,14 @@ var createTableType9 = function(target) {
     }
   });
 }
-var createTableType10 = function(target) {
+var createTableType10 = function(target, imgPath, imgW, imgH) {
   //define data array
   var tabledata = [];
   for (var i = 1; i <= 25; i++) {
     tabledata.push({
       "id": i,
       "no": (10000 - i).toString(),  // 9999부터 9975까지 감소
-      "이미지": "/img/img-vms-412.png",
+      "이미지": imgPath,
       "메세지 이름": "지정차로 준수, 자동차"
     });
   }
@@ -1966,7 +1966,7 @@ var createTableType10 = function(target) {
         vertAlign: "middle",
         formatter: function(cell, formatterParams, onRendered) {
           const imgSrc = cell.getValue();
-          return `<img src="${imgSrc}" style="width: 607px; height: 64px;">`;
+          return `<img src="${imgSrc}" style="width: ${imgW}px; height: ${imgH}px;">`;
         }
       },
       {
@@ -1976,6 +1976,52 @@ var createTableType10 = function(target) {
         headerHozAlign: "center",
         vertAlign: "middle",
 			},
+		],
+  });
+  table.on("rowClick", function(e, row){
+    if (!$(row._row.element).hasClass('on')) {
+      $(row._row.element).addClass('on')
+    } else {
+      $(row._row.element).removeClass('on')
+    }
+  });
+}
+
+var createTableType11 = function(target) {
+  //define data array
+  var tabledata = [];
+  for (var i = 1; i <= 25; i++) {
+    tabledata.push({
+      "id": i,
+      "구간명": `구간명 ${i}`,  // 9999부터 9975까지 감소
+    });
+  }
+
+  //initialize table
+  const table = new Tabulator(target, {
+		data: tabledata, //assign data to table
+		layout: "fitColumns",
+		reactiveData: true,
+		columns: [
+			{
+        width: 41,
+				formatter: "rowSelection",
+				titleFormatter: "rowSelection",
+				titleFormatterParams: {
+					rowRange: "active", //only toggle the values of the active filtered rows
+				},
+				headerSort: false,
+        hozAlign: "center",
+        headerHozAlign: "center",
+        vertAlign: "middle",
+			},
+			{ 
+        title: "구간명",
+        field: "구간명",
+        hozAlign: "center",
+        headerHozAlign: "center",
+        vertAlign: "middle",
+      },
 		],
   });
   table.on("rowClick", function(e, row){

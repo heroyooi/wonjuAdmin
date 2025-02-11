@@ -16,7 +16,7 @@
 <body>
   <div id="wrap">
     <div id="header">
-      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="" /></a></h1>
       <h2 class="hide">주메뉴</h2>
       <ul id="gnb">
         <li><a href="#">통합모니터링</a></li>
@@ -82,9 +82,9 @@
         <div class="tab-input-wrap">
           <div class="tab-base">
             <ul>
-              <li class="on"><a href="javascript:;">4단 19열</a></li>
-              <li><a href="javascript:;">11단 3열</a></li>
-              <li><a href="javascript:;">4단 4열</a></li>
+              <li class="on"><a href="#tabContent1">4단 19열</a></li>
+              <li><a href="#tabContent2">11단 3열</a></li>
+              <li><a href="#tabContent3">4단 4열</a></li>
             </ul>
           </div>
           <div class="input-wrap input-btn">
@@ -92,10 +92,28 @@
             <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
           </div>
         </div>
-        <div id="exampleTable" class="c-table mt12"></div>
-        <div class="total-area">
-          <span class="total">총 <em>30</em>건</span>
-        </div>
+
+        <ul class="panel-base">
+          <li id="tabContent1">
+            <div id="exampleTable1" class="c-table mt12"></div>
+            <div class="total-area">
+              <span class="total">총 <em>30</em>건</span>
+            </div>
+          </li>
+          <li id="tabContent2">
+            <div id="exampleTable2" class="c-table mt12"></div>
+            <div class="total-area">
+              <span class="total">총 <em>30</em>건</span>
+            </div>
+          </li>
+          <li id="tabContent3">
+            <div id="exampleTable3" class="c-table mt12"></div>
+            <div class="total-area">
+              <span class="total">총 <em>30</em>건</span>
+            </div>
+          </li>
+        </ul>
+        
       </div><!-- .content-wrap -->
     </div><!-- #container -->
 
@@ -110,7 +128,7 @@
         </div>
       </h3>
       <div class="con-wrap">
-        <div class="manage-area">
+        <div class="manage-area ver_tmp">
           <div class="temp-wrap">
             <div class="temp-tit-area">
               <span class="s-tit">템플릿 편집</span>
@@ -121,8 +139,8 @@
                   <select>
                     <option value="0">선택</option>
                     <option value="1" selected>4단 19열</option>
-                    <option value="2">Value 2</option>
-                    <option value="3">Value 3</option>
+                    <option value="2">11단 3열</option>
+                    <option value="3">4단 4열</option>
                   </select>
                 </span>
               </div>
@@ -185,39 +203,75 @@
               <span class="s-tit">템플릿</span>
             </div>
             <div class="temp-view-area" id="tmpView1">
-              <ul>
-                <li>
-                  <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
-                  <span class="txt">기본 템플릿</span>
-                </li>
-                <li>
-                  <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
-                  <span class="txt">기본 템플릿</span>
-                </li>
-              </ul>
-            </div>
+              <div class="col-wrap">
+                <ul class="col-2">
+                  <li>
+                    <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
+                    <span class="txt">기본 템플릿</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
+                    <span class="txt">기본 템플릿</span>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- .temp-view-area -->
             <div class="temp-view-area" id="tmpView2" style="display: none;">
               <div class="col-wrap">
                 <ul class="col-5">
                   <li>
-                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas\nArea\n55 x 100" alt=""></span>
                     <span class="txt">기본 템플릿</span>
                   </li>
                   <li>
-                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas\nArea\n55 x 100" alt=""></span>
                     <span class="txt">템플릿 1</span>
                   </li>
                   <li>
-                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas\nArea\n55 x 100" alt=""></span>
                     <span class="txt">템플릿 2</span>
                   </li>
                   <li>
-                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas\nArea\n55 x 100" alt=""></span>
                     <span class="txt">템플릿 3</span>
                   </li>
                   <li>
-                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas Area 55 x 100" alt=""></span>
+                    <span class="img"><img src="https://placehold.co/55x100/000000/4c556d/png?text=Canvas\nArea\n55 x 100" alt=""></span>
                     <span class="txt">템플릿 4</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="temp-view-area" id="tmpView3" style="display: none;">
+              <div class="col-wrap">
+                <ul class="col-5">
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">기본 템플릿</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 1</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 2</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 3</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 4</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 5</span>
+                  </li>
+                  <li>
+                    <span class="img"><img src="https://placehold.co/50x100/000000/4c556d/png?text=Canvas\nArea\n50 x 100" alt=""></span>
+                    <span class="txt">템플릿 6</span>
                   </li>
                 </ul>
               </div>
@@ -237,7 +291,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="toggle on withShadow">
+                <li class="toggle withShadow" id="toggleImage">
                   <div class="input-area">
                     <span class="label">이미지</span>
                     <span class="s-info pb-info">등록할 이미지를 선택하고 추가하여 주세요</span>
@@ -348,14 +402,34 @@
                     </ul>
                   </div>
                 </li>
-                <li class="toggle">
+                <li class="toggle withShadow" id="toggleRespon">
                   <div class="input-area">
                     <span class="label">가변정보</span>
-                    <span class="s-info">등록할 가변정보를 선택하고 추가하여 주세요</span>
+                    <span class="s-info pb-info">등록할 가변정보를 선택하고 추가하여 주세요</span>
+                    <div class="pb-swiper swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">구간명 ~ 구간명</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">자안교차로 부근 ~ 팔탄교차로</a><a href="" class="btn-del"></a></span>
+                        </div>
+                      </div>
+                    </div>
                     <a href="" class="btn-arrow"></a>
                   </div>
                   <div class="detail-area">
-                    333
+                    <div class="search-res-area">
+                      <div class="search-res-left" style="background:url(/img/map-vw-2-dnight.png) 50% 50% no-repeat;"></div>
+                      <div class="search-res-right">
+                        <div class="input-wrap input-btn">
+                          <input type="text" class="input-base tp2" placeholder="검색 키워드를 입력하세요" />
+                          <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
+                        </div>
+                        <span class="btn-base w-full"><a href="#"><em class="add">가변정보 등록</em></a></span>
+                        <div id="exampleTable_popup" class="c-table mt12"></div>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -373,7 +447,10 @@
 
   <script src="js/swiper.js"></script>
   <script>
-    createTableType10("#exampleTable");
+    createTableType10("#exampleTable1", "/img/img-vms-412.png", 607, 64);
+    createTableType10("#exampleTable2", "/img/img-vms-113.png", 54, 100);
+    createTableType10("#exampleTable3", "/img/img-vms-44.png", 50, 100);
+    
 
     $(window).on('load resize', function(){
       $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 249);
@@ -422,32 +499,42 @@
       }
     }
 
-    var pbSwiper = new Swiper('.pb-swiper', {
-      slidesPerView: 'auto',
-      observer: true,
-      observeParents: true,
-      observeSlideChildren: true,
+    $('.pb-swiper').each(function(index, element) {
+      var pbSwiper = new Swiper(element, {
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+      });
+
+      var $pbSlide = $(element).find('.swiper-slide a.item');
+      var $activeSlide = $(element).find('.swiper-slide.on');
+      var activeIndex = $activeSlide.index();
+
+      if (activeIndex !== -1) {
+        pbSwiper.slideTo(activeIndex, 0);
+      }
+
+      $pbSlide.on('click', function(e) {
+        e.preventDefault();
+        var $slide = $(this).closest('.swiper-slide');
+        $slide.addClass('on').siblings().removeClass('on');
+        pbSwiper.slideTo($slide.index());
+      });
     });
-    var pbSlide = $('.pb-swiper .swiper-slide a.item');
-    var activeIndex = $('.pb-swiper .swiper-slide.on').index();
-    if (activeIndex) {
-      pbSwiper.slideTo(activeIndex, 0)
-    }
-    pbSlide.on('click', function(e){
-      e.preventDefault();
-      $(this).closest('.swiper-slide').addClass('on');
-      $(this).closest('.swiper-slide').siblings().removeClass('on');
-      pbSwiper.slideTo(pbSlide.index(this))
-    });
+
     $('.pb-swiper.swiper-container .swiper-slide .inner .btn-del').on('click', function(e){
       e.preventDefault();
       $(this).closest('.swiper-slide').remove();
     });
 
-    $('#tmpView2 .col-wrap').css('width', $('#tmpView2 .col-wrap li').length * (120 + 8) + 8);
+    $('#tmpView1 .col-wrap').css('width', $('#tmpView1 .col-wrap li').length * (316 + 8) - 8);
+    $('#tmpView2 .col-wrap').css('width', $('#tmpView2 .col-wrap li').length * (120 + 8));
+    $('#tmpView3 .col-wrap').css('width', $('#tmpView3 .col-wrap li').length * (120 + 8));
 
     var Qsample = $.urlParam('sample');
     var Qpopup = $.urlParam('popup');
+    var Qtab = $.urlParam('tab');
     
     if (Qpopup === 'manageMessage') {
         setTimeout(function () {
@@ -456,13 +543,38 @@
             $('#popup-manage-message .items-input ul li.toggle:nth-child(2)').addClass('on');
           } else if (Qsample == '3') {
             $('#popup-manage-message .items-input ul li.toggle:nth-child(2)').addClass('on');
-            $('.pb-info').hide();
-            $('.pb-swiper').css('display', 'block');
+            $('#toggleImage .pb-info').hide();
+            $('#toggleImage .pb-swiper').css('display', 'block');
             addListItems(10);
-          } else if (Qsample == '4') {
+          } else if (Qsample == '4' || Qsample == '5') {
+            $('#popup-manage-message select').val('2').trigger('change'); // 11단 3열
             $('#tmpImg1, #tmpView1').hide();
             $('#tmpImg2, #tmpView2').show();
+            $('#toggleImage .pb-info').hide();
+            $('#toggleImage .pb-swiper').css('display', 'block');
+            $('#popup-manage-message .items-input ul li.toggle:nth-child(3)').addClass('on');
+            setTimeout(() => {
+              createTableType11("#exampleTable_popup");
+            }, 250);
+            if (Qsample == '5') {
+              $('#toggleRespon .pb-info').hide();
+              $('#toggleRespon .pb-swiper').css('display', 'block');
+            }
+          } else if (Qsample == '6') {
+            $('#popup-manage-message select').val('3').trigger('change'); // 4단 4열
+            $('#tmpImg1, #tmpView1').hide();
+            $('#tmpImg2, #tmpView3').show();
+            $('#toggleImage .pb-info').hide();
+            $('#toggleImage .pb-swiper').css('display', 'block');
+            $('#toggleRespon .pb-info').hide();
+            $('#toggleRespon .pb-swiper').css('display', 'block');
           }
+        }, 250);
+      }
+
+      if (Qtab) {
+        setTimeout(function(){
+          $(`.tab-input-wrap .tab-base li:eq(${Qtab - 1}) a`).click();
         }, 250);
       }
   </script>

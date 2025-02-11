@@ -568,3 +568,16 @@ body{width:100%;overflow-y:hidden;}
 .tab-input-wrap .input-wrap{margin-top:0;}
 #popup-add-image .manage-area{gap:0 16px;}
 #popup-add-image .scenario-area{padding:16px;width:532px;height:532px;flex-shrink:0;}
+.manage-area.ver_tmp > div{flex-shrink:0;}
+.manage-area.ver_tmp > div.temp-wrap{width:674px;}
+.manage-area.ver_tmp > div.temp-wrap + .temp-input-wrap{width:540px;}
+
+#header h1.logo-type3 a{display:flex;align-items:center;gap:0 8px;}
+#header h1.logo-type3 a .sm-text{font-size:16px;color:#f4f5f7;color:#fff;font-weight:bold;position: relative;top:3px;}
+.vms-items-area.ver_tmp .tmp-list-wrap{width:100%;overflow-y:hidden;overflow-x:auto;padding-bottom:4px;}
+.vms-items-area.ver_tmp .tmp-list-wrap::-webkit-scrollbar{background: transparent;width:12px;height:12px;} 
+.vms-items-area.ver_tmp .tmp-list-wrap::-webkit-scrollbar-track { border-radius: 6px; background: transparent;} 
+.vms-items-area.ver_tmp .tmp-list-wrap::-webkit-scrollbar-thumb { background: #4c556d; border-radius: 6px; background-clip: padding-box; border: 3px solid transparent; }
+.vms-items-area.ver_tmp .vms-items-list > li{width:100%;padding:16px 16px 0;}
+.vms-items-area.ver_tmp .vms-items-list > li .list li{padding:8px;width:auto;}
+.vms-items-area.ver_tmp .vms-items-list > li .list li.vms-type1{width:623px;padding:36px 8px;}
