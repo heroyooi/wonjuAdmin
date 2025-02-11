@@ -111,41 +111,200 @@
       </h3>
       <div class="con-wrap">
         <div class="manage-area">
-          <div class="scenario-area">
-            <span class="evt-list"><em>이미지 파일을 선택하면 표출됩니다</em></span>
-            <div class="preview-img"></div>
+          <div class="temp-wrap">
+            <div class="temp-tit-area">
+              <span class="s-tit">템플릿 편집</span>
+              <div class="label-select">
+                <span class="label">VMS 유형</span>
+                <span class="select-base">
+                  <span class="value"></span>
+                  <select>
+                    <option value="0">선택</option>
+                    <option value="1" selected>4단 19열</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div class="temp-top-area">
+              <div class="temp-item">
+                <ul class="color-pick">
+                  <li class="c-ff1900"><span></span></li>
+                  <li class="c-39ff00"><span></span></li>
+                  <li class="c-ffff00"><span></span></li>
+                  <li class="c-0006ff"><span></span></li>
+                  <li class="c-50ffff"><span></span></li>
+                  <li class="c-ffffff"><span></span></li>
+                  <li class="c-000000"><span></span></li>
+                </ul>
+                <ul>
+                  <li class="trafficinfo"><span></span></li>
+                </ul>
+                <ul>
+                  <li class="triangle"><span></span></li>
+                  <li class="quadrangle"><span></span></li>
+                  <li class="arrowshort"><span></span></li>
+                  <li class="arrowlong"><span></span></li>
+                </ul>
+
+                <ul class="right">
+                  <li class="refresh"><span></span></li>
+                </ul>
+              </div>
+              <div class="temp-item">
+                <span class="select-base" style="width: 100px;">
+                  <span class="value"></span>
+                  <select>
+                    <option value="0">선택</option>
+                    <option value="1" selected>20</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                  </select>
+                </span>
+                <ul>
+                  <li class="bold"><span></span></li>
+                  <li class="textsort"><span></span></li>
+                </ul>
+                <ul>
+                  <li class="left"><span></span></li>
+                  <li class="hcenter"><span></span></li>
+                  <li class="right"><span></span></li>
+                  <li class="top"><span></span></li>
+                  <li class="vcenter"><span></span></li>
+                  <li class="bottom"><span></span></li>
+                  <li class="dcenter"><span></span></li>
+                </ul>
+              </div>
+              <div class="temp-detail">
+                <img src="https://placehold.co/608x64/000000/4c556d/png?text=Canvas Area\n608 x 64" alt="">
+              </div>
+            </div>
+            <div class="temp-tit-area mt16">
+              <span class="s-tit">템플릿</span>
+            </div>
+            <div class="temp-view-area">
+              <ul>
+                <li>
+                  <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
+                  <span class="txt">기본 템플릿</span>
+                </li>
+                <li>
+                  <span class="img"><img src="https://placehold.co/318x32/000000/4c556d/png?text=Canvas Area 318 x 32" alt=""></span>
+                  <span class="txt">기본 템플릿</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="items-input">
-            <ul>
-              <li class="toggle">
-                <div class="input-area">
-                  <span class="label">메시지 이름</span>
-                  <div class="input">
-                    <input type="text" placeholder="메시지 이름을 입력하세요" class="input-base tp2" />
+          <div class="temp-input-wrap">
+            <div class="temp-tit-area">
+              <span class="s-tit">메시지 마스터 정보</span>
+            </div>
+            <div class="items-input">
+              <ul>
+                <li class="toggle">
+                  <div class="input-area">
+                    <span class="label">메시지 이름</span>
+                    <div class="input">
+                      <input type="text" placeholder="메시지 이름을 입력하세요" class="input-base tp2" />
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="toggle">
-                <div class="input-area">
-                  <span class="label">이미지</span>
-                  <span class="s-info">등록할 이미지를 선택하고 추가하여 주세요</span>
-                  <a href="" class="btn-arrow"></a>
-                </div>
-                <div class="detail-area">
-                  222
-                </div>
-              </li>
-              <li class="toggle">
-                <div class="input-area">
-                  <span class="label">가변정보</span>
-                  <span class="s-info">등록할 가변정보를 선택하고 추가하여 주세요</span>
-                  <a href="" class="btn-arrow"></a>
-                </div>
-                <div class="detail-area">
-                  333
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li class="toggle on">
+                  <div class="input-area">
+                    <span class="label">이미지</span>
+                    <span class="s-info">등록할 이미지를 선택하고 추가하여 주세요</span>
+                    <a href="" class="btn-arrow"></a>
+                  </div>
+                  <div class="detail-area">
+                    <div class="search-img-top">
+                      <div class="input-wrap input-btn" style="width: 293px;">
+                        <input type="text" class="input-base tp2" placeholder="검색 키워드를 입력하세요" />
+                        <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
+                      </div>
+                      <span class="btn-base"><a href="#"><em class="add">이미지 추가</em></a></span>
+                    </div>
+                    <ul class="search-img-list">
+                      <li>
+                        <dl>
+                          <dt>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-1" />
+                              <label for="chk-1">이미지명명 명명명명명</label>
+                            </span>
+                          </dt>
+                          <dd>
+                            <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-2" />
+                              <label for="chk-2">이미지명</label>
+                            </span>
+                          </dt>
+                          <dd>
+                            <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-3" />
+                              <label for="chk-3">이미지 이름</label>
+                            </span>
+                          </dt>
+                          <dd>
+                            <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-4" />
+                              <label for="chk-4">이미지명명 명명명명명</label>
+                            </span>
+                          </dt>
+                          <dd>
+                            <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl>
+                          <dt>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-5" />
+                              <label for="chk-5">이미지명명 명명명명명</label>
+                            </span>
+                          </dt>
+                          <dd>
+                            <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="toggle">
+                  <div class="input-area">
+                    <span class="label">가변정보</span>
+                    <span class="s-info">등록할 가변정보를 선택하고 추가하여 주세요</span>
+                    <a href="" class="btn-arrow"></a>
+                  </div>
+                  <div class="detail-area">
+                    333
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div><!-- .manage-area -->
         <div class="btns-wrap t-center">
@@ -172,6 +331,41 @@
         $(this).closest('.tit').find('.tip-content').hide();
       }
     });
+    $('.items-input ul li.toggle .input-area .btn-arrow').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).closest('li.toggle').hasClass('on')) {
+        $(this).closest('li.toggle').addClass('on')
+      } else {
+        $(this).closest('li.toggle').removeClass('on')
+      }
+    });
+
+    function addListItems(count) {
+      let list = $('.search-img-list');
+      let currentCount = list.children('li').length;
+      
+      for (let i = 1; i <= count; i++) {
+        let newIndex = currentCount + i;
+        let listItem = `
+            <li>
+                <dl>
+                    <dt>
+                        <span class="chk-base">
+                            <input type="checkbox" id="chk-${newIndex}" />
+                            <label for="chk-${newIndex}">이미지명 ${newIndex}</label>
+                        </span>
+                    </dt>
+                    <dd>
+                        <img src="https://placehold.co/64x64/000000/4c556d/png" alt="">
+                    </dd>
+                </dl>
+            </li>
+        `;
+        list.append(listItem);
+      }
+    }
+
+    // addListItems(10);
 
     var Qsample = $.urlParam('sample');
     var Qpopup = $.urlParam('popup');
