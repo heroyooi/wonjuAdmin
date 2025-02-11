@@ -536,11 +536,16 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 
 .items-input ul li .input-area .s-info{font-size:12px;font-weight:600;color:#99a2b9;display:flex;gap:0 4px;align-items:center;line-height:1.52;}
 .items-input ul li .input-area .s-info::before{width:12px;height:12px;background:url(../img/ico-s-hint.png) 0 0 no-repeat;content:'';display:block;}
-.items-input ul li.toggle{position: relative;border-bottom:1px solid #373d4f;padding:12px 0;margin-top:0;}
+.items-input ul li.toggle .input-area{min-height:28px;}
+.items-input ul li.toggle.withShadow::before,
+.items-input ul li.toggle.withShadow::after{content:'';display:block;height:28px;position:absolute;top:8px;z-index:2;}
+.items-input ul li.toggle.withShadow::before{width:8px;background-color:#2c3240;right:24px;}
+.items-input ul li.toggle.withShadow::after{width:24px;background-image:linear-gradient(to right, rgba(44, 50, 64, 0) 2%, #2c3240 77%, #2c3240 100%);right:32px;}
+.items-input ul li.toggle{position: relative;border-bottom:1px solid #373d4f;padding:8px 0;margin-top:0;}
 .items-input ul li.toggle:first-child{padding-top:0;}
 .items-input ul li.toggle:last-child{border-bottom:0;}
-.items-input ul li.toggle .input-area .btn-arrow{background:url(../img/ico-arrow-g.png) 0 0 no-repeat;display:inline-block;width:24px;height:24px;position: absolute;right:0;top:10px;}
-.items-input ul li.toggle .detail-area{display:none;padding:8px 0;}
+.items-input ul li.toggle .input-area .btn-arrow{background:#2c3240 url(../img/ico-arrow-g.png) 50% 50% no-repeat;display:inline-block;width:24px;height:28px;position: absolute;right:0;top:8px;z-index:1;transition:none;}
+.items-input ul li.toggle .detail-area{display:none;padding:8px 0 0;}
 .items-input ul li.toggle.on .input-area .btn-arrow{transform:rotate(180deg);}
 .items-input ul li.toggle.on .detail-area{display:block;}
 
@@ -607,5 +612,11 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .search-img-list::after{content:'';display:block;clear:both;}
 .search-img-list li{border-left:1px solid #2c3240;border-top:1px solid #2c3240;width:33.333%;text-align:center;margin-top:0 !important;float:left;}
 .search-img-list li dt{background-color:#222631;padding:4px 16px;text-align:left;}
-.search-img-list li dd{padding:8px;text-align:center;background-color: rgba(34, 38, 49, 0.5);
-  ;}
+.search-img-list li dd{padding:8px;text-align:center;background-color: rgba(34, 38, 49, 0.5);}
+
+.pb-swiper.swiper-container{display:none;margin:0;}
+.pb-swiper.swiper-container .swiper-slide{width:auto;margin-right:10px;}
+.pb-swiper.swiper-container .swiper-slide .inner{display:flex;align-items:center;padding:4.5px 12px;background-color:#222631;border-radius:16px;gap:0 8px;}
+.pb-swiper.swiper-container .swiper-slide .inner .item{display:block;transition:background-color 0.2s, color 0.2s;font-size:12px;color:#b8bdcd;font-weight:600;}
+.pb-swiper.swiper-container .swiper-slide .inner .btn-del{display:inline-block;width:12px;height:12px;background:url(../img/ico-ss-cancel-g.png) 50% 50% no-repeat;}
+.pb-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}

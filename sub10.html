@@ -210,10 +210,38 @@
                     </div>
                   </div>
                 </li>
-                <li class="toggle on">
+                <li class="toggle on withShadow">
                   <div class="input-area">
                     <span class="label">이미지</span>
-                    <span class="s-info">등록할 이미지를 선택하고 추가하여 주세요</span>
+                    <span class="s-info pb-info">등록할 이미지를 선택하고 추가하여 주세요</span>
+                    <div class="pb-swiper swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지명명 명명명명명</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                        <div class="swiper-slide">
+                          <span class="inner"><a class="item" href="#">이미지이름</a><a href="" class="btn-del"></a></span>
+                        </div>
+                      </div>
+                    </div>
                     <a href="" class="btn-arrow"></a>
                   </div>
                   <div class="detail-area">
@@ -315,6 +343,8 @@
     </div><!-- .popup-wrap -->
     
   </div><!-- #wrap -->
+
+  <script src="js/swiper.js"></script>
   <script>
     createTableType10("#exampleTable");
 
@@ -365,16 +395,44 @@
       }
     }
 
-    // addListItems(10);
+    var pbSwiper = new Swiper('.pb-swiper', {
+      slidesPerView: 'auto',
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+    });
+    var pbSlide = $('.pb-swiper .swiper-slide a.item');
+    var activeIndex = $('.pb-swiper .swiper-slide.on').index();
+    if (activeIndex) {
+      pbSwiper.slideTo(activeIndex, 0)
+    }
+    pbSlide.on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.swiper-slide').addClass('on');
+      $(this).closest('.swiper-slide').siblings().removeClass('on');
+      pbSwiper.slideTo(pbSlide.index(this))
+    });
+    $('.pb-swiper.swiper-container .swiper-slide .inner .btn-del').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.swiper-slide').remove();
+    })
 
     var Qsample = $.urlParam('sample');
     var Qpopup = $.urlParam('popup');
     
     if (Qpopup === 'manageMessage') {
-      setTimeout(function(){
-        $('[href="#popup-manage-message"]').click();
-      }, 250);
-    }
+        setTimeout(function () {
+          $('[href="#popup-manage-message"]').click();
+          if (Qsample == '2') {
+            $('#popup-manage-message .items-input ul li.toggle:nth-child(2)').addClass('on');
+          } else if (Qsample == '3') {
+            $('#popup-manage-message .items-input ul li.toggle:nth-child(2)').addClass('on');
+            $('.pb-info').hide();
+            $('.pb-swiper').css('display', 'block');
+            addListItems(10);
+          }
+        }, 250);
+      }
   </script>
 </body>
 </html>
