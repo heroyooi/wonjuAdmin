@@ -263,7 +263,15 @@
       $(this).siblings('.on').removeClass('on')
       $(this).addClass('on');
     });
-
+    $('.video-info.ver_tmp li .result.state').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $(this).text('ON');
+      } else {
+        $(this).removeClass('on');
+        $(this).text('OFF');
+      }
+    })
 
     var Qsample = $.urlParam('sample');
     if (Qsample === '') {

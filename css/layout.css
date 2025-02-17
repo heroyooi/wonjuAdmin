@@ -582,6 +582,7 @@ body{width:100%;overflow-y:hidden;}
 .vms-items-area.ver_tmp .vms-items-list > li .list li{padding:8px;width:auto;}
 .vms-items-area.ver_tmp .vms-items-list > li .list li.vms-type1{width:623px;padding:36px 8px;}
 .video-wrap.ver_tmp{position: relative;}
+.video-info.ver_tmp li .result.state{cursor:pointer;}
 .video-info.ver_tmp li .result.state::before{display:none;}
 .video-info.ver_tmp li .result.state{color:#99a2b9;display:flex;gap:0 4px;}
 .video-info.ver_tmp li .result.state::after{content:'';display:block;width:40px;height:20px;background:url(../img/toggle-off.png) 0 0 no-repeat;}

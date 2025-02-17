@@ -197,6 +197,7 @@
               <div class="temp-detail">
                 <img id="tmpImg1" src="https://placehold.co/608x64/000000/4c556d/png?text=Canvas Area\n608 x 64" alt="">
                 <img id="tmpImg2" src="https://placehold.co/145x268/000000/4c556d/png?text=Canvas Area\n145 x 268" alt="" style="display: none;">
+                <img id="tmpImg3" src="https://placehold.co/145x268/000000/4c556d/png?text=Canvas Area\n134 x 268" alt="" style="display: none;">
               </div>
             </div>
             <div class="temp-tit-area mt16">
@@ -456,18 +457,19 @@
       $('.content-wrap .c-table.tabulator').css('height', $(window).height() - 249);
     });
 
-    $('[class*=popup-wrap] .tit.w-tip .tip').on('click', function(){
-      if (!$(this).hasClass('on')) {
-        $(this).addClass('on');
-        $(this).closest('.tit').find('.tip-content').show();
-      } else {
-        $(this).removeClass('on');
-        $(this).closest('.tit').find('.tip-content').hide();
-      }
-    });
+    // $('[class*=popup-wrap] .tit.w-tip .tip').on('click', function(){
+    //   if (!$(this).hasClass('on')) {
+    //     $(this).addClass('on');
+    //     $(this).closest('.tit').find('.tip-content').show();
+    //   } else {
+    //     $(this).removeClass('on');
+    //     $(this).closest('.tit').find('.tip-content').hide();
+    //   }
+    // });
     $('.items-input ul li.toggle .input-area .btn-arrow').on('click', function(e){
       e.preventDefault();
       if (!$(this).closest('li.toggle').hasClass('on')) {
+        $(this).closest('li.toggle').siblings().removeClass('on');
         $(this).closest('li.toggle').addClass('on')
       } else {
         $(this).closest('li.toggle').removeClass('on')
@@ -525,7 +527,12 @@
 
     $('.pb-swiper.swiper-container .swiper-slide .inner .btn-del').on('click', function(e){
       e.preventDefault();
-      $(this).closest('.swiper-slide').remove();
+      if ($(this).closest('.pb-swiper').find('.swiper-slide').length == 1) {
+        $(this).closest('.pb-swiper').prev('.pb-info').show();
+        $(this).closest('.pb-swiper').remove();
+      } else {
+        $(this).closest('.swiper-slide').remove();
+      }
     });
 
     $('#tmpView1 .col-wrap').css('width', $('#tmpView1 .col-wrap li').length * (316 + 8) - 8);
@@ -563,11 +570,12 @@
           } else if (Qsample == '6') {
             $('#popup-manage-message select').val('3').trigger('change'); // 4단 4열
             $('#tmpImg1, #tmpView1').hide();
-            $('#tmpImg2, #tmpView3').show();
+            $('#tmpImg3, #tmpView3').show();
             $('#toggleImage .pb-info').hide();
             $('#toggleImage .pb-swiper').css('display', 'block');
             $('#toggleRespon .pb-info').hide();
             $('#toggleRespon .pb-swiper').css('display', 'block');
+
           }
         }, 250);
       }

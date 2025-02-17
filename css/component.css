@@ -513,6 +513,7 @@
 .input-wrap.input-btn .btn-base{width:auto;flex-shrink:0;}
 
 .period-detail.ver-label.ver-relative.ver-cell{padding:16px 118px;position: relative;}
+.period-detail.ver-cell .cell-wrap [class*=cell-btn]{cursor:default;}
 .period-detail.ver-label.ver-relative.ver-cell .fe-label{left:20px;}
 .period-detail.ver-label.ver-relative.ver-cell .be-label{right:20px;}
 .period-detail.ver-label.ver-relative.ver-cell .fe-label,
@@ -529,10 +530,11 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 [class*=popup-wrap] .tit.w-tip{display:inline-block;position: relative;z-index:1;}
 [class*=popup-wrap] .tit.w-tip .tip{display:flex;align-items: center;gap:0 8px;cursor:pointer;}
 [class*=popup-wrap] .tit.w-tip .tip::after{content:'';display:block;width:24px;height:24px;background:url(../img/ico-info-def.png) 50% 50% no-repeat;}
-[class*=popup-wrap] .tit.w-tip .tip.on::after{background:url(../img/ico-info-hov.png) 50% 50% no-repeat;}
+[class*=popup-wrap] .tit.w-tip .tip:hover::after, [class*=popup-wrap] .tit.w-tip .tip.on::after{background:url(../img/ico-info-hov.png) 50% 50% no-repeat;}
 [class*=popup-wrap] .tit.w-tip .tip-content{font-size:13px;color:#b8bdcd;font-weight:400;position: absolute;border-radius: 8px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);background-color: #373d4f;padding:12px 16px;width:372px;left:20px;top:47px;display:none;}
 [class*=popup-wrap] .tit.w-tip .tip-content li{line-height:1.4;}
 [class*=popup-wrap] .tit.w-tip .tip-content li span{font-weight:700;}
+[class*=popup-wrap] .tit.w-tip .tip:hover + .tip-content{display:block;}
 
 .items-input ul li .input-area .s-info{font-size:12px;font-weight:600;color:#99a2b9;display:flex;gap:0 4px;align-items:center;line-height:1.52;}
 .items-input ul li .input-area .s-info::before{width:12px;height:12px;background:url(../img/ico-s-hint.png) 0 0 no-repeat;content:'';display:block;}
@@ -544,9 +546,10 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .items-input ul li.toggle{position: relative;border-bottom:1px solid #373d4f;padding:8px 0;margin-top:0;}
 .items-input ul li.toggle:first-child{padding-top:0;}
 .items-input ul li.toggle:last-child{border-bottom:0;}
-.items-input ul li.toggle .input-area .btn-arrow{background:#2c3240 url(../img/ico-arrow-g.png) 50% 50% no-repeat;display:inline-block;width:24px;height:28px;position: absolute;right:0;top:8px;z-index:1;transition:none;}
+.items-input ul li.toggle .input-area .btn-arrow{background:#2c3240 url(../img/ico-arrow-g2.png) 50% 50% no-repeat;display:inline-block;width:24px;height:28px;position: absolute;right:0;top:8px;z-index:1;transition:none;transform:rotate(180deg);}
+.items-input ul li.toggle .input-area .btn-arrow:hover{background:#2c3240 url(../img/ico-arrow-b.png) 50% 50% no-repeat;}
 .items-input ul li.toggle .detail-area{display:none;padding:8px 0 0;}
-.items-input ul li.toggle.on .input-area .btn-arrow{transform:rotate(180deg);}
+.items-input ul li.toggle.on .input-area .btn-arrow{transform:rotate(0deg);}
 .items-input ul li.toggle.on .detail-area{display:block;}
 
 .temp-tit-area{margin-bottom:8px;display:flex;justify-content:space-between;align-items: center;}
@@ -566,7 +569,7 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .temp-wrap .temp-view-area ul.col-5 li{width:120px;}
 .temp-wrap .temp-view-area ul li span{display:block;text-align:center;}
 .temp-wrap .temp-view-area ul li span.txt{font-size:13px;line-height:1.4;color:#b8bdcd;margin-top:4px;}
-.temp-input-wrap .items-input{height:637px;}
+.temp-input-wrap .items-input{height:637px;overflow:hidden;}/* ppt 6번 */
 
 .temp-item{display:flex;gap:8px;position: relative;margin-top:8px;}
 .temp-item:first-child{margin-top:0;}
