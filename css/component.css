@@ -585,16 +585,17 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .temp-item > ul.color-pick > li.c-50ffff span{background-color: #50ffff;}
 .temp-item > ul.color-pick > li.c-ffffff span{background-color: #ffffff;}
 .temp-item > ul.color-pick > li.c-000000 span{background-color: #000000;}
+.temp-item > ul.color-pick > li span:hover, .temp-item > ul.color-pick > li.on span{border:2px solid #fff;}
+.temp-item > ul.color-pick > li.c-ffffff span:hover, .temp-item > ul.color-pick > li.c-ffffff.on span{border:2px solid #99a2b9;}
+
 .temp-item > ul > li.trafficinfo span{background-image: url(../img/ico-tool-trafficinfo-g.png);}
 .temp-item > ul > li.triangle span{background-image: url(../img/ico-tool-triangle-g.png);}
 .temp-item > ul > li.quadrangle span{background-image: url(../img/ico-tool-quadrangle-g.png);}
 .temp-item > ul > li.arrowshort span{background-image: url(../img/ico-tool-arrowshort-g.png);}
 .temp-item > ul > li.arrowlong span{background-image: url(../img/ico-tool-arrowlong-g.png);}
 .temp-item > ul > li.refresh span{background-image: url(../img/ico-tool-refresh-g.png);}
-
 .temp-item > ul > li.bold span{background-image: url(../img/ico-tool-bold-g.png);}
 .temp-item > ul > li.textsort span{background-image: url(../img/ico-tool-textsort-g.png);}
-
 .temp-item > ul > li.left span{background-image: url(../img/ico-tool-left-g.png);}
 .temp-item > ul > li.hcenter span{background-image: url(../img/ico-tool-hcenter-g.png);}
 .temp-item > ul > li.right span{background-image: url(../img/ico-tool-right-g.png);}
@@ -602,6 +603,22 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .temp-item > ul > li.vcenter span{background-image: url(../img/ico-tool-vcenter-g.png);}
 .temp-item > ul > li.bottom span{background-image: url(../img/ico-tool-bottom-g.png);}
 .temp-item > ul > li.dcenter span{background-image: url(../img/ico-tool-dcenter-g.png);}
+
+.temp-item > ul > li.on.trafficinfo span, .temp-item > ul > li.trafficinfo span:hover{background-image: url(../img/ico-tool-trafficinfo-b.png);}
+.temp-item > ul > li.on.triangle span, .temp-item > ul > li.triangle span:hover{background-image: url(../img/ico-tool-triangle-b.png);}
+.temp-item > ul > li.on.quadrangle span, .temp-item > ul > li.quadrangle span:hover{background-image: url(../img/ico-tool-quadrangle-b.png);}
+.temp-item > ul > li.on.arrowshort span, .temp-item > ul > li.arrowshort span:hover{background-image: url(../img/ico-tool-arrowshort-b.png);}
+.temp-item > ul > li.on.arrowlong span, .temp-item > ul > li.arrowlong span:hover{background-image: url(../img/ico-tool-arrowlong-b.png);}
+.temp-item > ul > li.on.refresh span, .temp-item > ul > li.refresh span:hover{background-image: url(../img/ico-tool-refresh-b.png);}
+.temp-item > ul > li.on.bold span, .temp-item > ul > li.bold span:hover{background-image: url(../img/ico-tool-bold-b.png);}
+.temp-item > ul > li.on.textsort span, .temp-item > ul > li.textsort span:hover{background-image: url(../img/ico-tool-textsort-b.png);}
+.temp-item > ul > li.on.left span, .temp-item > ul > li.left span:hover{background-image: url(../img/ico-tool-left-b.png);}
+.temp-item > ul > li.on.hcenter span, .temp-item > ul > li.hcenter span:hover{background-image: url(../img/ico-tool-hcenter-b.png);}
+.temp-item > ul > li.on.right span, .temp-item > ul > li.right span:hover{background-image: url(../img/ico-tool-right-b.png);}
+.temp-item > ul > li.on.top span, .temp-item > ul > li.top span:hover{background-image: url(../img/ico-tool-top-b.png);}
+.temp-item > ul > li.on.vcenter span, .temp-item > ul > li.vcenter span:hover{background-image: url(../img/ico-tool-vcenter-b.png);}
+.temp-item > ul > li.on.bottom span, .temp-item > ul > li.bottom span:hover{background-image: url(../img/ico-tool-bottom-b.png);}
+.temp-item > ul > li.on.dcenter span, .temp-item > ul > li.dcenter span:hover{background-image: url(../img/ico-tool-dcenter-b.png);}
 
 .temp-item > ul.right{position: absolute;right:0;top:0;}
 

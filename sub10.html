@@ -134,7 +134,7 @@
               <span class="s-tit">템플릿 편집</span>
               <div class="label-select">
                 <span class="label">VMS 유형</span>
-                <span class="select-base">
+                <span class="select-base" style="width: 120px;">
                   <span class="value"></span>
                   <select>
                     <option value="0">선택</option>
@@ -533,6 +533,15 @@
       } else {
         $(this).closest('.swiper-slide').remove();
       }
+    });
+    $('.temp-item > ul > li').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+      
     });
 
     $('#tmpView1 .col-wrap').css('width', $('#tmpView1 .col-wrap li').length * (316 + 8) - 8);
