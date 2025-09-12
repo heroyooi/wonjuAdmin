@@ -588,3 +588,5 @@ body{width:100%;overflow-y:hidden;}
 .video-info.ver_tmp li .result.state::after{content:'';display:block;width:40px;height:20px;background:url(../img/toggle-off.png) 0 0 no-repeat;}
 .video-info.ver_tmp li .result.state.on{color:#008fff;}
 .video-info.ver_tmp li .result.state.on::after{background:url(../img/toggle-on.png) 0 0 no-repeat;}
+
+/* 2025-09 */
