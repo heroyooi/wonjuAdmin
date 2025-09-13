@@ -193,6 +193,55 @@
 .s-ico:not(.ai).new.disabled.roadsurface{background-image:url(../img/icon/new/ico-s-roadsurface-dis.svg);background-color: #373d4f;}
 .s-ico:not(.ai).new.disabled.signal{background-image:url(../img/icon/new/ico-s-signal-dis.svg);background-color: #373d4f;}
 
+.i-obj {
+  position: absolute;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+.e-point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  animation: epoint 1.5s infinite;
+  opacity: 0;
+}
+.e-point.tp1 {
+  background-color: rgba(45, 190, 133, 0.6);
+}
+.e-point.tp2 {
+  background-color: rgba(81, 106, 240, 0.6);
+}
+.e-point.tp3 {
+  background-color: rgba(150, 70, 239, 0.6);
+}
+.e-point.tp4 {
+  background-color: rgba(243, 75, 171, 0.6);
+}
+.e-point.tp5 {
+  background-color: rgba(14, 173, 208, 0.6);
+}
+.e-point.tp6 {
+  background-color: rgba(255, 133, 46, 0.6);
+}
+.e-point.tp7 {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+@keyframes epoint {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform:scale(2.93);
+    opacity:0;
+  }
+}
+.s-ico.accident{width:28px;height:28px;background:url('/img/wj/ico-map-accident-def.svg') 50% 50% no-repeat;border-radius:0;}
+.s-ico.special{width:28px;height:28px;background:url('/img/wj/ico-map-special-def.svg') 50% 50% no-repeat;border-radius:0;}
 
 /* modal */
 .modal-wrap{position:absolute;border:1px solid #2c3240;width:302px;border-radius:8px;overflow:hidden;display:none;z-index:9;}
@@ -204,10 +253,10 @@
 .modal-wrap .modal-content iframe{position: absolute;width:100%;height:100%;}
 .modal-wrap.type-2{border-color:#008fff;background-color: rgba(34, 38, 49, 0.9);}
 .modal-wrap .modal-info{padding:10px 8px 10px 16px;}
-.modal-wrap .modal-info li{display:flex;justify-content:space-between;align-items:center;font-size:13px;line-height:1.4;margin-top:4px;}
+.modal-wrap .modal-info li{display:flex;align-items:center;font-size:13px;line-height:1.4;margin-top:8px;gap:0 8px;}
 .modal-wrap .modal-info li:first-child{margin-top:0;}
-.modal-wrap .modal-info li .label{color:#b8bdcd;}
-.modal-wrap .modal-info li .result{color:#f4f5f7;}
+.modal-wrap .modal-info li .label{color:#b8bdcd;width:68px;flex-shrink:0;}
+.modal-wrap .modal-info li .result{color:#f4f5f7;flex-grow:1;word-break: break-all;}
 
 .modal-wrap .modal-head{padding:14.5px 16px;background-color:#2c3240;position: relative;}
 .modal-wrap .modal-head .tit{color:#008fff;font-size:16px;font-weight:700;}

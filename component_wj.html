@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 퍼블리싱 - 컴포넌트 가이드 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <style>
+    .code-box > .btn-base{margin-top:10px;}
+
+    .component-menu{position:fixed;right:20px;top:80px;padding:10px;background-color:#000;border-radius:5px;z-index:1;min-width:100px;}
+    .component-menu li{font-size:12px;margin-top:10px;cursor:pointer;color:#fff;}
+    .component-menu li:first-child{margin-top:0;}
+    .component-menu li.on{color:#1b64c8;font-weight:500;}
+    .component-menu .component-list{margin-bottom:10px;}
+    
+    .component-menu .btn-base{width:100%;}
+    .component-menu .btn-base a{font-size:12px;padding:5px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="" /></a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="#">통합모니터링</a></li>
+        <li>
+          <a href="#">수집 장비 관리</a>
+          <ul class="submenu submenu2">
+            <li><a href="#">레이더 관리</a></li>
+            <li><a href="#">라이다 관리</a></li>
+            <li><a href="#">음향식노면검지기 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">VMS관리</a>
+          <ul class="submenu submenu3">
+            <li><a href="#">VMS 제어</a></li>
+            <li><a href="#">VMS 시나리오 관리</a></li>
+            <li><a href="#">VMS 메시지 관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">AI 영상 분석</a>
+        </li>
+        <li>
+          <a href="#">위험도 예측</a>
+        </li>
+        <li>
+          <a href="#"><span class="ico">통계/이력관리</span></a>
+        </li>
+        <li>
+          <a href="#">시스템 관리</a>
+        </li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li>
+          <a href="#" class="user">
+            <span class="avatar"></span>
+            <span class="nickname">Admin 01</span>
+          </a>
+        </li>
+        <li><a href="#" class="logout">로그아웃</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container" class="ex_wrp component c-scrollbar">
+
+<pre class="language-html guide">
+<code><link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/tabulator.min.js"></script>
+<script src="js/tui-time-picker.js"></script>
+<script src="js/tui-date-picker.js"></script>
+<script src="js/ui.js"></script></code>
+</pre>
+
+      <div class="section" id="logo">
+        <h2>LOGO</h2>
+        <div class="code-area">
+          <h3>로고 <button>코드 보기</button></h3>
+<div class="code-box"><h1><a href="#"><img src="img/seoul/logo-srocm.png" alt="서울지방국토관리청 운영단말 시스템" /></a></h1>
+<h1><a href="#"><img src="img/seoul/logo-srocm-login.png" alt="서울지방국토관리청 운영단말 시스템" /></a></h1>
+<h2><a href="#"><img src="img/seoul/logo-srocm-popup.png" alt="서울지방국토관리청" /></a></h2></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section" id="icon">
+        <h2>ICON</h2>
+        <div class="code-area">
+          <h3>타입1(18) <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp1 radar"></span>
+<span class="s-ico ai tp1 cctv"></span>
+<span class="s-ico ai tp1 vms"></span>
+<span class="s-ico ai tp1 dfs"></span>
+<span class="s-ico ai tp1 vds"></span>
+<span class="s-ico ai tp1 all"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입1(18) - 활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp1 radar on"></span>
+<span class="s-ico ai tp1 cctv on"></span>
+<span class="s-ico ai tp1 vms on"></span>
+<span class="s-ico ai tp1 dfs on"></span>
+<span class="s-ico ai tp1 vds on"></span>
+<span class="s-ico ai tp1 all on"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입1(18) - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp1 radar disabled"></span>
+<span class="s-ico ai tp1 cctv disabled"></span>
+<span class="s-ico ai tp1 vms disabled"></span>
+<span class="s-ico ai tp1 dfs disabled"></span>
+<span class="s-ico ai tp1 vds disabled"></span>
+<span class="s-ico ai tp1 all disabled"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>타입2(18+10) <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 radar"></span>
+<span class="s-ico ai tp2 cctv"></span>
+<span class="s-ico ai tp2 vms"></span>
+<span class="s-ico ai tp2 dfs"></span>
+<span class="s-ico ai tp2 vds"></span>
+<span class="s-ico ai tp2 all"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2(18+10) - 활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 radar on"></span>
+<span class="s-ico ai tp2 cctv on"></span>
+<span class="s-ico ai tp2 vms on"></span>
+<span class="s-ico ai tp2 dfs on"></span>
+<span class="s-ico ai tp2 vds on"></span>
+<span class="s-ico ai tp2 all on"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2(18+10) - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 radar disabled"></span>
+<span class="s-ico ai tp2 cctv disabled"></span>
+<span class="s-ico ai tp2 vms disabled"></span>
+<span class="s-ico ai tp2 dfs disabled"></span>
+<span class="s-ico ai tp2 vds disabled"></span>
+<span class="s-ico ai tp2 all disabled"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2(18+10) - POI Test <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 poi radar"></span>
+<span class="s-ico ai tp2 poi cctv"></span>
+<span class="s-ico ai tp2 poi vms"></span>
+<span class="s-ico ai tp2 poi dfs"></span>
+<span class="s-ico ai tp2 poi vds"></span>
+<span class="s-ico ai tp2 poi all"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2(18+10) - POI Test - 활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 poi radar on"></span>
+<span class="s-ico ai tp2 poi cctv on"></span>
+<span class="s-ico ai tp2 poi vms on"></span>
+<span class="s-ico ai tp2 poi dfs on"></span>
+<span class="s-ico ai tp2 poi vds on"></span>
+<span class="s-ico ai tp2 poi all on"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2(18+10) - POI Test - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp2 poi radar disabled"></span>
+<span class="s-ico ai tp2 poi cctv disabled"></span>
+<span class="s-ico ai tp2 poi vms disabled"></span>
+<span class="s-ico ai tp2 poi dfs disabled"></span>
+<span class="s-ico ai tp2 poi vds disabled"></span>
+<span class="s-ico ai tp2 poi all disabled"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입3(24) <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico ai tp3 radar"></span>
+<span class="s-ico ai tp3 cctv"></span>
+<span class="s-ico ai tp3 vms"></span>
+<span class="s-ico ai tp3 dfs"></span>
+<span class="s-ico ai tp3 vds"></span>
+<span class="s-ico ai tp3 all"></span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>INPUT</h2>
+
+        <div class="code-area">
+          <h3>기본 <button>코드 보기</button></h3>
+<div class="code-box"><input type="text" class="input-base" placeholder="ID 를 입력하세요" /></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>값 있음 <button>코드 보기</button></h3>
+<div class="code-box"><input type="text" class="input-base" placeholder="ID 를 입력하세요" value="히어로" /></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>파일찾기 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap file">
+  <input type="text" class="input-base tp2" placeholder="첨부파일을 업로드하세요" readonly />
+  <span class="btn-base"><a href="#">파일찾기</a></span>
+  <input type="file" id="addFile" />
+  <a href="#" class="btn-delete"></a>
+</div></div>
+<script>$('#addFile').on('change', function(){
+  var $target = $(this).closest('.input-wrap');
+  var fileValue = this.value.split('\\');  
+  var fileName = fileValue[fileValue.length-1];
+  $target.find('.input-base').val(fileName);
+  if (!$target.hasClass('active')) {
+    $target.addClass('active');
+  }
+});
+
+$('.input-wrap.file .btn-delete').on('click', function(){
+  var $target = $(this).closest('.input-wrap')
+  $target.find('.input-base').val('');
+  $target.removeClass('active');
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>BUTTON</h2>
+        <div class="code-area">
+          <h3>버튼 L 그룹 <button>코드 보기</button></h3>
+<div class="code-box"><div class="btns-wrap">
+  <span class="btn-base"><a href="#"><em class="play">재시작</em></a></span>
+  <span class="btn-base tp2"><a href="#"><em class="play">재시작</em></a></span>
+  <span class="btn-base tp3"><a href="#"><em class="play">재시작</em></a></span>
+  <span class="btn-base tp3 disabled"><a href="#"><em class="play">재시작</em></a></span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>버튼 M 그룹 <button>코드 보기</button></h3>
+<div class="code-box"><div class="btns-wrap">
+  <span class="btn-base md"><a href="#"><em class="management">관리</em></a></span>
+  <span class="btn-base md tp3"><a href="#"><em class="management">관리</em></a></span>
+  <span class="btn-base md tp3 disabled"><a href="#"><em class="management">관리</em></a></span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>버튼 그룹 <button>코드 보기</button></h3>
+<div class="code-box"><div class="btns-wrap">
+  <span class="btn-base"><a href="#"><em class="vmsdata">VMS 표출 관리</em></a></span>
+  <span class="btn-base"><a href="#"><em class="time">운영시간 관리</em></a></span>
+  <span class="btn-base"><a href="#"><em class="onoff">ON/OFF</em></a></span>
+  <span class="btn-base tp2"><a href="#"><em class="play">재시작</em></a></span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>버튼 그룹 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><div class="btns-wrap">
+  <span class="btn-base disabled"><a href="#"><em class="vmsdata">VMS 표출 관리</em></a></span>
+  <span class="btn-base disabled"><a href="#"><em class="time">운영시간 관리</em></a></span>
+  <span class="btn-base disabled"><a href="#"><em class="onoff">ON/OFF</em></a></span>
+  <span class="btn-base disabled tp2"><a href="#"><em class="play">재시작</em></a></span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>기타 버튼 <button>코드 보기</button></h3>
+<div class="code-box"><a href="#" class="btn-ico btn-layer"></a>
+<a href="#" class="btn-ico btn-plus"></a>
+<a href="#" class="btn-ico btn-minus"></a>
+<a href="#" class="btn-ico btn-refresh"></a>
+<a href="#" class="btn-ico btn-index"></a></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>ICON</h2>
+        <div class="code-area">
+          <h3>기본 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico lidar"></span>
+<span class="s-ico radar"></span>
+<span class="s-ico cctv"></span>
+<span class="s-ico vms"></span>
+<span class="s-ico dfs"></span>
+<span class="s-ico roadsurface"></span>
+<span class="s-ico signal"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico lidar on"></span>
+<span class="s-ico radar on"></span>
+<span class="s-ico cctv on"></span>
+<span class="s-ico vms on"></span>
+<span class="s-ico dfs on"></span>
+<span class="s-ico roadsurface on"></span>
+<span class="s-ico signal on"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico lidar disabled"></span>
+<span class="s-ico radar disabled"></span>
+<span class="s-ico cctv disabled"></span>
+<span class="s-ico vms disabled"></span>
+<span class="s-ico dfs disabled"></span>
+<span class="s-ico roadsurface disabled"></span>
+<span class="s-ico signal disabled"></span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>NEW - ICON</h2>
+        <div class="code-area">
+          <h3>기본 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico new lidar"></span>
+<span class="s-ico new radar"></span>
+<span class="s-ico new cctv"></span>
+<span class="s-ico new vms"></span>
+<span class="s-ico new dfs"></span>
+<span class="s-ico new roadsurface"></span>
+<span class="s-ico new signal"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico new lidar on"></span>
+<span class="s-ico new radar on"></span>
+<span class="s-ico new cctv on"></span>
+<span class="s-ico new vms on"></span>
+<span class="s-ico new dfs on"></span>
+<span class="s-ico new roadsurface on"></span>
+<span class="s-ico new signal on"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-ico new lidar disabled"></span>
+<span class="s-ico new radar disabled"></span>
+<span class="s-ico new cctv disabled"></span>
+<span class="s-ico new vms disabled"></span>
+<span class="s-ico new dfs disabled"></span>
+<span class="s-ico new roadsurface disabled"></span>
+<span class="s-ico new signal disabled"></span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>셀렉트박스</h2>
+        <div class="code-area">
+          <h3>기본 <button>코드 보기</button></h3>
+<div class="code-box"><span class="select-base">
+  <span class="value"></span>
+  <select>
+    <option value="0" selected>선택</option>
+    <option value="1">Value 1</option>
+    <option value="2">Value 2</option>
+    <option value="3">Value 3</option>
+  </select>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>탭</h2>
+        <div class="code-area">
+          <h3>기본 - 3단 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base">
+  <ul>
+    <li class="on"><a href="#tab1-1">텍스트</a></li>
+    <li><a href="#tab1-2">이미지</a></li>
+    <li><a href="#tab1-3">가변 이미지</a></li>
+  </ul>
+</div>
+<ul class="panel-base">
+  <li id="tab1-1">
+    1
+  </li>
+  <li id="tab1-2">
+    2
+  </li>
+  <li id="tab1-3">
+    3
+  </li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div><!-- .code-area -->
+
+        <div class="code-area">
+          <h3>2단 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base col2">
+  <ul>
+    <li class="on"><a href="#tab2-1">텍스트</a></li>
+    <li><a href="#tab2-2">이미지</a></li>
+  </ul>
+</div>
+<ul class="panel-base">
+  <li id="tab2-1">
+    1
+  </li>
+  <li id="tab2-2">
+    2
+  </li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div><!-- .code-area -->
+
+        <div class="code-area">
+          <h3>타입2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base type-2">
+  <ul>
+    <li class="on"><a href="javascript:;">원주 전체 구간</a></li>
+    <li><a href="javascript:;">광터 교차로 구간</a></li>
+    <li><a href="javascript:;">선녀골 삼거리 구간</a></li>
+    <li><a href="javascript:;">진양 삼거리 구간</a></li>
+    <li><a href="javascript:;">반곡/관설 IC 구간</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div><!-- .code-area -->
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>카운터</h2>
+        <div class="code-area">
+          <h3>1) 최소값, 최대값 세팅 안함 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base">
+  <button class="btn-minus">-</button>
+  <input type="text" value="1" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+        
+        <div class="code-area">
+          <h3>2) 최소값 2, 최대값 10 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base" data-min="2" data-max="10">
+  <button class="btn-minus">-</button>
+  <input type="text" value="2" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>3) 최소값 3, 최대값 세팅 안함 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base" data-min="3">
+  <button class="btn-minus">-</button>
+  <input type="text" value="4" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+        
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>테이블 하드코딩 - VMS 표출 관리 - 시나리오 운영</h2>
+        <div class="code-area">
+          <h3>1) 시나리오 있음 - VMS 목록 > 선택 전 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tb-wrap" id="scenario-tb-1">
+  <table class="tb-list">
+    <colgroup>
+      <col width="7%" />
+      <col width="7%" />
+      <col width="38%" />
+      <col width="38%" />
+      <col width="*" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">상황</th>
+        <th scope="col">시나리오 ID</th>
+        <th scope="col">시나리오 이름</th>
+        <th scope="col">전환시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="disabled">
+        <td rowspan="2" class="bl0">자동</td>
+        <td>평시</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr class="disabled">
+        <td>돌발</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr class="disabled">
+        <td class="bl0">수동</td>
+        <td class="bl0"></td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>2) 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 없는 경우 (자동) <button>코드 보기</button></h3>
+<div class="code-box"><div class="tb-wrap" id="scenario-tb-2">
+  <table class="tb-list">
+    <colgroup>
+      <col width="7%" />
+      <col width="7%" />
+      <col width="38%" />
+      <col width="38%" />
+      <col width="*" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">상황</th>
+        <th scope="col">시나리오 ID</th>
+        <th scope="col">시나리오 이름</th>
+        <th scope="col">전환시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2" class="bl0">자동</td>
+        <td>평시</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr>
+        <td>돌발</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr class="disabled">
+        <td class="bl0">수동</td>
+        <td class="bl0"></td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>3) 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 있는 경우 (자동 : 평시) <button>코드 보기</button></h3>
+<div class="code-box"><div class="tb-wrap" id="scenario-tb-3">
+  <table class="tb-list">
+    <colgroup>
+      <col width="7%" />
+      <col width="7%" />
+      <col width="38%" />
+      <col width="38%" />
+      <col width="*" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">상황</th>
+        <th scope="col">시나리오 ID</th>
+        <th scope="col">시나리오 이름</th>
+        <th scope="col">전환시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2" class="bl0">자동</td>
+        <td>평시</td>
+        <td class="evt-td">VMS_SNO_001</td>
+        <td class="bl0">Limit_Speed</td>
+        <td class="bl0">3초</td>
+      </tr>
+      <tr>
+        <td>돌발</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr class="disabled">
+        <td class="bl0">수동</td>
+        <td class="bl0"></td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>4) 시나리오 있음 - VMS 목록 > 선택 후 : 시나리오가 없는 경우 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tb-wrap" id="scenario-tb-4">
+  <table class="tb-list">
+    <colgroup>
+      <col width="7%" />
+      <col width="7%" />
+      <col width="38%" />
+      <col width="38%" />
+      <col width="*" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">상황</th>
+        <th scope="col">시나리오 ID</th>
+        <th scope="col">시나리오 이름</th>
+        <th scope="col">전환시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="disabled">
+        <td rowspan="2" class="bl0">자동</td>
+        <td>평시</td>
+        <td class="evt-td">VMS_SNO_001</td>
+        <td class="bl0">Limit_Speed</td>
+        <td class="bl0">3초</td>
+      </tr>
+      <tr class="disabled">
+        <td>돌발</td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+      <tr>
+        <td class="bl0">수동</td>
+        <td class="bl0"></td>
+        <td colspan="3" class="evt-td">
+          <a href="#" class="btn-add-scenario"><em>시나리오를 추가해 주세요</em></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>페이지네이션</h2>
+        <div class="code-area">
+          <h3>1) 기본 <button>코드 보기</button></h3>
+<div class="code-box"><div class="paging-wrap">
+  <a href="#" class="btn-prev"></a>
+  <a href="#">1</a>
+  <a href="#" class="on">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">7</a>
+  <a href="#">8</a>
+  <a href="#">9</a>
+  <a href="#">10</a>
+  <a href="#" class="btn-next"></a>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>입력 폼</h2>
+        <div class="code-area">
+          <h3>계정 추가 <button>코드 보기</button></h3>
+<div class="code-box"><div class="items-input">
+  <ul>
+    <li>
+      <div class="input-area">
+        <span class="label">ID</span>
+        <div class="input">
+          <input type="text" placeholder="ID를 입력하세요" class="input-base tp2" />
+        </div>
+      </div>
+      <p class="info"><span>최대 10자, 특수문자를 포함할 수 없습니다.</span></p>
+    </li>
+    <li>
+      <div class="input-area">
+        <span class="label">Password</span>
+        <div class="input">
+          <input type="password" placeholder="Password를 입력하세요" class="input-base tp2" />
+        </div>
+      </div>
+      <p class="info"><span>최소 8자 이상, 영어+숫자+특수문자를 조합해야 합니다.</span></p>
+    </li>
+    <li>
+      <div class="input-area">
+        <span class="label">이름</span>
+        <div class="input">
+          <input type="text" placeholder="이름을 입력하세요" class="input-base tp2" />
+        </div>
+      </div>
+      <p class="info"><span>최대 5자로 제한됩니다.</span></p>
+    </li>
+    <li>
+      <div class="input-area">
+        <span class="label">전화번호</span>
+        <div class="input">
+          <input type="text" placeholder="전화번호를 입력하세요" class="input-base tp2" />
+        </div>
+      </div>
+      <p class="info"><span>최대 10자, 숫자형태만 입력가능 합니다.</span></p>
+    </li>
+  </ul>
+</div>
+<div class="btns-wrap t-center mt20">
+  <span class="btn-base tp3 b-mfp-close"><a href="#"><em class="cancel">취소</em></a></span>
+  <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+      
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+  <script src="js/prism.js"></script>
+</body>
+</html>
