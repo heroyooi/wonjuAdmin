@@ -73,70 +73,71 @@
         <div class="tit-r">
           <div class="btns-wrap">
             <span class="btn-base tp3"><a href="#"><em class="delete">삭제</em></a></span>
-            <span class="btn-base"><a href="#"><em class="modify">수정</em></a></span>
-            <span class="btn-base btn-popup-anim-1"><a href="#popup-reception"><em class="receipt">접수</em></a></span>
+            <span class="btn-base"><a href="#"><em class="save">저장</em></a></span>
           </div>
         </div>
       </div><!-- .tit-wrap -->
       <div class="content-wrap">
         <div class="content-l">
-          <div class="input-area input-flex">
-            <span class="label" style="width: auto; margin-right: 8px;">발생일시</span>
-            <div class="date-input">
-              <div class="input">
-                <input type="text" placeholder="0000/00/00" class="input-base tp2" />
-              </div>
-              <span class="bridge">~</span>
-              <div class="input">
-                <input type="text" placeholder="0000/00/00" class="input-base tp2" />
-              </div>
-            </div>
-            <span class="label" style="width: auto; margin: 0 8px;">검색</span>
-            <div class="select-input">
-              <span class="select-base" style="flex: 2;">
-                <span class="value"></span>
-                <select>
-                  <option value="0" selected>돌발유형 선택</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </span>
-              <span class="select-base" style="flex: 1;">
-                <span class="value"></span>
-                <select>
-                  <option value="0" selected>방향 선택</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </span>
-              <span class="select-base" style="flex: 2;">
-                <span class="value"></span>
-                <select>
-                  <option value="0" selected>진행상태 선택</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </span>
-              <span class="btn-base"><a href="#"><em class="search">검색</em></a></span>
-            </div>
-          </div>
-          <div id="exampleTable" class="c-table"></div>
-          <div class="total-area ver_paging">
-            <span class="total">총 <em>30</em>건</span>
-            <div class="paging-wrap">
-              <a href="#" class="btn-prev"></a>
-              <a href="#">1</a>
-              <a href="#" class="on">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#">10</a>
-              <a href="#" class="btn-next"></a>
-            </div>
+          <div class="tb-input-wrap">
+            <table class="tb-input">
+              <colgroup>
+                <col width="130" />
+                <col width="*" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <span class="require">발생일시</span>
+                  </th>
+                  <td>
+                    <input type="text" placeholder="0000/00/00" class="input-base tp2" style="width: 120px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">검지유형</span>
+                  </th>
+                  <td>
+                    <span class="select-base">
+                      <span class="value"></span>
+                      <select>
+                        <option value="0">선택</option>
+                        <option value="1" selected>수동검지</option>
+                        <option value="2">2</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">방향</span>
+                  </th>
+                  <td>
+                    <span class="select-base disabled">
+                      <span class="value"></span>
+                      <select disabled>
+                        <option value="0" selected>자동 선택</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">X좌표/Y좌표</span>
+                  </th>
+                  <td>
+                    <div class="input-area ver_wj">
+                      <input type="text" class="input-base tp2" placeholder="좌표 자동 입력" style="width: 200px;" disabled />
+                      <span class="bridge">/</span>
+                      <input type="text" class="input-base tp2" placeholder="좌표 자동 입력" style="width: 200px;" disabled />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div><!-- .content-l -->
         <div class="content-r">
@@ -189,10 +190,7 @@
     </div><!-- .popup-wrap -->
   </div><!-- #wrap -->
   <script>
-    createTableType13("#exampleTable");
-
     $(window).on('load resize', function(){
-      $('.c-table.tabulator').css('height', 442);
       $('.content-wrap .map-area').css('height', $(window).height() - 170);
     });
 
