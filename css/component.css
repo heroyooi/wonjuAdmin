@@ -244,11 +244,11 @@
 .s-ico.special{width:28px;height:28px;background:url('/img/wj/ico-map-special-def.svg') 50% 50% no-repeat;border-radius:0;}
 
 /* modal */
-.modal-wrap{position:absolute;border:1px solid #2c3240;width:302px;border-radius:8px;overflow:hidden;display:none;z-index:9;}
+.modal-wrap{position:absolute;border:1px solid #2c3240;width:394px;border-radius:8px;overflow:hidden;display:none;z-index:9;}
 .modal-wrap .modal-top{background-color: #222631;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;}
 .modal-wrap .modal-top .modal-title{font-size:16px;font-weight:bold;color:#b8bdcd;}
 .modal-wrap .modal-top .modal-r{display:flex;align-items:center;gap:0 4px;}
-.modal-wrap .modal-content{height:226px;background-color:#000;background-repeat:no-repeat;background-position:50% 50%;background-size:contain;position: relative;}
+.modal-wrap .modal-content{height:296px;background-color:#000;background-repeat:no-repeat;background-position:50% 50%;background-size:contain;position: relative;}
 .modal-wrap .modal-content img{vertical-align:middle;}
 .modal-wrap .modal-content iframe{position: absolute;width:100%;height:100%;}
 .modal-wrap.type-2{border-color:#008fff;background-color: rgba(34, 38, 49, 0.9);}
@@ -302,7 +302,7 @@
 [class*=popup-wrap] button.mfp-close,
 .popup-wrap button.mfp-arrow{width:24px;height:24px;background:url(../img/icon/ico-close-hor.svg) 0 0 no-repeat;top:18px;right:20px;font-size:0;}
 [class*=popup-wrap] .tit{font-size:18px;line-height:26px;padding:17px 20px;color:#008fff;font-weight:bold;}
-[class*=popup-wrap] .con-wrap{position:relative;padding:0 20px 30px;}
+[class*=popup-wrap] .con-wrap{position:relative;padding:0 20px 20px;}
 [class*=popup-wrap] .con-wrap .btns-wrap{margin-top:20px;}
 [class*=popup-wrap] .scenario-item{min-height:306px;}
 
