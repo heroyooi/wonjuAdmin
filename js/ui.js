@@ -2305,6 +2305,153 @@ var createTableType12 = function(target) {
   });
 }
 
+var createTableType13 = function(target) {
+  //define data array
+  var tabledata = [
+    {
+      "id":1,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":2,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":3,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":4,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":5,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":6,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":7,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":8,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":9,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+    {
+      "id":10,
+      "돌발유형":"돌발유형",
+      "방향":"방향정보 표출",
+      "진행상태":"진행중",
+      "접수시간":"0000.00.00 00:00",
+      "종료시간":"0000.00.00 00:00"
+    },
+  ];
+
+  //initialize table
+  const table = new Tabulator(target, {
+		data: tabledata, //assign data to table
+		layout: "fitColumns",
+		reactiveData: true,
+		columns: [
+			{
+        width: 41,
+				formatter: "rowSelection",
+				titleFormatter: "rowSelection",
+				titleFormatterParams: {
+					rowRange: "active", //only toggle the values of the active filtered rows
+				},
+				headerSort: false,
+        hozAlign: "center",
+        headerHozAlign: "center"
+			},
+			{ title: "순번",
+        field: "id",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+			{ title: "돌발유형",
+        field: "돌발유형",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+			{
+        title: "방향",
+        field: "방향",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      {
+        title: "진행상태",
+        field: "진행상태",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      {
+        title: "접수시간",
+        field: "접수시간",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+      {
+        title: "종료시간",
+        field: "종료시간",
+        hozAlign: "center",
+        headerHozAlign: "center"
+      },
+		],
+  });
+  table.on("rowClick", function(e, row){
+    if (!$(row._row.element).hasClass('on')) {
+      $(row._row.element).addClass('on')
+    } else {
+      $(row._row.element).removeClass('on')
+    }
+  });
+}
+
 $(function(){
   AOS.init({ // https://github.com/michalsnik/aos#1-initialize-aos
     duration: 600,

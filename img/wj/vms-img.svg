@@ -1,0 +1,88 @@
+<svg width="86" height="172" viewBox="0 0 86 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#000" stroke="#222631" d="M.5.5h27.667v27.667H.5z"/>
+    <mask id="2l0mhxbz8a" fill="#fff">
+        <path d="M28.667 0h28.666v28.667H28.667V0z"/>
+    </mask>
+    <path d="M28.667 0h28.666v28.667H28.667V0z" fill="#000"/>
+    <path d="M57.333 0h1v-1h-1v1zm0 28.667v1h1v-1h-1zM28.667 0v1h28.666v-2H28.667v1zm28.666 0h-1v28.667h2V0h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#2l0mhxbz8a)"/>
+    <mask id="w0zr0ily1b" fill="#fff">
+        <path d="M57.333 0H86v28.667H57.333V0z"/>
+    </mask>
+    <path d="M57.333 0H86v28.667H57.333V0z" fill="#000"/>
+    <path d="M86 0h1v-1h-1v1zm0 28.667v1h1v-1h-1zM57.333 0v1H86v-2H57.333v1zM86 0h-1v28.667h2V0h-1zm0 28.667v-1H57.333v2H86v-1z" fill="#222631" mask="url(#w0zr0ily1b)"/>
+    <mask id="mqkmzsu73c" fill="#fff">
+        <path d="M0 28.667h28.667v28.667H0V28.667z"/>
+    </mask>
+    <path d="M0 28.667h28.667v28.667H0V28.667z" fill="#000"/>
+    <path d="M28.667 57.334v1h1v-1h-1zM0 57.334h-1v1h1v-1zm28.667-28.667h-1v28.667h2V28.667h-1zm0 28.667v-1H0v2h28.667v-1zM0 57.334h1V28.667h-2v28.667h1z" fill="#222631" mask="url(#mqkmzsu73c)"/>
+    <mask id="upv9sqppid" fill="#fff">
+        <path d="M28.667 28.667h28.666v28.667H28.667V28.667z"/>
+    </mask>
+    <path d="M28.667 28.667h28.666v28.667H28.667V28.667z" fill="#000"/>
+    <path d="M57.333 57.334v1h1v-1h-1zm0-28.667h-1v28.667h2V28.667h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#upv9sqppid)"/>
+    <mask id="41wydaicoe" fill="#fff">
+        <path d="M57.333 28.667H86v28.667H57.333V28.667z"/>
+    </mask>
+    <path d="M57.333 28.667H86v28.667H57.333V28.667z" fill="#000"/>
+    <path d="M86 57.334v1h1v-1h-1zm0-28.667h-1v28.667h2V28.667h-1zm0 28.667v-1H57.333v2H86v-1z" fill="#222631" mask="url(#41wydaicoe)"/>
+    <mask id="vphakcrr8f" fill="#fff">
+        <path d="M0 57.333h28.667V86H0V57.333z"/>
+    </mask>
+    <path d="M0 57.333h28.667V86H0V57.333z" fill="#000"/>
+    <path d="M28.667 86v1h1v-1h-1zM0 86h-1v1h1v-1zm28.667-28.667h-1V86h2V57.333h-1zm0 28.667v-1H0v2h28.667v-1zM0 86h1V57.333h-2V86h1z" fill="#222631" mask="url(#vphakcrr8f)"/>
+    <mask id="18x6nl70ag" fill="#fff">
+        <path d="M28.667 57.333h28.666V86H28.667V57.333z"/>
+    </mask>
+    <path d="M28.667 57.333h28.666V86H28.667V57.333z" fill="#000"/>
+    <path d="M57.333 86v1h1v-1h-1zm0-28.667h-1V86h2V57.333h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#18x6nl70ag)"/>
+    <mask id="sety4ov7bh" fill="#fff">
+        <path d="M57.333 57.333H86V86H57.333V57.333z"/>
+    </mask>
+    <path d="M57.333 57.333H86V86H57.333V57.333z" fill="#000"/>
+    <path d="M86 86v1h1v-1h-1zm0-28.667h-1V86h2V57.333h-1zM86 86v-1H57.333v2H86v-1z" fill="#222631" mask="url(#sety4ov7bh)"/>
+    <mask id="7vwil2kifi" fill="#fff">
+        <path d="M0 86h28.667v28.667H0V86z"/>
+    </mask>
+    <path d="M0 86h28.667v28.667H0V86z" fill="#000"/>
+    <path d="M28.667 114.667v1h1v-1h-1zm-28.667 0h-1v1h1v-1zM28.667 86h-1v28.667h2V86h-1zm0 28.667v-1H0v2h28.667v-1zm-28.667 0h1V86h-2v28.667h1z" fill="#222631" mask="url(#7vwil2kifi)"/>
+    <mask id="xrlj2q6crj" fill="#fff">
+        <path d="M28.667 86h28.666v28.667H28.667V86z"/>
+    </mask>
+    <path d="M28.667 86h28.666v28.667H28.667V86z" fill="#000"/>
+    <path d="M57.333 114.667v1h1v-1h-1zm0-28.667h-1v28.667h2V86h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#xrlj2q6crj)"/>
+    <mask id="0o7vrewgjk" fill="#fff">
+        <path d="M57.333 86H86v28.667H57.333V86z"/>
+    </mask>
+    <path d="M57.333 86H86v28.667H57.333V86z" fill="#000"/>
+    <path d="M86 114.667v1h1v-1h-1zM86 86h-1v28.667h2V86h-1zm0 28.667v-1H57.333v2H86v-1z" fill="#222631" mask="url(#0o7vrewgjk)"/>
+    <mask id="qhl7y1c19l" fill="#fff">
+        <path d="M0 114.667h28.667v28.667H0v-28.667z"/>
+    </mask>
+    <path d="M0 114.667h28.667v28.667H0v-28.667z" fill="#000"/>
+    <path d="M28.667 143.334v1h1v-1h-1zm-28.667 0h-1v1h1v-1zm28.667-28.667h-1v28.667h2v-28.667h-1zm0 28.667v-1H0v2h28.667v-1zm-28.667 0h1v-28.667h-2v28.667h1z" fill="#222631" mask="url(#qhl7y1c19l)"/>
+    <mask id="g5jjtdlvgm" fill="#fff">
+        <path d="M28.667 114.667h28.666v28.667H28.667v-28.667z"/>
+    </mask>
+    <path d="M28.667 114.667h28.666v28.667H28.667v-28.667z" fill="#000"/>
+    <path d="M57.333 143.334v1h1v-1h-1zm0-28.667h-1v28.667h2v-28.667h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#g5jjtdlvgm)"/>
+    <mask id="p2odyswonn" fill="#fff">
+        <path d="M57.333 114.667H86v28.667H57.333v-28.667z"/>
+    </mask>
+    <path d="M57.333 114.667H86v28.667H57.333v-28.667z" fill="#000"/>
+    <path d="M86 143.334v1h1v-1h-1zm0-28.667h-1v28.667h2v-28.667h-1zm0 28.667v-1H57.333v2H86v-1z" fill="#222631" mask="url(#p2odyswonn)"/>
+    <mask id="ata2xj49co" fill="#fff">
+        <path d="M0 143.333h28.667V172H0v-28.667z"/>
+    </mask>
+    <path d="M0 143.333h28.667V172H0v-28.667z" fill="#000"/>
+    <path d="M28.667 172v1h1v-1h-1zM0 172h-1v1h1v-1zm28.667-28.667h-1V172h2v-28.667h-1zm0 28.667v-1H0v2h28.667v-1zM0 172h1v-28.667h-2V172h1z" fill="#222631" mask="url(#ata2xj49co)"/>
+    <mask id="76jd2mfi9p" fill="#fff">
+        <path d="M28.667 143.333h28.666V172H28.667v-28.667z"/>
+    </mask>
+    <path d="M28.667 143.333h28.666V172H28.667v-28.667z" fill="#000"/>
+    <path d="M57.333 172v1h1v-1h-1zm0-28.667h-1V172h2v-28.667h-1zm0 28.667v-1H28.667v2h28.666v-1z" fill="#222631" mask="url(#76jd2mfi9p)"/>
+    <mask id="j9k16mpgdq" fill="#fff">
+        <path d="M57.333 143.333H86V172H57.333v-28.667z"/>
+    </mask>
+    <path d="M57.333 143.333H86V172H57.333v-28.667z" fill="#000"/>
+    <path d="M86 172v1h1v-1h-1zm0-28.667h-1V172h2v-28.667h-1zM86 172v-1H57.333v2H86v-1z" fill="#222631" mask="url(#j9k16mpgdq)"/>
+</svg>
