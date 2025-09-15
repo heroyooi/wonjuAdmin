@@ -121,15 +121,6 @@
           <div class="scenario-area ver_vms" id="scenario-info-1">
             <a href="#" class="evt-list"><em>목록을 선택하면 표출됩니다</em></a>
           </div>
-          <div class="scenario-area ver_vms" id="scenario-info-2_1" style="display: none;">
-            <div class="scenario-item">
-              <ul class="vms-list" id="type-1">
-                <li><img src="img/img-vms-412.png" alt=""></li>
-                <li><img src="img/img-vms-412.png" alt=""></li>
-                <li><img src="img/img-vms-412.png" alt=""></li>
-              </ul>
-            </div>
-          </div><!-- .scenario -->
           <div class="scenario-area ver_vms" id="scenario-info-2_2" style="display: none;">
             <div class="scenario-item">
               <ul class="vms-list" id="type-2">
@@ -152,19 +143,6 @@
                 <li><img src="img/img-vms-113.png" alt=""></li>
                 <li><img src="img/img-vms-113.png" alt=""></li>
                 <li><img src="img/img-vms-113.png" alt=""></li>
-              </ul>
-            </div>
-          </div><!-- .scenario -->
-          <div class="scenario-area ver_vms" id="scenario-info-2_3" style="display: none;">
-            <div class="scenario-item">
-              <ul class="vms-list" id="type-3">
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
-                <li><img src="img/img-vms-44.png" alt=""></li>
               </ul>
             </div>
           </div><!-- .scenario -->
@@ -655,9 +633,7 @@
     
 
     var $scenarioH2 = $('#scenario-info-2_2 .scenario-item');
-    var $scenarioH3 = $('#scenario-info-2_3 .scenario-item');
     $scenarioH2.css('width', $scenarioH2.find('.vms-list li').length * (96 + 16) + 16);
-    $scenarioH3.css('width', $scenarioH3.find('.vms-list li').length * (97 + 16) + 16);
 
     var Qscenario = $.urlParam('scenario');
     var Qtype = $.urlParam('type');
@@ -667,9 +643,7 @@
     if (Qsample || Qpopup) {
       setTimeout(() => {
         if (Qsample == 'view') {
-          $('#scenario-info-2_1').show();
           $('.content-r .evt-list').click();
-          $('#scenario-info-2_1').hide();
           $('#scenario-info-2_2').show();
           $('.content-l .select-base select option:eq(2)').prop('selected', true);
           commonSelect();

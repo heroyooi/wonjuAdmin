@@ -81,7 +81,7 @@
         <div class="content-l">
           <div class="top-state-area">
             <div class="state-info">
-              <span class="state st1">접수</span>
+              <span class="state st2">종료</span>
               <span class="txt">돌발상황 등록</span>
             </div>
             <span class="require">필수항목</span>
@@ -90,41 +90,95 @@
             <table class="tb-input">
               <colgroup>
                 <col width="130" />
+                <col width="330" />
+                <col width="130" />
                 <col width="*" />
               </colgroup>
               <tbody>
                 <tr>
                   <th scope="row">
-                    <span class="require">발생일시</span>
+                    <span>돌발ID/사고ID</span>
                   </th>
                   <td>
-                    <input type="text" placeholder="0000/00/00" class="input-base tp2" style="width: 120px;" />
+                    <div class="acc_id">
+                      <span>MMMM00000000</span>
+                      <span>/</span>
+                      <span>MMMM00000000</span>
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <span class="require">검지유형</span>
+                    <span class="require">인명 피해 유무</span>
+                  </th>
+                  <td colspan="3">
+                    <ul class="chk-list chk-counter">
+                      <li>
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-people-d1" checked />
+                          <label for="chk-people-d1">사망</label>
+                        </span>
+                        <span class="counter-base">
+                          <button class="btn-minus">-</button>
+                          <input type="text" value="0" readonly />
+                          <button class="btn-plus">+</button>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-people-d2" />
+                          <label for="chk-people-d2">중상</label>
+                        </span>
+                        <span class="counter-base">
+                          <button class="btn-minus">-</button>
+                          <input type="text" value="0" readonly />
+                          <button class="btn-plus">+</button>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-people-d3" />
+                          <label for="chk-people-d3">경상</label>
+                        </span>
+                        <span class="counter-base">
+                          <button class="btn-minus">-</button>
+                          <input type="text" value="0" readonly />
+                          <button class="btn-plus">+</button>
+                        </span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">현장 도착 일시</span>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" class="input-base tp2" placeholder="0000/00/00" style="width: 120px; text-align: center;" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">사고 원인</span>
                   </th>
                   <td>
                     <span class="select-base">
                       <span class="value"></span>
                       <select>
-                        <option value="0">선택</option>
-                        <option value="1" selected>수동검지</option>
+                        <option value="0" selected>선택</option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                       </select>
                     </span>
                   </td>
-                </tr>
-                <tr>
                   <th scope="row">
-                    <span class="require">방향</span>
+                    <span class="require">도로구분</span>
                   </th>
                   <td>
-                    <span class="select-base disabled">
+                    <span class="select-base">
                       <span class="value"></span>
-                      <select disabled>
-                        <option value="0" selected>자동 선택</option>
+                      <select>
+                        <option value="0" selected>선택</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                       </select>
@@ -133,50 +187,27 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <span class="require">X좌표/Y좌표</span>
-                  </th>
-                  <td>
-                    <div class="input-area ver_wj">
-                      <input type="text" class="input-base tp2" placeholder="좌표 자동 입력" style="width: 200px;" disabled />
-                      <span class="bridge">/</span>
-                      <input type="text" class="input-base tp2" placeholder="좌표 자동 입력" style="width: 200px;" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">돌발 발생구간</span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-base tp2" placeholder="자동 입력" disabled />
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">노선번호</span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-base tp2" placeholder="자동 입력" disabled />
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">이정</span>
-                  </th>
-                  <td>
-                    <input type="text" class="input-base tp2" placeholder="자동 입력" disabled />
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">발생차로</span>
+                    <span class="require">날씨</span>
                   </th>
                   <td>
                     <span class="select-base">
                       <span class="value"></span>
                       <select>
-                        <option value="0">선택</option>
-                        <option value="1" selected>수동검지</option>
+                        <option value="0" selected>선택</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
+                    </span>
+                  </td>
+                  <th scope="row">
+                    <span class="require">사고유형</span>
+                  </th>
+                  <td>
+                    <span class="select-base">
+                      <span class="value"></span>
+                      <select>
+                        <option value="0" selected>선택</option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                       </select>
                     </span>
@@ -184,45 +215,9 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <span class="require">운영자 확인 수단</span>
+                    <span>현장 조치 내용</span>
                   </th>
-                  <td>
-                    <ul class="chk-list">
-                      <li>
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-1" />
-                          <label for="chk-1">CCTV확인</label>
-                        </span>
-                      </li>
-                      <li>
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-2" checked />
-                          <label for="chk-2">현장 출동 확인</label>
-                        </span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">돌발유형</span>
-                  </th>
-                  <td>
-                    <span class="select-base">
-                      <span class="value"></span>
-                      <select>
-                        <option value="0">선택</option>
-                        <option value="1" selected>수동검지</option>
-                        <option value="2">2</option>
-                      </select>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <span class="require">돌발내용</span>
-                  </th>
-                  <td>
+                  <td colspan="3">
                     <textarea class="textarea-base" placeholder="입력해주세요"></textarea>
                   </td>
                 </tr>
@@ -282,6 +277,14 @@
   <script>
     $(window).on('load resize', function(){
       $('.content-wrap .map-area').css('height', $(window).height() - 170);
+    });
+
+    $('.btn-switch').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
     });
 
     var Qpopup = $.urlParam('popup');

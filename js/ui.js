@@ -50,6 +50,8 @@ var commonPopup = function() {
     }
   }
 
+  
+
   //팝업 (공통) - jquery magnific 팝업
   $('.btn-popup-modal a').magnificPopup({
     type: 'inline',
