@@ -221,6 +221,52 @@
                     <textarea class="textarea-base" placeholder="입력해주세요"></textarea>
                   </td>
                 </tr>
+                <tr>
+                  <th scope="row">
+                    <span>이미지 첨부</span>
+                  </th>
+                  <td colspan="3">
+                    <div class="input-wrap file">
+                      <input type="text" class="input-base tp2" placeholder="이미지를 선택해주세요" readonly />
+                      <span class="btn-base"><a href="#">이미지 찾기</a></span>
+                      <input type="file" id="addFile" />
+                      <a href="#" class="btn-delete"></a>
+                    </div>
+                    <p class="file-info"><span>JPG, PNG, GIF, 파일크기 50MB, 최대 해상도 500X500px로 제한됩니다.</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span>이미지 첨부</span>
+                  </th>
+                  <td colspan="3">
+                    <div class="input-wrap file">
+                      <input type="text" class="input-base tp2" placeholder="이미지를 선택해주세요" readonly />
+                      <span class="btn-base"><a href="#">이미지 찾기</a></span>
+                      <input type="file" id="addFile" />
+                      <a href="#" class="btn-delete"></a>
+                    </div>
+                    <p class="file-info"><span>JPG, PNG, GIF, 파일크기 50MB, 최대 해상도 500X500px로 제한됩니다.</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">통계유형</span>
+                  </th>
+                  <td colspan="3">
+                    <button class="btn-switch"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <span class="require">대응 메시지 종료</span>
+                  </th>
+                  <td colspan="3">
+                    <div class="btns-wrap">
+                      <span class="btn-base"><a href="#">VMS 대응 종료</a></span>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -285,6 +331,21 @@
       } else {
         $(this).removeClass('on');
       }
+    });
+
+    $('#addFile').on('change', function(){
+      var $target = $(this).closest('.input-wrap');
+      var fileValue = this.value.split('\\');  
+      var fileName = fileValue[fileValue.length-1];
+      $target.find('.input-base').val(fileName);
+      if (!$target.hasClass('active')) {
+        $target.addClass('active');
+      }
+    });
+    $('.input-wrap.file .btn-delete').on('click', function(){
+      var $target = $(this).closest('.input-wrap')
+      $target.find('.input-base').val('');
+      $target.removeClass('active');
     });
 
     var Qpopup = $.urlParam('popup');

@@ -744,3 +744,5 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 
 .btn-switch{content:'';display:block;width:40px;height:20px;background:url(../img/toggle-off.png) 0 0 no-repeat;}
 .btn-switch.on{background:url(../img/toggle-on.png) 0 0 no-repeat;}
+.file-info{display:block;padding-left:16px;position: relative;font-size:12px;color:#99a2b9;margin-top:8px;}
+.file-info::before{content:'';display:block;width:12px;height:12px;background:url(../img/icon/ico-s-hint.svg) 50% 50% no-repeat;position: absolute;left:0;top:3px;}
