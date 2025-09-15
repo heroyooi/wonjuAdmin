@@ -605,9 +605,9 @@ body{width:100%;overflow-y:hidden;}
 .manage-area.ver_vms.ver_wj .msg-list-wrap{height:346px;}
 .manage-area.ver_vms.ver_wj .msg-list li dt{border:0;}
 
-.manage-area.ver_vms.ver_wj .items-status-area#m3 > .items-status > .item ul{padding:0;}
-.manage-area.ver_vms.ver_wj #tab_m3 .msg-list li{width:calc(20% - 13px);}
-.manage-area.ver_vms.ver_wj .items-status-area#m3 > .items-status > .item li{width:156px;height:312px;}
+.manage-area.ver_vms.ver_wj .items-status-area#m1 > .items-status > .item ul{padding:0;}
+.manage-area.ver_vms.ver_wj #tab_m1 .msg-list li{width:calc(20% - 13px);}
+.manage-area.ver_vms.ver_wj .items-status-area#m1 > .items-status > .item li{width:156px;height:312px;}
 
 .total-area.ver_paging{position: relative;}
 .total-area.ver_paging .total{position: absolute;left: 0; top: 4px;}
