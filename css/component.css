@@ -738,11 +738,42 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .chk-list{display:flex;gap:16px;}
 .chk-list.chk-counter > li{display:flex;gap:8px;align-items:center;}
 
-.textarea-base{padding: 10px 16px 9px;border-radius: 8px;border: solid 1px #222631;background-color: #222631;width:100%;color:#b8bdcd;height:80px;}
+/* .textarea-base{padding: 10px 16px 9px;border-radius: 8px;border: solid 1px #222631;background-color: #222631;width:100%;color:#b8bdcd;height:80px;overflow: hidden;}
 .textarea-base:focus{border:1px solid var(--color-primary);color:var(--color-primary);}
 .textarea-base::-webkit-scrollbar{background:#373d4f;width:12px;height:12px;} 
-.textarea-base::-webkit-scrollbar-track { border-radius: 6px; background: transparent;} 
-.textarea-base::-webkit-scrollbar-thumb { background: #4c556d; border-radius: 6px; background-clip: padding-box; border: 3px solid transparent; }
+.textarea-base::-webkit-scrollbar-track { border-radius: 8px; background: transparent;} 
+.textarea-base::-webkit-scrollbar-thumb { background: #4c556d; border-radius: 8px; background-clip: padding-box; border: 3px solid transparent; } */
+.textarea-wrap{
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #222631;
+  background: #222631;
+  width: 100%;
+  height: 80px;
+}
+.textarea-base {
+  display:block;
+  width:100%;
+  height:100%;
+  padding: 10px 16px 9px;
+  color:#b8bdcd;
+  background: transparent;
+  border:0;
+  outline:0;
+  overflow: auto;
+}
+.textarea-base:focus-visible + .focus-ring,
+.textarea-wrap:has(.textarea-base:focus){
+  border-color: var(--color-primary);
+}
+.textarea-base::-webkit-scrollbar{ width:12px; height:12px; background:#373d4f; }
+.textarea-base::-webkit-scrollbar-track{ background:transparent; border-radius:8px; }
+.textarea-base::-webkit-scrollbar-thumb{
+  background:#4c556d;
+  border-radius:8px;
+  background-clip:padding-box;
+  border:3px solid transparent;
+}
 
 .input-area.ver_wj{display:flex;align-items: center;gap:0 8px;}
 .input-area.ver_wj .bridge{font-size:13px;font-weight:600;color:#b8bdcd;}

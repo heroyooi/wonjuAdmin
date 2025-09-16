@@ -1594,19 +1594,19 @@ body {
 }
 .period-detail .period-line .line-st1 {
   background-color: #46e4b8;
-  box-shadow: 0 0 6px 0 rgba(70, 228, 184, 0.8);
+  /* box-shadow: 0 0 6px 0 rgba(70, 228, 184, 0.8); */
 }
 .period-detail .period-line .line-st2 {
   background-color: #ffe034;
-  box-shadow: 0 0 6px 0 rgba(255, 224, 52, 0.8);
+  /* box-shadow: 0 0 6px 0 rgba(255, 224, 52, 0.8); */
 }
 .period-detail .period-line .line-st3 {
   background-color: #ff852e;
-  box-shadow: 0 0 6px 0 rgba(255, 133, 46, 0.8);
+  /* box-shadow: 0 0 6px 0 rgba(255, 133, 46, 0.8); */
 }
 .period-detail .period-line .line-st4 {
   background-color: #ff3162;
-  box-shadow: 0 0 8px 0 rgba(255, 49, 98, 0.8);
+  /* box-shadow: 0 0 8px 0 rgba(255, 49, 98, 0.8); */
 }
 .period-detail .period-name {
   /*display:flex;justify-content:space-between;*/
