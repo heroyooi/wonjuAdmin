@@ -2255,34 +2255,46 @@ var createTableType12 = function(target) {
 				},
 				headerSort: false,
         hozAlign: "center",
-        headerHozAlign: "center"
+        headerHozAlign: "center",
 			},
       { 
         width: 110,
         title: "VMS ID",
         field: "VMS ID",
         hozAlign: "center",
-        headerHozAlign: "center"
+        headerHozAlign: "center",
+        formatter: function(cell) {
+          return `<span class="align">${cell.getValue()}</span>`;
+        }
       },
 			{ 
         width: 174,
         title: "VMS 이름",
         field: "VMS 이름",
         hozAlign: "center",
-        headerHozAlign: "center"
+        headerHozAlign: "center",
+        formatter: function(cell) {
+          return `<span class="align">${cell.getValue()}</span>`;
+        }
       },
 			{
         width: 110,
         title: "VMS 유형",
         field: "VMS 유형",
         hozAlign: "center",
-        headerHozAlign: "center"
+        headerHozAlign: "center",
+        formatter: function(cell) {
+          return `<span class="align">${cell.getValue()}</span>`;
+        }
       },
       {
         title: "구간명",
         field: "구간명",
         hozAlign: "center",
-        headerHozAlign: "center"
+        headerHozAlign: "center",
+        formatter: function(cell) {
+          return `<span class="align">${cell.getValue()}</span>`;
+        }
       },
 			{
         width: 110,
