@@ -20,6 +20,23 @@ var closeModal = function(id) {
   $(id).css('display', 'none');
 }
 
+var getOptions = function(id) {
+  return {
+    items: {
+      src: id,
+      type: 'inline',
+    },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'mfp-zin'
+  };
+}
+
 var commonPopup = function() {
   var posY = null;
   var magnificPopupConfiguration = function() {

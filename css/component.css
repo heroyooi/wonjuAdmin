@@ -249,9 +249,9 @@
   }
 }
 .s-ico.accident{width:28px;height:28px;background:url('/img/wj/ico-map-accident-def.svg') 50% 50% no-repeat;border-radius:0;}
-.s-ico.accident:hover{background:url('/img/wj/ico-map-accident-sel.svg') 50% 50% no-repeat;}
+.s-ico.accident.on, .s-ico.accident:hover{background:url('/img/wj/ico-map-accident-sel.svg') 50% 50% no-repeat;}
 .s-ico.special{width:28px;height:28px;background:url('/img/wj/ico-map-special-def.svg') 50% 50% no-repeat;border-radius:0;}
-.s-ico.special:hover{background:url('/img/wj/ico-map-special-sel.svg') 50% 50% no-repeat;}
+.s-ico.special.on, .s-ico.special:hover{background:url('/img/wj/ico-map-special-sel.svg') 50% 50% no-repeat;}
 
 /* modal */
 .modal-wrap{position:absolute;border:1px solid #2c3240;width:394px;border-radius:8px;overflow:hidden;display:none;z-index:9;}
@@ -267,6 +267,9 @@
 .modal-wrap .modal-info li:first-child{margin-top:0;}
 .modal-wrap .modal-info li .label{color:#b8bdcd;width:68px;flex-shrink:0;}
 .modal-wrap .modal-info li .result{color:#f4f5f7;flex-grow:1;word-break: break-all;}
+.modal-wrap .modal-foot{padding:0 12px 10px;display:flex;align-items:center;gap:0 8px;}
+.modal-wrap .modal-foot .btn-close{flex: 0 0 24px;}
+.modal-wrap .modal-foot .btn-base{flex: 1 1 auto;}
 
 .modal-wrap .modal-head{padding:14.5px 16px;background-color:#2c3240;position: relative;}
 .modal-wrap .modal-head .tit{color:#008fff;font-size:16px;font-weight:700;}
@@ -314,7 +317,11 @@
 [class*=popup-wrap] .tit{font-size:18px;line-height:26px;padding:17px 20px;color:#008fff;font-weight:bold;}
 [class*=popup-wrap] .con-wrap{position:relative;padding:0 20px 20px;}
 [class*=popup-wrap] .con-wrap .btns-wrap{margin-top:20px;}
+[class*=popup-wrap] .con-wrap .btns-wrap.between{display:flex;justify-content:space-between;align-items: center;}
 [class*=popup-wrap] .scenario-item{min-height:306px;}
+[class*=popup-wrap].no-head button.mfp-close{display:none;}
+[class*=popup-wrap].no-head .con-wrap{padding:20px;}
+.items-input.msg{text-align:center;font-size:14px;font-weight:bold;color:#7b86a4;padding:32px 16px;}
 
 /* tabulator */
 .c-table.tabulator{height:766px;border:0;border-bottom:1px solid rgba(0, 143, 255, 0.2);}
@@ -539,6 +546,12 @@
 .s-ico.ai.tp2.dfs:hover, .s-ico.ai.tp2.dfs.on{background-image:url(../img/seoul/ico-dfs-poi-hor.svg);}
 .s-ico.ai.tp2.vds:hover, .s-ico.ai.tp2.vds.on{background-image:url(../img/seoul/ico-vds-poi-hor.svg);}
 .s-ico.ai.tp2.all:hover, .s-ico.ai.tp2.all.on{background-image:url(../img/seoul/ico-all-poi-hor.svg);}
+
+.s-ico.ai.tp2.deceleration{background-image:url(../img/se/ico-deceleration-map-def.svg);width:36px;height:36px;}
+.s-ico.ai.tp2.hardhat{background-image:url(../img/se/ico-hardhat-map-def.svg);width:36px;height:36px;}
+
+.s-ico.ai.tp2.deceleration:hover, .s-ico.ai.tp2.deceleration.on{background-image:url(../img/se/ico-deceleration-map-hor.svg);width:36px;height:36px;}
+.s-ico.ai.tp2.hardhat:hover, .s-ico.ai.tp2.hardhat.on{background-image:url(../img/se/ico-hardhat-map-hor.svg);width:36px;height:36px;}
 
 .s-ico.ai.tp2.radar.disabled{background-image:url(../img/seoul/ico-radar-poi-dis.svg);}
 .s-ico.ai.tp2.cctv.disabled{background-image:url(../img/seoul/ico-cctv-poi-dis.svg);}
@@ -784,3 +797,12 @@ background-color: rgba(0, 143, 255, 0.2);font-size:14px;}
 .btn-switch.on{background:url(../img/toggle-on.png) 0 0 no-repeat;}
 .file-info{display:block;padding-left:16px;position: relative;font-size:12px;color:#99a2b9;margin-top:8px;}
 .file-info::before{content:'';display:block;width:12px;height:12px;background:url(../img/icon/ico-s-hint.svg) 50% 50% no-repeat;position: absolute;left:0;top:3px;}
+
+#popup-cctv{border:1px solid #2c3240;border-radius:8px;overflow:hidden;}
+#popup-cctv button.mfp-close{display:none;}
+#popup-cctv .modal-top{background-color: #222631;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;}
+#popup-cctv .modal-top .modal-title{font-size:16px;font-weight:bold;color:#b8bdcd;}
+#popup-cctv .modal-top .modal-r{display:flex;align-items:center;gap:0 4px;}
+#popup-cctv .modal-content{height:440px;background-color:#000;background-repeat:no-repeat;background-position:50% 50%;background-size:contain;position: relative;}
+#popup-cctv .modal-content img{vertical-align:middle;}
+#popup-cctv .modal-content iframe{position: absolute;width:100%;height:100%;}

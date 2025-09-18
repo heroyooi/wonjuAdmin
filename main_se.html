@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,32 +14,17 @@
   <script src="js/tabulator.min.js"></script>
   <script src="js/ui.js"></script>
 </head>
-<body class="wj">
+
+<body class="se">
   <div id="wrap" class="dashboard-wrap">
     <div id="header">
-      <h1><a href="#"><img src="img/logo_wonjuadmin.png" alt="" /></a></h1>
+      <h1><a href="#"><img src="img/se/logo-srocm.png" alt="" /></a></h1>
       <h2 class="hide">주메뉴</h2>
       <ul id="gnb">
-        <li><a href="#">통합모니터링</a></li>
+        <li class="on"><a href="#">통합모니터링</a></li>
+        <li><a href="#">장비 전원제어</a></li>
         <li>
-          <a href="#">수집장치관리</a>
-          <ul class="submenu submenu2">
-            <li><a href="#">레이더 관리</a></li>
-            <li><a href="#">라이다 관리</a></li>
-            <li><a href="#">음향식노면검지기 관리</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">VMS관리</a>
-          <ul class="submenu submenu3">
-            <li><a href="#">VMS 제어</a></li>
-            <li><a href="#">VMS 시나리오 관리</a></li>
-            <li><a href="#">VMS 메시지 관리</a></li>
-          </ul>
-        </li>
-        <li><a href="#">차단기 관리</a></li>
-        <li>
-          <a href="#"><span class="ico">통계/이력관리</span></a>
+          <a href="#"><span class="ico">이력</span></a>
         </li>
         <li>
           <a href="#">시스템 관리</a>
@@ -61,7 +47,8 @@
     </div><!-- #header -->
     <div class="dashboard-dimm"></div>
     <div class="dashboard-area">
-      <div id="map" class="map" style="background: url(../img/map_vw2dnight.png) 50% 50% no-repeat; background-size: cover;"></div>
+      <div id="map" class="map"
+        style="background: url(../img/se/map-vw-2-dnight.png) 50% 50% no-repeat; background-size: cover;"></div>
 
       <!-- 좌측 패널 -->
       <div class="left-wrap c-scrollbar" data-aos="fade-right">
@@ -186,80 +173,65 @@
               <tbody>
                 <tr>
                   <td class="t-left">
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                     <p class="st-area">
-                      <span class="label">돌발</span>
                       <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
                     </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
+                    <p class="st-area">
+                      <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">
                     <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                   </td>
                 </tr>
                 <tr>
                   <td class="t-left">
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                     <p class="st-area">
-                      <span class="label">돌발</span>
-                      <span class="txt">쌍용1교차로~쌍용2교차로</span>
-                    </p>
-                    <p class="st-result">돌발 <em>1</em>건이 등록되었습니다. CCTV를 확인하세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">낙하물 탐지</span>
-                    </p>
-                    <p class="st-result">국도38호선 동영월교차로 → 제천방면 3차로. 차량 주의.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">돌발</span>
                       <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
                     </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
+                    <p class="st-area">
+                      <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">
                     <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                   </td>
                 </tr>
                 <tr>
                   <td class="t-left">
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                     <p class="st-area">
-                      <span class="label">돌발</span>
-                      <span class="txt">쌍용1교차로~쌍용2교차로</span>
-                    </p>
-                    <p class="st-result">돌발 <em>1</em>건이 등록되었습니다. CCTV를 확인하세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">낙하물 탐지</span>
-                    </p>
-                    <p class="st-result">국도38호선 동영월교차로 → 제천방면 3차로. 차량 주의.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">돌발</span>
                       <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
                     </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-left">
                     <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
+                    <p class="st-area">
+                      <span class="txt">[정선방향] 쌍용1교차로~쌍용2교차로</span>
+                    </p>
                   </td>
                 </tr>
                 <tr>
                   <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">돌발</span>
-                      <span class="txt">쌍용1교차로~쌍용2교차로</span>
-                    </p>
-                    <p class="st-result">돌발 <em>1</em>건이 등록되었습니다. CCTV를 확인하세요.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="t-left">
-                    <p class="st-area">
-                      <span class="label">낙하물 탐지</span>
-                    </p>
-                    <p class="st-result">국도38호선 동영월교차로 → 제천방면 3차로. 차량 주의.</p>
+                    <p class="st-result">레이더 돌발 검지 <em>00</em>건이 발생했습니다. CCTV를 확인하세요.</p>
                   </td>
                 </tr>
               </tbody>
@@ -273,9 +245,8 @@
         <div class="layer-wrap">
           <a href="#" class="btn-ico btn-layer"></a>
           <div class="item-area">
-            <a href="#" class="new radar"><span>Radar</span></a>
-            <a href="#" class="new cctv"><span>CCTV</span></a>
-            <a href="#" class="new vms"><span>VMS</span></a>
+            <a href="#" class="new deceleration"><span>능동감속장치</span></a>
+            <a href="#" class="new hardhat"><span>안전모</span></a>
           </div>
         </div><!-- .layer-wrap -->
         <div class="btns">
@@ -285,7 +256,7 @@
         <a href="#" class="btn-ico btn-refresh"></a>
         <a href="#" class="btn-ico btn-index"></a>
         <div class="index-wrap">
-          <!-- <div class="idx-table">
+          <div class="idx-table">
             <table summary="(Km/h), 시내부, 국도 정보">
               <colgroup>
                 <col width="33.33%" />
@@ -433,15 +404,120 @@
                 </tr>
               </tfoot>
             </table>
-          </div> -->
-          <ul>
+          </div>
+          <!-- <ul>
             <li class="st1">원활</li>
             <li class="st2">서행</li>
             <li class="st3">지체</li>
             <li class="st4">정체</li>
-          </ul>
+          </ul> -->
         </div>
         <a href="#" class="btn-ico btn-distance"></a>
+        <div class="distance-wrap">
+          <div class="idx-table">
+            <table summary="(Km/h), 시내부, 국도 정보">
+              <colgroup>
+                <col width="60%" />
+                <col width="*" />
+              </colgroup>
+              <tbody class="view">
+                <tr>
+                  <td class="tit">위험영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" readonly />
+                      <span>m</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">위험영역 검지속도</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="150" readonly />
+                      <span>Km/h</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">경고영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="50" readonly />
+                      <span>m</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">경고영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="110" readonly />
+                      <span>Km/h</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="edit" style="display: none;">
+                <tr>
+                  <td class="tit">위험영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="30" />
+                      <span>m</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">위험영역 검지속도</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="150" />
+                      <span>Km/h</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">경고영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="50" />
+                      <span>m</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tit">경고영역 검지거리</td>
+                  <td>
+                    <div class="res">
+                      <input type="text" value="110" />
+                      <span>Km/h</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="view">
+                <tr>
+                  <td colspan="2">
+                    <div class="btns-wrap">
+                      <a href="#" class="btn-change"><span class="txt">변경</span></a>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+              <tfoot class="edit" style="display: none;">
+                <tr>
+                  <td colspan="2">
+                    <div class="btns-wrap">
+                      <a href="#" class="btn-cancel"><span class="txt">취소</span></a>
+                      <a href="#" class="btn-apply"><span class="txt">적용</span></a>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
       </div><!-- .item-wrap -->
 
       <!-- 아이콘 예시 -->
@@ -464,43 +540,46 @@
 
       <span class="s-ico vms ex-3" id="ico-map-modaln1" style="left: 863px; top: 685px;"></span>
       -->
-      
-      <span class="i-obj ex-1" style="left: 546px; top: 500px; display: none;">
+
+      <span class="i-obj ex-1" style="left: 535px; top: 562px; display: none;">
         <span class="s-ico accident" id="ico-map-modals1"></span>
         <span class="e-point tp7"></span>
       </span>
 
-      <span class="i-obj ex-1" style="left: 786px; top: 477px; display: none;">
+      <!-- <span class="i-obj ex-1" style="left: 786px; top: 477px; display: none;">
         <span class="s-ico special" id="ico-map-modal2"></span>
         <span class="e-point tp6"></span>
-      </span>
+      </span> -->
 
-      <span class="i-obj ex-1" style="left: 1119px; top: 468px; display: none;">
+      <span class="i-obj ex-1" style="left: 1130px; top: 468px; display: none;">
         <span class="s-ico accident" id="ico-map-modal1"></span>
         <span class="e-point tp7"></span>
       </span>
 
-      <span class="s-ico ai tp2 radar ex-2" style="position: absolute; left: 655px; top: 272px; display: none;"></span>
+      <span class="s-ico ai tp2 deceleration ex-2" style="position: absolute; left: 744px; top: 500px; display: none;"></span>
+      <span class="s-ico ai tp2 deceleration ex-2" style="position: absolute; left: 851px; top: 556px; display: none;"></span>
+      <span class="s-ico ai tp2 deceleration ex-2" id="ico-map-modals2" style="position: absolute; left: 974px; top: 480px; display: none;"></span>
+      <span class="s-ico ai tp2 hardhat ex-2" style="position: absolute; left: 1267px; top: 480px; display: none;"></span>
+      <span class="s-ico ai tp2 hardhat ex-2" id="ico-map-modals3" style="position: absolute; left: 1350px; top: 518px; display: none;"></span>
+
+      <!-- <span class="s-ico ai tp2 radar ex-2" style="position: absolute; left: 655px; top: 272px; display: none;"></span>
       <span class="s-ico ai tp2 cctv ex-2" style="position: absolute; left: 639px; top: 324px; display: none;"></span>
       <span class="s-ico ai tp2 radar ex-2" style="position: absolute; left: 750px; top: 484px; display: none;"></span>
-      <span class="s-ico ai tp2 cctv ex-2" style="position: absolute; left: 833px; top: 508px; display: none;"  id="ico-map-modals2"></span>
-      <span class="s-ico ai tp2 vms ex-2" style="position: absolute; left: 841px; top: 587px; display: none;"></span>
+      <span class="s-ico ai tp2 cctv ex-2" style="position: absolute; left: 833px; top: 508px; display: none;"
+        id="ico-map-modals2"></span>
+      <span class="s-ico ai tp2 vms ex-2" style="position: absolute; left: 841px; top: 587px; display: none;"></span> -->
 
       <!-- 모달 예시 -->
-      <div class="modal-wrap type-2" id="modals1" style="left: 549px; top: 532px; width: 260px;">
+      <div class="modal-wrap type-2" id="modals1" style="left: 562px; top: 588px; width: 260px;">
         <div class="modal-info">
           <ul>
             <li>
               <span class="label">돌발유형</span>
-              <span class="result">역주행</span>
+              <span class="result">고속차량 접근</span>
             </li>
             <li>
               <span class="label">방향</span>
               <span class="result">정선방향</span>
-            </li>
-            <li>
-              <span class="label">진행상태</span>
-              <span class="result">접수</span>
             </li>
             <li>
               <span class="label">접수시간</span>
@@ -516,45 +595,70 @@
             </li>
           </ul>
         </div>
-      </div><!-- .modal-wrap --> 
-      <div class="modal-wrap type-2" id="modals2" style="left: 860px; top: 536px; width: 200px;">
+        <div class="modal-foot">
+          <a href="javascript:void(0);" class="btn-close"></a>
+          <span class="btn-base"><a href="#">이벤트 영상</a></span>
+        </div>
+      </div><!-- .modal-wrap -->
+      <div class="modal-wrap type-2" id="modals2" style="left: 1006px; top: 512px; width: 260px;">
         <div class="modal-info">
           <ul>
             <li>
               <span class="label">장비유형</span>
-              <span class="result">CCTV</span>
+              <span class="result">능동형 감속유도장치</span>
             </li>
             <li>
               <span class="label">장비ID</span>
-              <span class="result">CTV000003</span>
+              <span class="result">ADAS0918293</span>
             </li>
             <li>
-              <span class="label">제어기ID</span>
-              <span class="result">0001CTL00P</span>
+              <span class="label">장비상태</span>
+              <span class="result">ON</span>
             </li>
             <li>
-              <span class="label">설치방향</span>
-              <span class="result">제천방향</span>
-            </li>
-            <li>
-              <span class="label">설치이정</span>
-              <span class="result">237.8</span>
-            </li>
-            <li>
-              <span class="label">설치일시</span>
-              <span class="result">2025-09-03</span>
+              <span class="label">운영모드</span>
+              <span class="result">1 (현장 테스트 운영 모드)</span>
             </li>
           </ul>
         </div>
-      </div><!-- .modal-wrap --> 
-      
+        <div class="modal-foot">
+          <a href="javascript:void(0);" class="btn-close"></a>
+          <span class="btn-base"><a href="#">현장 영상</a></span>
+        </div>
+      </div><!-- .modal-wrap -->
+      <div class="modal-wrap type-2" id="modals3" style="left: 1382px; top: 550px; width: 240px;">
+        <div class="modal-info">
+          <ul>
+            <li>
+              <span class="label">장비유형</span>
+              <span class="result">스마트안전모 경고장치</span>
+            </li>
+            <li>
+              <span class="label">장비ID</span>
+              <span class="result">SAFE0192381</span>
+            </li>
+            <li>
+              <span class="label">장비상태</span>
+              <span class="result">ON</span>
+            </li>
+            <li>
+              <span class="label">운영모드</span>
+              <span class="result">1: 출력중</span>
+            </li>
+          </ul>
+        </div> 
+      </div><!-- .modal-wrap -->
+
       <div class="modal-wrap" id="modal1" style="left: 1054px; top: 191px;">
         <div class="modal-top">
           <p class="modal-title">강원 영월군 한반도면 쌍용리</p>
           <a href="#" class="btn-close"></a>
         </div>
         <div class="modal-content">
-          <iframe src="https://www.youtube.com/embed/GtegZ3Xqe8s?si=noorSGvXXg0ulFBd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/GtegZ3Xqe8s?si=noorSGvXXg0ulFBd" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
       </div><!-- .modal-wrap -->
 
@@ -564,7 +668,9 @@
           <a href="#" class="btn-close"></a>
         </div>
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
-        <div class="modal-content" style="background-image: url(https://placehold.co/183x315/666666/FFFFFF/png); height: 315px;"></div><!-- 세로로 긴 경우 -->
+        <div class="modal-content"
+          style="background-image: url(https://placehold.co/183x315/666666/FFFFFF/png); height: 315px;"></div>
+        <!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
       <div class="modal-wrap" id="modal3" style="left: 663px; top: 291px;">
@@ -572,7 +678,8 @@
           <p class="modal-title">SK주유소 앞 사거리</p>
           <a href="#" class="btn-close"></a>
         </div>
-        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
@@ -582,7 +689,8 @@
           <a href="#" class="btn-close"></a>
         </div>
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
-        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div>
+        <!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
       <div class="modal-wrap" id="modal5" style="left: 954px; top: 181px;">
@@ -590,7 +698,8 @@
           <p class="modal-title">추모공원 삼거리</p>
           <a href="#" class="btn-close"></a>
         </div>
-        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
@@ -600,7 +709,8 @@
           <a href="#" class="btn-close"></a>
         </div>
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
-        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div>
+        <!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
       <div class="modal-wrap" id="modal7" style="left: 1009px; top: 190px;">
@@ -608,7 +718,8 @@
           <p class="modal-title">추모공원 삼거리</p>
           <a href="#" class="btn-close"></a>
         </div>
-        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
@@ -618,7 +729,8 @@
           <a href="#" class="btn-close"></a>
         </div>
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div> --><!-- 가로로 긴 경우 -->
-        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div><!-- 세로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div>
+        <!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
       <div class="modal-wrap" id="modal9" style="left: 1221px; top: 72px;">
@@ -626,7 +738,8 @@
           <p class="modal-title">광터 교차로</p>
           <a href="#" class="btn-close"></a>
         </div>
-        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content" style="background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
         <!-- <div class="modal-content" style="background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
@@ -646,7 +759,9 @@
           <p class="modal-title">일이삼사오육칠팔구십일_이삼사오육칠팔</p>
           <a href="#" class="btn-close"></a>
         </div>
-        <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content"
+          style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
         <!-- <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/125x300/666666/FFFFFF/png);"></div> --><!-- 세로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
@@ -663,133 +778,136 @@
             <a href="#" class="btn-close"></a>
           </div>
         </div>
-        <div class="modal-content" style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div><!-- 가로로 긴 경우 -->
+        <div class="modal-content"
+          style="height: 300px;background-image: url(https://placehold.co/300x125/666666/FFFFFF/png);"></div>
+        <!-- 가로로 긴 경우 -->
       </div><!-- .modal-wrap -->
 
-      
 
-      <div class="modal-wrap type-2" id="modalCell" style="left: 50%; transform: translateX(-50%); top: 315px; width: 942px;">
-          <div class="modal-head">
-            <p class="tit">셀단위 분석</p>
-            <a href="#" class="close"></a>
-          </div>
-          <div class="modal-period">
-            <span>아산 방면</span>
-            <span>안산 방면</span>
-          </div>
-          <div class="modal-cell">
-            <div class="cell-wrap">
-              <a class="cell-btn-l" href="javascript:;"></a>
-              <div class="cell-area">
-                <div class="cell-box-wrap">
-                  <ul>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="yellow">00.00</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="yellow">000.0</li>
-                  </ul>
-                  <ul>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="yellow">00.00</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="yellow">000.0</li>
-                  </ul>
-                </div>
+
+      <div class="modal-wrap type-2" id="modalCell"
+        style="left: 50%; transform: translateX(-50%); top: 315px; width: 942px;">
+        <div class="modal-head">
+          <p class="tit">셀단위 분석</p>
+          <a href="#" class="close"></a>
+        </div>
+        <div class="modal-period">
+          <span>아산 방면</span>
+          <span>안산 방면</span>
+        </div>
+        <div class="modal-cell">
+          <div class="cell-wrap">
+            <a class="cell-btn-l" href="javascript:;"></a>
+            <div class="cell-area">
+              <div class="cell-box-wrap">
+                <ul>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="yellow">00.00</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="yellow">000.0</li>
+                </ul>
+                <ul>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="yellow">00.00</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="yellow">000.0</li>
+                </ul>
               </div>
-              <a class="cell-btn-r off" href="javascript:;"></a>
-            </div><!-- .cell-wrap -->
-
-            <div class="cell-period">
-              <span class="label">백학IC</span>
-              <span class="line"></span>
-              <span class="label">쌍학교차로</span>
             </div>
+            <a class="cell-btn-r off" href="javascript:;"></a>
+          </div><!-- .cell-wrap -->
 
-            <div class="cell-wrap">
-              <a class="cell-btn-l off" href="javascript:;"></a>
-              <div class="cell-area">
-                <div class="cell-box-wrap">
-                  <ul>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="yellow">00.00</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="yellow">000.0</li>
-                  </ul>
-                  <ul>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="red">00.0</li>
-                    <li class="yellow">00.00</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="green">00.0</li>
-                    <li class="yellow">000.0</li>
-                  </ul>
-                </div>
-              </div>
-              <a class="cell-btn-r" href="javascript:;"></a>
-            </div><!-- .cell-wrap -->
+          <div class="cell-period">
+            <span class="label">백학IC</span>
+            <span class="line"></span>
+            <span class="label">쌍학교차로</span>
           </div>
+
+          <div class="cell-wrap">
+            <a class="cell-btn-l off" href="javascript:;"></a>
+            <div class="cell-area">
+              <div class="cell-box-wrap">
+                <ul>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="yellow">00.00</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="yellow">000.0</li>
+                </ul>
+                <ul>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="red">00.0</li>
+                  <li class="yellow">00.00</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="green">00.0</li>
+                  <li class="yellow">000.0</li>
+                </ul>
+              </div>
+            </div>
+            <a class="cell-btn-r" href="javascript:;"></a>
+          </div><!-- .cell-wrap -->
+        </div>
       </div><!-- .modal-wrap -->
 
       <!--
@@ -851,7 +969,7 @@
               <span class="line-st4" style="width: 10.3%"></span>
               <span class="line-st3" style="width: 16.79%"></span>
               <span class="line-st1" style="width: 11.9%"></span>
-            </div> 
+            </div>
             <span class="s-ico new cctv down" style="left: 2.5%;"></span>
             <span class="s-ico ai tp2 poi radar down" style="left: 45%;"></span>
             <span class="s-ico ai tp2 poi vms down" style="left: 69.6%;"></span>
@@ -866,7 +984,7 @@
           </div>
           <span class="be-label">정선</span>
 
-          
+
         </div>
       </div><!-- .period-wrap -->
 
@@ -915,7 +1033,7 @@
           </div>
           <span class="be-label">횡성</span>
 
-          
+
         </div>
       </div><!-- .period-wrap -->
 
@@ -965,7 +1083,7 @@
           </div>
           <span class="be-label">새말</span>
 
-          
+
         </div>
       </div><!-- .period-wrap -->
 
@@ -1005,7 +1123,7 @@
           </div>
           <span class="be-label">횡성</span>
 
-          
+
         </div>
       </div><!-- .period-wrap -->
 
@@ -1076,11 +1194,11 @@
             <span class="s-ico new signal down" style="left: 86%;"></span>
             <span class="s-ico new signal down" style="left: 90%;"></span>
             <span class="s-ico new signal down" style="left: 96%;"></span>
-            
+
           </div>
           <span class="be-label">횡성</span>
 
-          
+
         </div>
       </div><!-- .period-wrap -->
 
@@ -1210,7 +1328,8 @@
           </div>
           <span class="be-label">안산방면</span>
 
-          <span class="s-ico ai tp2 radar on ex-4" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; display: block;"></span>
+          <span class="s-ico ai tp2 radar on ex-4"
+            style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; display: block;"></span>
         </div>
       </div><!-- .period-wrap -->
 
@@ -1322,15 +1441,41 @@
           </div>
           <span class="be-label">안산방면</span>
 
-          <span class="s-ico ai tp2 radar on ex-4" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; display: block;"></span>
+          <span class="s-ico ai tp2 radar on ex-4"
+            style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; display: block;"></span>
         </div>
       </div><!-- .period-wrap -->
-      
+
     </div><!-- .dashboard-area -->
+
+    <div class="popup-wrap z-anim mfp-hide no-head" id="popup-reflect" data-width="500">
+      <div class="con-wrap">
+        <div class="items-input msg">
+          설정값이 반영 되었습니다.
+        </div>
+        <div class="btns-wrap between">
+           <a href="" class="btn-close b-mfp-close"></a>
+          <span class="btn-base"><a href="#"><em class="apply">확인</em></a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-cctv" data-width="586">
+      <div class="modal-top">
+        <p class="modal-title">EVT09B173901</p>
+        <a href="#" class="btn-close b-mfp-close"></a>
+      </div>
+      <div class="modal-content">
+        <iframe src="https://www.youtube.com/embed/GtegZ3Xqe8s?si=noorSGvXXg0ulFBd" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div><!-- .popup-wrap -->
   </div><!-- #wrap -->
 
   <script>
-    $('.lnb-list > li dt').on('click', function(){
+    $('.lnb-list > li dt').on('click', function () {
       var $target = $(this).closest('li');
       if ($target.hasClass('disabled')) {
         return;
@@ -1343,7 +1488,7 @@
       }
     });
 
-    $('.layer-wrap .btn-accident').on('click', function(e){
+    $('.layer-wrap .btn-accident').on('click', function (e) {
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
       $('.layer-wrap.on, .layer-wrap .btn-layer, .layer-wrap .btn-status').removeClass('on');
@@ -1356,7 +1501,7 @@
       }
     });
 
-    $('.layer-wrap .btn-status').on('click', function(e){
+    $('.layer-wrap .btn-status').on('click', function (e) {
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
       $('.layer-wrap.on, .layer-wrap .btn-layer, .layer-wrap .btn-accident').removeClass('on');
@@ -1369,7 +1514,7 @@
       }
     });
 
-    $('.layer-wrap .btn-layer').on('click', function(e){
+    $('.layer-wrap .btn-layer').on('click', function (e) {
       e.preventDefault();
       var $target = $(this).closest('.layer-wrap');
       $('.layer-wrap.on, .layer-wrap .btn-status, .layer-wrap .btn-accident').removeClass('on');
@@ -1381,7 +1526,7 @@
         $target.removeClass('on');
       }
     });
-    $('.layer-wrap .item-area a').on('click', function(e){
+    $('.layer-wrap .item-area a').on('click', function (e) {
       e.preventDefault();
       if (!$(this).hasClass('on')) {
         $(this).addClass('on');
@@ -1390,7 +1535,7 @@
       }
     });
 
-    $('.item-wrap .btn-index').on('click', function(e){
+    $('.item-wrap .btn-index').on('click', function (e) {
       e.preventDefault();
       var $target = $(this).next('.index-wrap');
       if (!$(this).hasClass('on')) {
@@ -1402,7 +1547,19 @@
       }
     });
 
-    $('.period-wrap .btn-close').on('click', function(e){
+    $('.item-wrap .btn-distance').on('click', function (e) {
+      e.preventDefault();
+      var $target = $(this).next('.distance-wrap');
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $target.addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $target.removeClass('on');
+      }
+    });
+
+    $('.period-wrap .btn-close').on('click', function (e) {
       e.preventDefault();
       $(this).closest('.period-wrap').hide();
     });
@@ -1411,21 +1568,20 @@
       $('.modal-wrap').hide();
       $('[id*=ico-].on').removeClass('on');
     }
-    
+
     // 아이콘 + 모달
-    $('[id*=ico-]').on('click', function(e){
+    $('[id*=ico-]').on('click', function (e) {
       var _modal = ($(this).attr('id').split('-')[$(this).attr('id').split('-').length - 1]);
       if (!$(this).hasClass('on')) {
-        resetIcon();
+        // resetIcon();
         $('#ico-map-' + _modal + ', #ico-period-' + _modal).addClass('on');
-        console.log(_modal)
         openModal('#' + _modal);
       } else {
         $('#ico-map-' + _modal + ', #ico-period-' + _modal).removeClass('on');
         closeModal('#' + _modal);
       }
     });
-    $('.modal-wrap .btn-close').on('click', function(e){
+    $('.modal-wrap .btn-close').on('click', function (e) {
       e.preventDefault();
       $(this).closest('.modal-wrap').hide();
       var _modal = $(this).closest('.modal-wrap').attr('id');
@@ -1435,7 +1591,7 @@
     });
 
     // 구간 선택
-    $('.lnb-area .lnb-list > li dd li').on('click', function(e){
+    $('.lnb-area .lnb-list > li dd li').on('click', function (e) {
       e.preventDefault();
       if (!$(this).hasClass('on')) {
         $('.lnb-area .lnb-list > li dd li.on').removeClass('on');
@@ -1445,7 +1601,7 @@
       }
     });
 
-    $('.accident-area .acc-top .items li.expans a').on('click', function(e){
+    $('.accident-area .acc-top .items li.expans a').on('click', function (e) {
       e.preventDefault();
       if (!$(this).closest('li').hasClass('on')) {
         $(this).closest('li').addClass('on');
@@ -1455,12 +1611,12 @@
         $(this).closest('.layer-wrap').find('.acc-table').removeClass('on');
       }
     });
-    $('.accident-area .acc-top .items li.close a').on('click', function(e){
+    $('.accident-area .acc-top .items li.close a').on('click', function (e) {
       e.preventDefault();
       $(this).closest('.layer-wrap').removeClass('on');
       $(this).closest('.layer-wrap').find('.btn-ico').removeClass('on');
     });
-    $('.accident-area .acc-table tr td').on('click', function(){
+    $('.accident-area .acc-table tr td').on('click', function () {
       if (!$(this).closest('tr').hasClass('on')) {
         $(this).closest('tr').siblings().removeClass('on');
         $(this).closest('tr').addClass('on');
@@ -1470,14 +1626,14 @@
       }
     });
 
-    $('.idx-table tfoot td a.btn-change').on('click', function(e){
+    $('.idx-table tfoot td a.btn-change').on('click', function (e) {
       e.preventDefault();
       $('.idx-table .view').hide();
       $('.idx-table tbody.edit').css('display', 'table-row-group');
       $('.idx-table tfoot.edit').css('display', 'table-footer-group');
     });
 
-    $('.idx-table tfoot td a.btn-cancel, .idx-table tfoot td a.btn-apply').on('click', function(e){
+    $('.idx-table tfoot td a.btn-cancel, .idx-table tfoot td a.btn-apply').on('click', function (e) {
       e.preventDefault();
       $('.idx-table .edit').hide();
       $('.idx-table tbody.view').css('display', 'table-row-group');
@@ -1489,32 +1645,49 @@
     var Qdetail = $.urlParam('detail');
     var Qsample = $.urlParam('sample');
     var Qmode = $.urlParam('mode');
+    var Qpopup = $.urlParam('popup');
 
-    if (Qsample) {
+    if (Qsample || Qpopup) {
       setTimeout(() => {
-        if (Qsample == '1' || Qsample == '2') {
+        if (Qsample == '1' || Qsample == '2' || Qsample == '4' || Qsample == '5') {
           $('.ex-1').show();
           $('.layer-wrap .btn-accident').click();
           if (Qsample == '2') {
             $('.accident-area .acc-top .items li.expans a').click();
             // $('#ico-map-modal1').click();
             $('.accident-area .acc-table tr:nth-child(3)').addClass('on');
-            $('#modals1').show();
+            // $('#modals1').show();
+          }
+          if (Qsample == '4') {
+            $('.ex-2').show();
+            $('#ico-map-modals1').click();
+            $('#ico-map-modals2').click();
+            $('#ico-map-modals3').click();
+          }
+          if (Qsample == '5') {
+            $('.btn-index').click();
           }
         }
         if (Qsample == '3') {
-          $('.ex-2').show();
-          $('#ico-map-modals2').click();
-          $('#modal1, #modal2').show();
-          $('.lnb-list > li:eq(1) dt').click(); // 광터 교차로 구간 선택
-          $('.period-wrap#period01').show(); // 하단 패널
+          // $('.ex-2').show();
+          // $('#ico-map-modals2').click();
+          // $('#modal1, #modal2').show();
+          // $('.lnb-list > li:eq(1) dt').click(); // 광터 교차로 구간 선택
+          // $('.period-wrap#period01').show(); // 하단 패널
+          $('.ex-1').show();
+          $('.btn-distance').click();
+        } 
+        if (Qsample == '4') {}
+        
+        if (Qpopup) {
+          $.magnificPopup.open(getOptions('#popup-' + Qpopup));
         }
       }, 250);
     }
-    
+
 
     if (Qperiod) {
-      setTimeout(function(){
+      setTimeout(function () {
         $('.btn-layer').click();
         $('.dashboard-area > [id*=ico-].ex-1').show();
         $('.layer-wrap .item-area a:nth-child(n+0):nth-child(-n+4)').addClass('on');
@@ -1541,18 +1714,18 @@
       }, 250);
     }
     if (Qmodal == '01') {
-      setTimeout(function(){
+      setTimeout(function () {
         $('#ico-period-modal1').click();
         $('.btn-index').click();
       }, 250);
     }
     if (Qmodal == '02') {
-      setTimeout(function(){
+      setTimeout(function () {
         $('#ico-period-modal2').click();
       }, 250);
     }
     if (Qdetail === '01') {
-      setTimeout(function(){
+      setTimeout(function () {
         // $('.btn-layer').click();
         $('.dashboard-area > [id*=ico-].ex-2').show();
         $('.layer-wrap .item-area a:nth-child(n+0):nth-child(-n+4)').addClass('on');
@@ -1606,10 +1779,11 @@
     if (Qmodal == 'cell') {
       openModal('#modalCell');
     }
-    $('.modal-wrap .modal-head .close').on('click', function(e){
+    $('.modal-wrap .modal-head .close').on('click', function (e) {
       e.preventDefault();
       $(this).closest('.modal-wrap').hide();
     })
   </script>
 </body>
+
 </html>
