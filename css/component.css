@@ -149,6 +149,8 @@
 .btn-accident:hover, .btn-accident.on{background-image:url(../img/icon/ico-s-accident-b.svg);border:1px solid var(--color-primary);}
 .btn-status{background-image:url(../img/icon/ico-s-status-g.svg);}
 .btn-status:hover, .btn-status.on{background-image:url(../img/icon/ico-s-status-b.svg);border:1px solid var(--color-primary);}
+.btn-distance{background-image:url(../img/se/ico-distancesetting-def.svg);}
+.btn-distance:hover, .btn-distance.on{background-image:url(../img/se/ico-distancesetting-hov.svg);border:1px solid var(--color-primary);}
 .toggle-area{display:inline-block;}
 .toggle-area > *{vertical-align:middle;}
 .s-label{display:inline-block;font-size:13px;line-height:19px;color:#99a2b9;margin-right:4px;}
